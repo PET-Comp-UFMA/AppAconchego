@@ -1,15 +1,14 @@
 import React from "react";
+import BotaoPadrao from "../componentes/Botoes/Padrao";
 import {
     SafeAreaView,
     View,
     StyleSheet
 } from 'react-native'
 
-import BotaoPadrao from "../componentes/Botoes/Padrao";
-
 export default function Teste() {
     return(
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={localStyles.container}>
             <View>
                 <BotaoPadrao
                     title = 'Sobre o Aconchego'
@@ -22,10 +21,10 @@ export default function Teste() {
     )
 }
 
-const styles = StyleSheet.create({
+const localStyles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
     }
-})
+});
