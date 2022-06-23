@@ -1,20 +1,33 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack'
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import AppLoading from 'expo-app-loading';
+import {
+  useFonts,
+  IBMPlexSans_600SemiBold as IBMPlexSans_Bold,
+} from '@expo-google-fonts/ibm-plex-sans'
+
+import Teste from './src/screens/teste';
+
+const Stack = createStackNavigator();
 
 export default function App() {
+
+  let[fontsLoaded] = useFonts({ IBMPlexSans_Bold });
+  if(!fontsLoaded) { return <AppLoading /> };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <View style={{flex: 1}}>
+        <Stack.Navigator>
+          <Stack.Screen
+            name='teste'
+            component={Teste}
+          />
+        </Stack.Navigator>
+      </View>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
