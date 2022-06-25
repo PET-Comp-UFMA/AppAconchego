@@ -5,10 +5,9 @@ import {
     StyleSheet
 } from 'react-native'
 
-// import BotaoPadrao from "../componentes/Botoes/Padrao";
 import BotaoEscolhaTeste from "../componentes/Botoes/EscolhaTeste";
 
-export default function Teste() {
+export default function Teste2() {
     return(
         <SafeAreaView style={localStyles.container}>
             <View>

@@ -5,10 +5,10 @@ import {
     StyleSheet
 } from 'react-native'
 
-// import BotaoPadrao from "../componentes/Botoes/Padrao";
 import BotaoPadrao from "../componentes/Botoes/Padrao";
+import GlobalColors from "../componentes/Global/GlobalColors";
 
-export default function Teste() {
+export default function Teste1() {
     return(
         <SafeAreaView style={localStyles.container}>
             <View>
@@ -27,6 +27,7 @@ const localStyles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: GlobalColors.CorFundo
     }
 });

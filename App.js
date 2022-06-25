@@ -11,9 +11,10 @@ import {
   IBMPlexSans_500Medium as IBMPlexSans_Medium
 } from '@expo-google-fonts/ibm-plex-sans'
 
-// import Teste from './src/screens/teste1';
-// import Teste from './src/screens/teste2';
-import Teste from './src/screens/teste3';
+// import Teste1 from './src/screens/teste1';
+// import Teste2 from './src/screens/teste2';
+// import Teste3 from './src/screens/teste3';
+import Teste4 from './src/screens/teste4';
 
 const Stack = createStackNavigator();
 
@@ -25,10 +26,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <View style={{flex: 1}}>
-        <Stack.Navigator>
+        <Stack.Navigator >
           <Stack.Screen
             name='teste'
-            component={Teste}
+            component={Teste4}
+            options = {{
+              
+            }}
           />
         </Stack.Navigator>
       </View>

@@ -7,7 +7,7 @@ import {
 
 import Avaliacao from "../componentes/Botoes/Avaliacao";
 
-export default function Teste() {
+export default function Teste3() {
     return(
         <SafeAreaView style={localStyles.container}>
             <View>

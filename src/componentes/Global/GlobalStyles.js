@@ -60,7 +60,7 @@ export default StyleSheet.create({
         lineHeight: 24
     },
     textoBotao: {
-        color: GlobalColors.CorFundo,
+        color: GlobalColors.CorFundoCard,
         fontSize: 20,
         fontWeight: '600',
         textAlign: 'center',
@@ -71,10 +71,15 @@ export default StyleSheet.create({
         color: GlobalColors.CorTextoForte,
         fontSize: 16,
         fontWeight: '400',
-        textAlign: 'center',
         fontFamily: 'IBMPlexSans_Regular',
         maxWidth: '80%',
         textAlign: 'left'
+    },
+    textoTabBottom: {
+        fontSize: 15,
+        fontWeight: '500',
+        textAlign: 'center',
+        fontFamily: 'IBMPlexSans_Medium',
     },
     numero: {
         color: GlobalColors.CorFundo,
