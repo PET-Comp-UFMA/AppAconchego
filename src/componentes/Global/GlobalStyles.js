@@ -43,7 +43,23 @@ export default StyleSheet.create({
         backgroundColor: GlobalColors.CorFundoCard,
         flexDirection: 'row'
     },
-    titulo: {
+    titulo1: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 24,
+        fontWeight: '600',
+        textAlign: 'center',
+        fontFamily: 'IBMPlexSans_Bold',
+        lineHeight: 28
+    },
+    titulo2: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 21,
+        fontWeight: '500',
+        textAlign: 'center',
+        fontFamily: 'IBMPlexSans_Medium',
+        lineHeight: 24
+    },
+    textoBotao: {
         color: GlobalColors.CorFundo,
         fontSize: 20,
         fontWeight: '600',
@@ -51,7 +67,7 @@ export default StyleSheet.create({
         letterSpacing: 1,
         fontFamily: 'IBMPlexSans_Bold'
     },
-    testoTeste: {
+    textoOpcoes: {
         color: GlobalColors.CorTextoForte,
         fontSize: 16,
         fontWeight: '400',

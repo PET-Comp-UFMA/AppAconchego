@@ -24,7 +24,7 @@ export default class BotaoPadrao extends Component {
                     </View>
 
                     <View>
-                        <Text style={GlobalStyles.testoTeste}>    
+                        <Text style={GlobalStyles.textoOpcoes}>    
                             {this.props.title}
                         </Text>
                     </View>
@@ -45,17 +45,18 @@ const localStyles = StyleSheet.create({
     containerImagemAvaliacao: {
         backgroundColor: '#009DA1',
         width: 84,
-        height: 86,
+        height: 88,
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
         borderColor: '#101012',
         borderTopWidth: 1,
         borderLeftWidth: 1,
-        borderBottomWidth: 1,
+        borderBottomWidth: 3,
         marginLeft: -1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginRight: 8
+        marginRight: 8,
+        top: 1
     },
     imagemAvaliacao: {
         width: 51,

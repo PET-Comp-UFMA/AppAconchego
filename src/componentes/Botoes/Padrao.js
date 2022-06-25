@@ -17,7 +17,7 @@ export default class BotaoPadrao extends Component {
         return(
             <SafeAreaView style={localStyles.container}>
                 <TouchableOpacity style={GlobalStyles.butao} onPress = {this.props.onPress}>
-                    <Text style={GlobalStyles.titulo}>    
+                    <Text style={GlobalStyles.textoBotao}>    
                         {this.props.title}
                     </Text>
                 </TouchableOpacity>

@@ -24,7 +24,7 @@ export default class BotaoEscolhaTeste extends Component {
                         <Text style={GlobalStyles.numero}>{this.props.number}</Text>
                     </View>
 
-                    <Text style={GlobalStyles.testoTeste}>    
+                    <Text style={GlobalStyles.textoOpcoes}>    
                         {this.props.title}
                     </Text>
                 </TouchableOpacity>
@@ -42,8 +42,8 @@ const localStyles = StyleSheet.create({
         alignSelf: 'flex-end'
     },
     circulo: {
-        height: 49,
-        width: 49,
+        height: 50,
+        width: 50,
         borderRadius: 25,
         borderWidth: 1,
         borderColor: GlobalColors.CorTextoForte,

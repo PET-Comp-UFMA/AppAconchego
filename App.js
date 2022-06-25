@@ -11,7 +11,9 @@ import {
   IBMPlexSans_500Medium as IBMPlexSans_Medium
 } from '@expo-google-fonts/ibm-plex-sans'
 
-import Teste from './src/screens/teste';
+// import Teste from './src/screens/teste1';
+// import Teste from './src/screens/teste2';
+import Teste from './src/screens/teste3';
 
 const Stack = createStackNavigator();
 
