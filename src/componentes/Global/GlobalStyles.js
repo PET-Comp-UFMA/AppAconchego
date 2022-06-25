@@ -29,6 +29,20 @@ export default StyleSheet.create({
         backgroundColor: GlobalColors.CorFundoCard,
         flexDirection: 'row'
     },
+    butaoAvaliacao:{
+        fontFamily: 'IBMPlexSans_Bold',
+        height: 90,
+        width: '90%',
+        marginVertical: 10,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: GlobalColors.CorTextoForte,
+        borderBottomWidth: 5,
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        backgroundColor: GlobalColors.CorFundoCard,
+        flexDirection: 'row'
+    },
     titulo: {
         color: GlobalColors.CorFundo,
         fontSize: 20,
