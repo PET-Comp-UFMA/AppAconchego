@@ -74,15 +74,26 @@ export default StyleSheet.create({
         textAlign: 'center',
         fontFamily: 'IBMPlexSans_Medium',
         lineHeight: 24,
-        padding: 3
+        padding: 3,
+        maxWidth: 330
     },
-    titulo3:{
+    descricao:{
+        color: GlobalColors.CorTextoForte,
+        fontSize: 20,
+        fontFamily: 'IBMPlexSans_Medium',
+        justifyContent: 'center',
+        textAlign: 'justify',
+        padding: 1,
+        maxWidth: 330
+    },
+    nomes:{
         color: GlobalColors.CorTextoForte,
         fontSize: 16,
         fontWeight: '500',
         textAlign: 'center',
         fontFamily: 'IBMPlexSans_Medium',
         lineHeight: 24,
+        maxWidth: 340
     },
     textoBotao: {
         color: GlobalColors.CorFundoCard,
