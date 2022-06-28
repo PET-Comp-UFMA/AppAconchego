@@ -43,6 +43,20 @@ export default StyleSheet.create({
         backgroundColor: GlobalColors.CorFundoCard,
         flexDirection: 'row'
     },
+    butaoEmoji:{
+        fontFamily: 'IBMPlexSans_Bold',
+        height: 68,
+        width: 66,
+        marginVertical: 10,
+        borderRadius: 33,
+        borderWidth: 1,
+        borderColor: GlobalColors.CorTextoForte,
+        borderBottomWidth: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: GlobalColors.CorAcao,
+        flexDirection: 'row'
+    },
     titulo1: {
         color: GlobalColors.CorTextoForte,
         fontSize: 24,

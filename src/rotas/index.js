@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import Teste1 from "../screens/teste1";
+import Home from "../screens/home";
 import Teste2 from "../screens/teste2";
 import Teste3 from "../screens/teste3";
 
@@ -31,13 +31,14 @@ export default function RotasBottom() {
             }
         >
             <Tab.Screen
-                name = 'Padrao'
-                component={Teste1}
+                name = 'Home'
+                component={Home}
                 options={{
                     tabBarIcon: ({ size, color }) => (
                         <Entypo name='home' size={25} color={color}/>
                     ),
-                    tabBarLabelStyle: GlobalStyles.textoTabBottom
+                    tabBarLabelStyle: GlobalStyles.textoTabBottom,
+                    headerShown: false
                 }}
             />
 

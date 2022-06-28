@@ -30,8 +30,8 @@ export default function App() {
           <Stack.Screen
             name='teste'
             component={Teste4}
-            options = {{
-              
+            options={{
+              headerShown: false
             }}
           />
         </Stack.Navigator>
