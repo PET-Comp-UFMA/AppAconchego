@@ -38,7 +38,7 @@ const localStyles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,
-        paddingTop: 64,
+        paddingTop: 48,
     },
     botoesAvaliacao: {
         marginTop: 24

@@ -61,6 +61,14 @@ export default function RotasBottom() {
                         <MaterialCommunityIcons name='account-search' size={25} color={color}/>
                     ),
                     tabBarLabelStyle: GlobalStyles.textoTabBottom,
+                    headerTitleStyle: GlobalStyles.header,
+                    headerStyle: {
+                        height: 70,
+                        backgroundColor: GlobalColors.CorFundo,
+                        borderBottomWidth: 2,
+                        borderBottomColor: GlobalColors.CorTextoFraco,
+                    },
+                    headerTitleAlign: 'center'
                 }}
             />
 
