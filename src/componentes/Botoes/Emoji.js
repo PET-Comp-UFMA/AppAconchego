@@ -4,8 +4,9 @@ import {
     SafeAreaView,
     TouchableOpacity,
     StyleSheet,
-    Image
 } from 'react-native'
+
+import EmojiFeliz from '../../../assets/feliz.svg'
 
 export default class BotaoEmoji
  extends Component {
@@ -17,7 +18,7 @@ export default class BotaoEmoji
         return(
             <SafeAreaView style={localStyles.container}>
                 <TouchableOpacity style={GlobalStyles.butaoEmoji} onPress = {this.props.onPress}>
-                    <Image style={localStyles.emoji} source={require('../../../assets/feliz.png')} />
+                    <EmojiFeliz />
                 </TouchableOpacity>
             </SafeAreaView>
         )

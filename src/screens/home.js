@@ -7,6 +7,7 @@ import {
     Dimensions
 } from 'react-native'
 
+import Logo from '../../assets/logo.svg'
 import Titulo from "../componentes/Titulos/Titulo";
 import BotaoEmoji from "../componentes/Botoes/Emoji";
 import BotaoPadrao from "../componentes/Botoes/Padrao";
@@ -15,7 +16,7 @@ import GlobalColors from "../componentes/Global/GlobalColors";
 export default function Home() {
     return(
         <SafeAreaView style={localStyles.container}>
-            <Image style = {localStyles.logo} source={require('../../assets/logo.png')} />
+            <Logo style={localStyles.logo} />
 
             <Titulo
                 title = 'Como está se sentindo hoje?'
@@ -42,12 +43,12 @@ export default function Home() {
 const localStyles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: GlobalColors.CorFundo
+        backgroundColor: GlobalColors.CorFundo,
     },
     logo: {
-        width: 206,
+        marginTop: 20,
         marginBottom: 30
     },
     botoesEmoji: {
