@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from "../screens/home";
 import Teste2 from "../screens/teste2";
-import Teste3 from "../screens/teste3";
+import Avaliacao from "../screens/avaliacao";
 
 import { Entypo, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
 import GlobalColors from "../componentes/Global/GlobalColors";
@@ -49,18 +49,18 @@ export default function RotasBottom() {
                     tabBarIcon: ({ size, color }) => (
                         <Ionicons name='people' size={25} color={color}/>
                     ),
-                    tabBarLabelStyle: GlobalStyles.textoTabBottom,
+                    tabBarLabelStyle: GlobalStyles.textoTabBottom
                 }}
             />
 
             <Tab.Screen
-                name = 'Avaliacao'
-                component={Teste3}
+                name = 'Avaliação'
+                component={Avaliacao}
                 options={{
                     tabBarIcon: ({ size, color }) => (
                         <MaterialCommunityIcons name='account-search' size={25} color={color}/>
                     ),
-                    tabBarLabelStyle: GlobalStyles.textoTabBottom
+                    tabBarLabelStyle: GlobalStyles.textoTabBottom,
                 }}
             />
 

@@ -32,7 +32,7 @@ export default StyleSheet.create({
     butaoAvaliacao:{
         fontFamily: 'IBMPlexSans_Bold',
         height: 90,
-        width: '90%',
+        width: '85%',
         marginVertical: 10,
         borderRadius: 10,
         borderWidth: 1,
@@ -63,7 +63,8 @@ export default StyleSheet.create({
         fontWeight: '600',
         textAlign: 'center',
         fontFamily: 'IBMPlexSans_Bold',
-        lineHeight: 28
+        lineHeight: 28,
+        maxWidth: 320
     },
     titulo2: {
         color: GlobalColors.CorTextoForte,

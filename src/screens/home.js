@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    SafeAreaView,
     View,
     StyleSheet,
     Image,
@@ -15,7 +14,7 @@ import GlobalColors from "../componentes/Global/GlobalColors";
 
 export default function Home() {
     return(
-        <SafeAreaView style={localStyles.container}>
+        <View style={localStyles.container}>
             <Logo style={localStyles.logo} />
 
             <Titulo
@@ -36,7 +35,7 @@ export default function Home() {
                     title = 'Meus Registros'
                 />
             </View>
-        </SafeAreaView>
+        </View>
     )
 }
 
@@ -48,8 +47,8 @@ const localStyles = StyleSheet.create({
         backgroundColor: GlobalColors.CorFundo,
     },
     logo: {
-        marginTop: 20,
-        marginBottom: 30
+        marginBottom: 30,
+        marginTop: 35
     },
     botoesEmoji: {
         flexDirection: 'row',

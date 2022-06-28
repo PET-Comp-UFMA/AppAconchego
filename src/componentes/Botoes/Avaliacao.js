@@ -6,11 +6,12 @@ import {
     Text,
     StyleSheet,
     Dimensions,
-    Image,
     View
 } from 'react-native'
 
-export default class BotaoPadrao extends Component {
+import ImagemAvaliacao from '../../../assets/vector.svg'
+
+export default class BotaoAvaliacao extends Component {
     constructor(props){
         super(props);
     }
@@ -20,7 +21,7 @@ export default class BotaoPadrao extends Component {
             <SafeAreaView style={localStyles.container}>
                 <TouchableOpacity style={GlobalStyles.butaoAvaliacao} onPress = {this.props.onPress}>
                     <View style={localStyles.containerImagemAvaliacao}>
-                        <Image style={localStyles.imagemAvaliacao} source={require('../../../assets/Vector.png')} />
+                        <ImagemAvaliacao />
                     </View>
 
                     <View>
