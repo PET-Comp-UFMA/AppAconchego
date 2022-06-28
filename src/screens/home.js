@@ -6,6 +6,7 @@ import {
     Dimensions
 } from 'react-native'
 
+import { saibaMais } from './saibaMais'
 import Logo from '../../assets/logo.svg'
 import Titulo from "../componentes/Titulos/Titulo";
 import BotaoEmoji from "../componentes/Botoes/Emoji";
@@ -29,7 +30,7 @@ export default function Home() {
 
             <View>
                 <BotaoPadrao
-                    title = 'Sobre o Aconchego'
+                    title = 'Sobre o Aconchego' onPress={saibaMais()}
                 />
                 <BotaoPadrao
                     title = 'Meus Registros'
