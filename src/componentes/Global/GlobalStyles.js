@@ -123,5 +123,15 @@ export default StyleSheet.create({
         fontWeight: '500',
         textAlign: 'center',
         fontFamily: 'IBMPlexSans_Medium',
+    },
+    header: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 24,
+        fontWeight: '600',
+        textAlign: 'center',
+        fontFamily: 'IBMPlexSans_Bold',
+        maxWidth: 320,
+        textTransform: 'uppercase',
+        letterSpacing: 3,
     }
 });
