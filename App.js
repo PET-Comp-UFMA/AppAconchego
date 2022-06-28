@@ -15,6 +15,7 @@ import {
 // import Teste2 from './src/screens/teste2';
 // import Teste3 from './src/screens/teste3';
 import Teste4 from './src/screens/teste4';
+import SaibaMais from './src/screens/saibaMais'
 
 const Stack = createStackNavigator();
 
@@ -29,7 +30,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste'
-            component={Teste4}
+            component={SaibaMais}
             options={{
               headerShown: false
             }}
