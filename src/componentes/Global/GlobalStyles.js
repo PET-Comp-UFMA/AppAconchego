@@ -138,7 +138,7 @@ export default StyleSheet.create({
         fontFamily: 'IBMPlexSans_Bold',
         height: 56,
         width: '25%',
-        margin: 15,
+        margin: 16,
         borderRadius: 10,
         borderWidth: 1,
         borderColor: GlobalColors.CorTextoForte,
@@ -151,7 +151,7 @@ export default StyleSheet.create({
         fontFamily: 'IBMPlexSans_Bold',
         height: 56,
         width: '25%',
-        margin: 14,
+        margin: 16,
         borderRadius: 10,
         borderWidth: 1,
         borderColor: GlobalColors.CorTextoForte,
@@ -167,5 +167,9 @@ export default StyleSheet.create({
         textAlign: 'center',
         letterSpacing: 1,
         fontFamily: 'IBMPlexSans_Bold'
+    },
+    containerBotao:{
+        alignItems: 'center', 
+        flexDirection: 'row',
     }
 });
