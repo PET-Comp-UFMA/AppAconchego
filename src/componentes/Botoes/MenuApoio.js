@@ -84,6 +84,7 @@ const localStyles = StyleSheet.create({
     containerImagem: {
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 11
+        paddingLeft: 11,
+        paddingTop: 11
     }
 })
