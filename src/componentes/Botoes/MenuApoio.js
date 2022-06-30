@@ -73,12 +73,13 @@ export default class MenuApoio extends Component {
 const localStyles = StyleSheet.create({
     container:{
         width: Dimensions.get('window').width,
-        padding: 45,
         alignItems: 'center',
     },
     botoes: {
         flexDirection: 'row',
         flexWrap: 'wrap',
+        widht: '80%',
+        justifyContent: 'space-between',
     },
     containerImagem: {
         alignItems: 'center',

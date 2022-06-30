@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from "../screens/home";
-import Teste2 from "../screens/teste2";
+import TelaApoio from "../screens/TelaApoio";
 import Avaliacao from "../screens/avaliacao";
 
 import { Entypo, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
@@ -43,8 +43,8 @@ export default function RotasBottom() {
             />
 
             <Tab.Screen
-                name = 'Escolha'
-                component={Teste2}
+                name = 'Apoio'
+                component={TelaApoio}
                 options={{
                     tabBarIcon: ({ size, color }) => (
                         <Ionicons name='people' size={25} color={color}/>

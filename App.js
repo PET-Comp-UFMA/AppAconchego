@@ -14,7 +14,7 @@ import {
 //import Teste1 from './src/screens/teste1';
 //import Teste2 from './src/screens/teste2';
 //import Teste3 from './src/screens/teste3';
-//import Teste4 from './src/screens/teste4';
+import Teste4 from './src/screens/teste4';
 //import SaibaMais from './src/screens/saibaMais'
 //import CanalCvv from './src/screens/CanalCvv';
 //import CanalCaps from './src/screens/CanalCaps';
@@ -35,7 +35,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste'
-            component={TelaApoio}
+            component={Teste4}
             options={{
               headerShown: false
             }}
