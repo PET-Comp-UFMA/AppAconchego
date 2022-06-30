@@ -34,7 +34,7 @@ export default function App() {
       <View style={{flex: 1}}>
         <Stack.Navigator >
           <Stack.Screen
-            name='teste'
+            name='teste4'
             component={Teste4}
             options={{
               headerShown: false

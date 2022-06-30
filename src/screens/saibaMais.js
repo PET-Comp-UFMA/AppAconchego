@@ -68,3 +68,5 @@ const localStyles = StyleSheet.create({
         padding: 10
     }
 })
+
+export { SaibaMais }
