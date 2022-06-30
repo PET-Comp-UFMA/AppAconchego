@@ -20,6 +20,7 @@ export default class MenuApoio extends Component {
         return(
             <ScrollView>
             <SafeAreaView style={localStyles.container}> 
+                <View style={localStyles.botoes}>
                 <TouchableOpacity onPress={this.props.onPress}>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/meditacao.png')} /> 
@@ -62,20 +63,22 @@ export default class MenuApoio extends Component {
                         <Text style={GlobalStyles.nomes}>Canais de Apoio</Text>
                     </View>
                 </TouchableOpacity>
-            </SafeAreaView>
+                </View>
+                </SafeAreaView>
             </ScrollView>
         )
     }
 }
 
 const localStyles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
+    container:{
         width: Dimensions.get('window').width,
+        padding: 45,
         alignItems: 'center',
-        alignSelf: 'flex-end',
-        flexWrap: 'wrap', 
-        padding: 45
+    },
+    botoes: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
     },
     containerImagem: {
         alignItems: 'center',
