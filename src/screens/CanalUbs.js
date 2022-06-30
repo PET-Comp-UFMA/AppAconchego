@@ -3,9 +3,8 @@ import { View, Text, StyleSheet, SafeAreaView } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
 import Botao from '../componentes/Botoes/Padrao'
-import Apoio from '../../assets/canaisdeapoio.svg'
-import BotaoPequenoProx from '../componentes/Botoes/BotaoPequenoProx'
-import BotaoPequenoVoltar from '../componentes/Botoes/BotaoPequenoVoltar'
+import Apoio from '../../assets/apoio.svg'
+import MenuApoio from '../componentes/Botoes/MenuApoio'
 
 export default function CanalUbs(){
     return(
@@ -14,6 +13,7 @@ export default function CanalUbs(){
             <Text style={GlobalStyles.titulo1}>Unidade Básica de Atendimento (UBS)</Text>
             <Text style={localStyles.descricao}>As Unidades Básicas de Atendimento (UBS) se configuram como a porta de entrada no Sistema Único de Saúde (SUS). Ao se propor em prestar uma assistência mais próxima da população, torna-se possível a identificação, encaminhamento e acompanhamento de pacientes em sofrimento mental.</Text>
             <Botao title='Voltar' />
+            <MenuApoio />
         </SafeAreaView>
     )
 }

@@ -11,15 +11,16 @@ import {
   IBMPlexSans_500Medium as IBMPlexSans_Medium
 } from '@expo-google-fonts/ibm-plex-sans'
 
-// import Teste1 from './src/screens/teste1';
-// import Teste2 from './src/screens/teste2';
-// import Teste3 from './src/screens/teste3';
+//import Teste1 from './src/screens/teste1';
+//import Teste2 from './src/screens/teste2';
+//import Teste3 from './src/screens/teste3';
 //import Teste4 from './src/screens/teste4';
 //import SaibaMais from './src/screens/saibaMais'
 //import CanalCvv from './src/screens/CanalCvv';
 //import CanalCaps from './src/screens/CanalCaps';
 //import CanalUnicef from './src/screens/CanalUnicef';
-import CanalUbs from './src/screens/CanalUbs';
+//import CanalUbs from './src/screens/CanalUbs';
+import MenuApoio from './src/componentes/Botoes/MenuApoio';
 
 const Stack = createStackNavigator();
 
@@ -34,7 +35,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste'
-            component={CanalUbs}
+            component={MenuApoio}
             options={{
               headerShown: false
             }}

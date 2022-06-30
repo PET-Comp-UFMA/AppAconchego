@@ -5,7 +5,7 @@ import {
     StyleSheet
 } from 'react-native'
 
-import BotaoEscolhaTeste from "../componentes/Botoes/EscolhaTeste";
+import BotaoSimNao from "../componentes/Botoes/BotaoSimNao";
 
 export default function Teste2() {
     return(

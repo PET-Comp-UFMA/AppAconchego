@@ -171,5 +171,17 @@ export default StyleSheet.create({
     containerBotao:{
         alignItems: 'center', 
         flexDirection: 'row',
+    },
+    circulo: {
+        height: 50,
+        width: 50,
+        borderRadius: 25,
+        borderWidth: 1,
+        borderColor: GlobalColors.CorTextoForte,
+        backgroundColor: GlobalColors.CorAcao,
+        marginLeft: -1,
+        marginRight: 6,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 });

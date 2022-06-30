@@ -20,7 +20,7 @@ export default class BotaoEscolhaTeste extends Component {
         return(
             <SafeAreaView style={localStyles.container}>
                 <TouchableOpacity style={GlobalStyles.butaoTeste} onPress = {this.props.onPress}>
-                    <View style={localStyles.circulo}>
+                    <View style={GlobalStyles.circulo}>
                         <Text style={GlobalStyles.numero}>{this.props.number}</Text>
                     </View>
 
@@ -40,17 +40,5 @@ const localStyles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         alignSelf: 'flex-end'
-    },
-    circulo: {
-        height: 50,
-        width: 50,
-        borderRadius: 25,
-        borderWidth: 1,
-        borderColor: GlobalColors.CorTextoForte,
-        backgroundColor: GlobalColors.CorAcao,
-        marginLeft: -1,
-        marginRight: 6,
-        alignItems: 'center',
-        justifyContent: 'center'
     }
-});
+})
