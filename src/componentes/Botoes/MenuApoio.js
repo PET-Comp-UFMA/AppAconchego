@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import GlobalStyles from '../Global/GlobalStyles';
 import { 
+    ScrollView,
     Image,
     SafeAreaView,
     TouchableOpacity, 
@@ -10,14 +11,6 @@ import {
     View
 } from 'react-native'
 
-//import Meditacao from '../../../assets/meditacao.png'
-import Lisamcast from '../../../assets/lisamcast.png'
-import Musicas from '../../../assets/musicas.png'
-import Alimentacao from '../../../assets/alimentacao.png'
-import Filmes from '../../../assets/filmes.png'
-import Series from '../../../assets/series.png'
-import CanaisApoio from '../../../assets/canaisdeapoio.png'
-
 export default class MenuApoio extends Component {
     constructor(props){
         super(props)
@@ -25,6 +18,7 @@ export default class MenuApoio extends Component {
 
     render(){
         return(
+            <ScrollView>
             <SafeAreaView style={localStyles.container}> 
                 <TouchableOpacity onPress={this.props.onPress}>
                     <View style={localStyles.containerImagem}>
@@ -69,6 +63,7 @@ export default class MenuApoio extends Component {
                     </View>
                 </TouchableOpacity>
             </SafeAreaView>
+            </ScrollView>
         )
     }
 }
