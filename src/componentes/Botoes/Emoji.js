@@ -4,6 +4,7 @@ import {
     SafeAreaView,
     TouchableOpacity,
     StyleSheet,
+    Image,
 } from 'react-native'
 
 import EmojiFeliz from '../../../assets/feliz.svg'
@@ -15,10 +16,19 @@ export default class BotaoEmoji
     }
 
     render(){
+        // Troca da imagem do emoji
+        var emoji = require('../../../assets/feliz.png');
+
+        if (this.props.emoji == "normal") {
+            emoji = require('../../../assets/normal.png');
+        } else if (this.props.emoji == "triste") {
+            emoji = require('../../../assets/triste.png');
+        }
+        
         return(
             <SafeAreaView style={localStyles.container}>
                 <TouchableOpacity style={GlobalStyles.butaoEmoji} onPress = {this.props.onPress}>
-                    <EmojiFeliz />
+                    <Image style={localStyles.emoji} source={emoji}/>
                 </TouchableOpacity>
             </SafeAreaView>
         )
@@ -30,7 +40,7 @@ const localStyles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    emoji: {
+    emoji: {    
         width: 39,
         height: 39
     }

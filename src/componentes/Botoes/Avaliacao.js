@@ -6,22 +6,24 @@ import {
     Text,
     StyleSheet,
     Dimensions,
-    View
+    View,
+    Image
 } from 'react-native'
 
-import ImagemAvaliacao from '../../../assets/vector.svg'
+//import ImagemAvaliacao from '../../../assets/vector.svg'
 
 export default class BotaoAvaliacao extends Component {
     constructor(props){
         super(props);
     }
 
+     //<ImagemAvaliacao />
     render(){
         return(
             <SafeAreaView style={localStyles.container}>
                 <TouchableOpacity style={GlobalStyles.butaoAvaliacao} onPress = {this.props.onPress}>
                     <View style={localStyles.containerImagemAvaliacao}>
-                        <ImagemAvaliacao />
+                        <Image style={localStyles.imagemAvaliacao} source={require('../../../assets/vector.png')}/>
                     </View>
 
                     <View>
