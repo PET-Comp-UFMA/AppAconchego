@@ -10,7 +10,6 @@ export default function SaibaMais(){
     return(
         <SafeAreaView style={localStyles.container}>
             <MenuApoio />
-            <RotasBottom />
         </SafeAreaView>
     )
 }
