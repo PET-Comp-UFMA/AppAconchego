@@ -19,8 +19,8 @@ import {
 //import CanalCvv from './src/screens/CanalCvv';
 //import CanalCaps from './src/screens/CanalCaps';
 //import CanalUnicef from './src/screens/CanalUnicef';
-import CanalUbs from './src/screens/CanalUbs';
-//import MenuApoio from './src/componentes/Botoes/MenuApoio';
+//import CanalUbs from './src/screens/CanalUbs';
+import TelaApoio from './src/screens/TelaApoio'
 
 const Stack = createStackNavigator();
 
@@ -35,7 +35,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste'
-            component={CanalUbs}
+            component={TelaApoio}
             options={{
               headerShown: false
             }}

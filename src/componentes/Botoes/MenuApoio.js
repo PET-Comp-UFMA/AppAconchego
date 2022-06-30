@@ -78,13 +78,13 @@ const localStyles = StyleSheet.create({
         flexDirection: 'row',
         width: Dimensions.get('window').width,
         alignItems: 'center',
-        justifyContent: 'center',
         alignSelf: 'flex-end',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap', 
+        padding: 45
     },
     containerImagem: {
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 30
+        padding: 25
     }
 })
