@@ -14,13 +14,14 @@ import {
 //import Teste1 from './src/screens/teste1';
 //import Teste2 from './src/screens/teste2';
 //import Teste3 from './src/screens/teste3';
-import Teste4 from './src/screens/teste4';
+//import Teste4 from './src/screens/teste4';
 //import SaibaMais from './src/screens/saibaMais'
 //import CanalCvv from './src/screens/CanalCvv';
 //import CanalCaps from './src/screens/CanalCaps';
 //import CanalUnicef from './src/screens/CanalUnicef';
 //import CanalUbs from './src/screens/CanalUbs';
-import TelaApoio from './src/screens/TelaApoio'
+//import TelaApoio from './src/screens/TelaApoio'
+import Teste1Int from './src/screens/Teste1Int';
 
 const Stack = createStackNavigator();
 
@@ -35,7 +36,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste4'
-            component={Teste4}
+            component={Teste1Int}
             options={{
               headerShown: false
             }}

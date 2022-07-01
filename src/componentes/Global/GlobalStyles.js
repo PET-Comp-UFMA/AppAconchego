@@ -183,5 +183,9 @@ export default StyleSheet.create({
         marginRight: 6,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    botoesTeste: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 });
