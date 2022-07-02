@@ -49,7 +49,15 @@ export default function RotasBottom() {
                     tabBarIcon: ({ size, color }) => (
                         <Ionicons name='people' size={25} color={color}/>
                     ),
-                    tabBarLabelStyle: GlobalStyles.textoTabBottom
+                    tabBarLabelStyle: GlobalStyles.textoTabBottom,
+                    headerTitleStyle: GlobalStyles.header,
+                    headerStyle: {
+                        height: 70,
+                        backgroundColor: GlobalColors.CorFundo,
+                        borderBottomWidth: 2,
+                        borderBottomColor: GlobalColors.CorTextoFraco,
+                    },
+                    headerTitleAlign: 'center'
                 }}
             />
 

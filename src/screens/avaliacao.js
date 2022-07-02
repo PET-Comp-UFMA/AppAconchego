@@ -2,10 +2,9 @@ import React from "react";
 import {
     View,
     StyleSheet,
-    Dimensions
+    Image
 } from 'react-native'
 
-import Logo from '../../assets/logo.svg'
 import Titulo from "../componentes/Titulos/Titulo";
 import BotaoAvaliacao from '../componentes/Botoes/Avaliacao'
 import GlobalColors from "../componentes/Global/GlobalColors";
@@ -13,6 +12,8 @@ import GlobalColors from "../componentes/Global/GlobalColors";
 export default function Avaliacao() {
     return(
         <View style={localStyles.container}>
+            <Image style={localStyles.imagem} source={require('../../assets/figavaliacao.png')}/>
+
             <Titulo
                 title = 'Escolha um teste para responder'
             />
@@ -28,6 +29,7 @@ export default function Avaliacao() {
                     title = 'Avaliando os cuidados em saúde mental'
                 />
             </View>
+
         </View>
     )
 }
@@ -38,9 +40,14 @@ const localStyles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,
-        paddingTop: 48,
+        paddingTop: 36,
     },
     botoesAvaliacao: {
-        marginTop: 24
+        marginTop: 6
+    },
+    imagem: {
+        position: "absolute",
+        bottom: -25,
+        left: -5,
     }
 });

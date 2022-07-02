@@ -3,32 +3,37 @@ import {
     View,
     StyleSheet,
     Image,
-    Dimensions
+    Dimensions,
 } from 'react-native'
 
-import Logo from '../../assets/logo.svg'
+import { useNavigation } from '@react-navigation/native'
+
 import Titulo from "../componentes/Titulos/Titulo";
 import BotaoEmoji from "../componentes/Botoes/Emoji";
 import BotaoPadrao from "../componentes/Botoes/Padrao";
 import GlobalColors from "../componentes/Global/GlobalColors";
 
 export default function Home() {
+
+    const navigation = useNavigation();
+
     return(
         <View style={localStyles.container}>
-            <Logo style={localStyles.logo} />
+            <Image style={localStyles.logo} source={require('../../assets/logo.png')} />
 
             <Titulo
                 title = 'Como está se sentindo hoje?'
             />
 
             <View style={localStyles.botoesEmoji}>
-                <BotaoEmoji />
-                <BotaoEmoji />
+                <BotaoEmoji emoji='triste' />
+                <BotaoEmoji emoji='normal' />
                 <BotaoEmoji />
             </View>
 
             <View>
                 <BotaoPadrao
+                    onPress={() => navigation.navigate('sobre o aconchego')}
                     title = 'Sobre o Aconchego'
                 />
                 <BotaoPadrao
@@ -48,7 +53,9 @@ const localStyles = StyleSheet.create({
     },
     logo: {
         marginBottom: 30,
-        marginTop: 35
+        marginTop: 35,
+        width: 200,
+        height: 200
     },
     botoesEmoji: {
         flexDirection: 'row',

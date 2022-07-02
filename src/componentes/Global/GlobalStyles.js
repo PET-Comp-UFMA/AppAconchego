@@ -64,7 +64,7 @@ export default StyleSheet.create({
         textAlign: 'center',
         fontFamily: 'IBMPlexSans_Bold',
         lineHeight: 28,
-        maxWidth: 320,
+        maxWidth: 330,
         padding: 5
     },
     titulo2: {

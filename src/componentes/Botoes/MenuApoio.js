@@ -77,14 +77,15 @@ const localStyles = StyleSheet.create({
         alignItems: 'center',
     },
     botoes: {
-        width: '65%',
+        width: '70%',
         flexDirection: 'row',
         flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        paddingTop: 5
     },
     containerImagem: {
         alignItems: 'center',
         justifyContent: 'center',
-        paddingLeft: 11,
-        paddingTop: 11
+        paddingTop: 15
     }
 })

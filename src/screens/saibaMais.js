@@ -4,8 +4,12 @@ import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
 import Logo from '../../assets/logo.svg'
 import Botao from '../componentes/Botoes/Padrao'
+import { useNavigation } from '@react-navigation/native'
 
 export default function SaibaMais(){
+
+    const navigation = useNavigation();
+
     return(
         <ScrollView>
         <SafeAreaView style={localStyles.container}>
@@ -49,7 +53,7 @@ FUNCAP</Text>
             <Text style={GlobalStyles.titulo2}>Discente do Curso de Engenharia da Computação da Universidade Ferderal do Ceará (UFC)</Text>
             <Text style={GlobalStyles.nomes}>Ana Lara Carvalho Mesquita</Text>
             <Text style={GlobalStyles.nomes}>Joyce Ávila Ximenes</Text>
-            <Botao title='Voltar à Tela Principal'/>
+            <Botao title='Voltar à Tela Principal' onPress={() => navigation.navigate('teste4')} />
         </SafeAreaView>
         </ScrollView>
     )
