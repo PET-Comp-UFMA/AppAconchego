@@ -10,10 +10,10 @@ export default function Teste1Int(){
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../assets/vector.png')} style={localStyles.Imagem}/>
             <Text style={GlobalStyles.titulo1}>Instruções</Text>
-                    <View style={localStyles.paragrafo}>
+                    <View style={GlobalStyles.paragrafo}>
                     <Text style={GlobalStyles.descricao}>Por favor, leia cuidadosamente cada uma das afirmações e assinale o número apropriado 0, 1, 2 ou 3.</Text>
                     </View>
-                    <View style={localStyles.paragrafo}>
+                    <View style={GlobalStyles.paragrafo}>
                     <Text style={GlobalStyles.descricao}>A pontuação indicará o quanto ela se aplicou a você durante a última semana, conforme as indicações. </Text>
                     </View>
                 <View style={GlobalStyles.botoesTeste}>
@@ -37,9 +37,6 @@ const localStyles = StyleSheet.create({
         tintColor: '#0066FF',
         height: 80,
         width: 72
-    },
-    paragrafo: {
-        paddingBottom: 15
     }
     }
 )

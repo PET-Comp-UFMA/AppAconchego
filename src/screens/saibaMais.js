@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, SafeAreaView, StyleSheet, Text, ScrollView } from 'react-native'
+import { Image, SafeAreaView, StyleSheet, Text, ScrollView, View } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
 import Logo from '../../assets/logo.svg'
@@ -14,11 +14,16 @@ export default function SaibaMais(){
         <ScrollView>
         <SafeAreaView style={localStyles.container}>
             <Logo style={localStyles.logo} />
-            <Text style={GlobalStyles.titulo1}>Aconchego é um aplicativo de Apoio em Saúde mental</Text>
+            <View style={GlobalStyles.paragrafo}>
+                <Text style={GlobalStyles.titulo1}>Aconchego é um aplicativo de Apoio em Saúde mental</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.descricao}>A nossa saúde mental pode ser compreendida pelo bem-estar 
             emocional e social. Possui relação com a maneira como pensamos, sentimos 
             e agimos em nosso dia-a-dia. Também é determinada pela forma como lidamos 
             com o estresse, nos relacionamos com os outros e tomamos decisões.</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo1}>Sobre Nós</Text>
             <Text style={GlobalStyles.titulo2}>Realização</Text>
             <Text style={GlobalStyles.titulo2}>Universidade Federal do Vale do Aracaú</Text>
@@ -30,16 +35,26 @@ export default function SaibaMais(){
             <Text style={GlobalStyles.titulo2}>Fundação Cearense de Apoio ao Desenvolvimento Cientifico e Tecnológico
 FUNCAP</Text>
             <Image source={require('../../assets/funcap.png')}/>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo1}>Parceiros</Text>
             <Text style={GlobalStyles.titulo2}>Universidade Federal do Ceará</Text>
             <Text style={GlobalStyles.titulo2}>Loading Desenvolvimento Jr</Text>
             <Image source={require('../../assets/univeload.png')} />
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo1}>Créditos</Text>
             <Text style={GlobalStyles.titulo2}>Prof. a Dra Eliany Nazaré Oliveira</Text>
             <Text style={GlobalStyles.nomes}>Docente do Curso de Enfermagem da Universidade Estadual do Vale do Acaraú</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo2}>João Breno Cavalcante Costa</Text>
             <Text style={GlobalStyles.nomes}>Mestrado Acadêmico em Saúde da Família, Universidade Federal do Ceará</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo2}>Bolsistas do Programa de Bolsa de Produtividade em Pesquisa, Estímulo à Interiorização e à Inovação Tecnológica (BPI-FUNCAP) e discentes do Curso de Enfermagem da Universidade Estadual Vale do Acaraú (UVA)</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.nomes}>Caio San Rodrigues</Text>
             <Text style={GlobalStyles.nomes}>Letícia Mara Cavalcante Lima</Text>
             <Text style={GlobalStyles.nomes}>Lídia Cristina Monteiro da Silva</Text>
@@ -47,12 +62,21 @@ FUNCAP</Text>
             <Text style={GlobalStyles.nomes}>Flávia Regino Oliveira</Text>
             <Text style={GlobalStyles.nomes}>Ana Beatryz dos Santos Costa</Text>
             <Text style={GlobalStyles.nomes}>Emilia do Nascimento Silva</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo2}>Discente do Curso de Enfermagem da Universidade Estadual do Vale do Acaraú (UVA)</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.nomes}>Alexia Gomes Souza</Text>
             <Text style={GlobalStyles.nomes}>Ravena Petra Mororó Ziesemer</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo2}>Discente do Curso de Engenharia da Computação da Universidade Ferderal do Ceará (UFC)</Text>
+            </View>
+            <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.nomes}>Ana Lara Carvalho Mesquita</Text>
             <Text style={GlobalStyles.nomes}>Joyce Ávila Ximenes</Text>
+            </View>
             <Botao title='Voltar à Tela Principal' onPress={() => navigation.navigate('teste4')} />
         </SafeAreaView>
         </ScrollView>
@@ -72,5 +96,3 @@ const localStyles = StyleSheet.create({
         padding: 10
     }
 })
-
-export { SaibaMais }

@@ -187,5 +187,10 @@ export default StyleSheet.create({
     botoesTeste: {
         flexDirection: 'row',
         alignItems: 'center'
+    },
+    
+    paragrafo: {
+        alignItems:'center',
+        paddingBottom: 15
     }
 });
