@@ -7,27 +7,24 @@ import {
     StyleSheet,
     Dimensions,
     View,
-    Image
 } from 'react-native'
+import { Feather } from '@expo/vector-icons'
 
-//import ImagemAvaliacao from '../../../assets/vector.svg'
-
-export default class BotaoAvaliacao extends Component {
+export default class BotaoMidia extends Component {
     constructor(props){
         super(props);
     }
 
-     //<ImagemAvaliacao />
     render(){
         return(
             <SafeAreaView style={localStyles.container}>
-                <TouchableOpacity style={GlobalStyles.butaoAvaliacao} onPress = {this.props.onPress}>
-                    <View style={localStyles.containerImagemAvaliacao}>
-                        <Image style={localStyles.imagemAvaliacao} source={require('../../../assets/vector.png')}/>
+                <TouchableOpacity style={GlobalStyles.butaoMusica} onPress = {this.props.onPress}>
+                    <View style={localStyles.containerImagemMusica}>
+                        <Feather name="play" size={25} color={'#FFF'}/>
                     </View>
 
                     <View style={localStyles.containerTexto}>
-                        <Text style={GlobalStyles.textoOpcoes}>    
+                        <Text numberOfLines={1} style={GlobalStyles.textoOpcoes}>    
                             {this.props.title}
                         </Text>
                     </View>
@@ -45,10 +42,10 @@ const localStyles = StyleSheet.create({
         justifyContent: 'center',
         alignSelf: 'flex-end'
     },
-    containerImagemAvaliacao: {
+    containerImagemMusica: {
         backgroundColor: '#009DA1',
-        width: 84,
-        height: 88,
+        width: 50,
+        height: 48,
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
         borderColor: '#101012',
@@ -60,10 +57,6 @@ const localStyles = StyleSheet.create({
         justifyContent: 'center',
         marginRight: 8,
         top: 1
-    },
-    imagemAvaliacao: {
-        width: 51,
-        height: 57,
     },
     containerTexto: {
         flex: 1,
