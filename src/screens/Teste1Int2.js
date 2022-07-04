@@ -5,8 +5,7 @@ import GlobalColors from '../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../componentes/Botoes/BotaoPequenoVoltar'
 
-
-export default function Teste1Int2(){
+export default function Teste1Int(){
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../assets/vector.png')} style={localStyles.Imagem}/>
