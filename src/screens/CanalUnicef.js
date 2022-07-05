@@ -1,20 +1,17 @@
 import React from 'react'
-import { Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native'
+import { Text, StyleSheet, SafeAreaView, Image } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
 import Botao from '../componentes/Botoes/Padrao'
-import Apoio from '../../assets/apoio.svg'
 
 export default function CanalUnicef(){
     return(
-        <ScrollView>
         <SafeAreaView style={localStyles.container}>
-            <Apoio />
+            <Image source={require('../../assets/apoio.png')} />
             <Text style={GlobalStyles.titulo1}>Pode Falar(UNICEF)</Text>
-            <Text style={localStyles.descricao}>Pode Falar é um canal de ajuda em saúde mental para você que tem de 13 a 24 anos desenvolvido pela Unicef em parceria com outros projetos, a exemplo do CVV. Através do site é possível consultar o cronograma de atendimento e agendar sua consulta on-line.</Text>
+            <Text style={GlobalStyles.descricao}>Pode Falar é um canal de ajuda em saúde mental para você que tem de 13 a 24 anos desenvolvido pela Unicef em parceria com outros projetos, a exemplo do CVV. Através do site é possível consultar o cronograma de atendimento e agendar sua consulta on-line.</Text>
             <Botao title='Acessar'/>
         </SafeAreaView>
-        </ScrollView>
     )
 }
 
@@ -25,14 +22,5 @@ const localStyles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,
     },
-    descricao:{
-        color: GlobalColors.CorTextoForte,
-        fontSize: 20,
-        fontFamily: 'IBMPlexSans_Medium',
-        justifyContent: 'center',
-        textAlign: 'justify',
-        padding: 16,
-        maxWidth: 330
-    }
 }
 )

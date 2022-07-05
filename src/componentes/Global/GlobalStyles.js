@@ -206,5 +206,14 @@ export default StyleSheet.create({
     paragrafo: {
         alignItems:'center',
         paddingBottom: 15
+    },
+    descricao:{
+        color: GlobalColors.CorTextoForte,
+        fontSize: 20,
+        fontFamily: 'IBMPlexSans_Medium',
+        justifyContent: 'center',
+        textAlign: 'justify',
+        padding: 16,
+        maxWidth: 330
     }
 });

@@ -20,10 +20,10 @@ import Teste4 from './src/screens/teste4';
 import SaibaMais from './src/screens/saibaMais'
 import GlobalStyles from './src/componentes/Global/GlobalStyles';
 import GlobalColors from './src/componentes/Global/GlobalColors';
-//import CanalCvv from './src/screens/CanalCvv';
-//import CanalCaps from './src/screens/CanalCaps';
-//import CanalUnicef from './src/screens/CanalUnicef';
-//import CanalUbs from './src/screens/CanalUbs';
+import CanalCvv from './src/screens/CanalCvv';
+import CanalCaps from './src/screens/CanalCaps';
+import CanalUnicef from './src/screens/CanalUnicef';
+import CanalUbs from './src/screens/CanalUbs';
 //import TelaApoio from './src/screens/TelaApoio'
 //import Teste1Int from './src/screens/Teste1Int';
 
@@ -40,7 +40,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste4'
-            component={Teste4}
+            component={CanalCaps}
             options={{
               headerShown: false
             }}
