@@ -7,8 +7,6 @@ import {
     Image,
 } from 'react-native'
 
-import EmojiFeliz from '../../../assets/feliz.svg'
-
 export default class BotaoEmoji
  extends Component {
     constructor(props){

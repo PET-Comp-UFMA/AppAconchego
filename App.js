@@ -17,6 +17,8 @@ import { Entypo } from '@expo/vector-icons'
 //import Teste2 from './src/screens/teste2';
 //import Teste3 from './src/screens/teste3';
 import Teste4 from './src/screens/teste4';
+import Teste2 from './src/screens/teste2'
+import Teste1 from './src/screens/Teste1Int2'
 import SaibaMais from './src/screens/saibaMais'
 import GlobalStyles from './src/componentes/Global/GlobalStyles';
 import GlobalColors from './src/componentes/Global/GlobalColors';
@@ -24,6 +26,7 @@ import CanalCvv from './src/screens/CanalCvv';
 import CanalCaps from './src/screens/CanalCaps';
 import CanalUnicef from './src/screens/CanalUnicef';
 import CanalUbs from './src/screens/CanalUbs';
+import TelaAvaliacao from './src/screens/avaliacao'
 //import TelaApoio from './src/screens/TelaApoio'
 //import Teste1Int from './src/screens/Teste1Int';
 
@@ -40,7 +43,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste4'
-            component={CanalCaps}
+            component={TelaAvaliacao}
             options={{
               headerShown: false
             }}

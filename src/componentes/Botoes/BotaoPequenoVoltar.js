@@ -18,4 +18,4 @@ export default class BotaoPequeno extends Component{
                 </Text>
             </TouchableOpacity>)
             }
-        }
+}

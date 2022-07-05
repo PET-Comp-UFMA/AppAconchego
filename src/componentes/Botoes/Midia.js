@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import GlobalStyles from '../Global/GlobalStyles';
+import GlobalColors from '../Global/GlobalColors';
+
 import { 
     SafeAreaView,
     TouchableOpacity, 
@@ -43,12 +45,12 @@ const localStyles = StyleSheet.create({
         alignSelf: 'flex-end'
     },
     containerImagemMusica: {
-        backgroundColor: '#009DA1',
+        backgroundColor: GlobalColors.CorAcao,
         width: 50,
         height: 48,
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
-        borderColor: '#101012',
+        borderColor: GlobalColors.CorTextoForte,
         borderTopWidth: 1,
         borderLeftWidth: 1,
         borderBottomWidth: 3,

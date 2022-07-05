@@ -11,7 +11,6 @@ export default class BotaoPequeno extends Component{
     }
 
     render(){
-        
             return(
                 <TouchableOpacity style={GlobalStyles.botaopeqprox} onPress = {this.props.onPress}>
                     <Text style={GlobalStyles.textoBotao}>    
@@ -20,5 +19,4 @@ export default class BotaoPequeno extends Component{
                 </TouchableOpacity>
             )
         }
-        
-    }
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import GlobalStyles from '../Global/GlobalStyles';
+import GlobalColors from '../Global/GlobalColors';
+
 import { 
     SafeAreaView,
     TouchableOpacity, 
@@ -9,8 +11,6 @@ import {
     View,
     Image
 } from 'react-native'
-
-//import ImagemAvaliacao from '../../../assets/vector.svg'
 
 export default class BotaoAvaliacao extends Component {
     constructor(props){
@@ -46,12 +46,12 @@ const localStyles = StyleSheet.create({
         alignSelf: 'flex-end'
     },
     containerImagemAvaliacao: {
-        backgroundColor: '#009DA1',
+        backgroundColor: GlobalColors.CorAcao,
         width: 84,
         height: 88,
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
-        borderColor: '#101012',
+        borderColor: GlobalColors.CorTextoForte,
         borderTopWidth: 1,
         borderLeftWidth: 1,
         borderBottomWidth: 3,
