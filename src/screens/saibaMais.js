@@ -33,14 +33,15 @@ export default function SaibaMais(){
             <Text style={GlobalStyles.titulo1}>Apoio Financeiro</Text>
             <Text style={GlobalStyles.titulo2}>Fundação Cearense de Apoio ao Desenvolvimento Cientifico e Tecnológico
 FUNCAP</Text>
-            <Image source={require('../../assets/funcap.png')}/>
+            <Image style={localStyles.logo} source={require('../../assets/funcap.png')}/>
             </View>
             <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo1}>Parceiros</Text>
             <Text style={GlobalStyles.titulo2}>Universidade Federal do Ceará</Text>
             <Text style={GlobalStyles.titulo2}>Loading Desenvolvimento Jr</Text>
             <Image source={require('../../assets/univeload.png')} />
-            </View>
+            <Image style={localStyles.logo_loading} source={require('../../assets/Loading.png')} />
+            </View> 
             <View style={GlobalStyles.paragrafo}>
             <Text style={GlobalStyles.titulo1}>Créditos</Text>
             <Text style={GlobalStyles.titulo2}>Prof. a Dra Eliany Nazaré Oliveira</Text>
@@ -95,5 +96,12 @@ const localStyles = StyleSheet.create({
         padding: 10,
         width: 200,
         height: 200
+    },
+    logo_loading: {
+        marginBottom: 30,
+        marginTop: 35,
+        padding: 10,
+        width: 250.5,
+        height: 99
     }
 })
