@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from "../screens/home";
-import TelaApoio from "../screens/TelaApoio";
+import TelaApoio from "../screens/Apoio/TelaApoio";
 import Avaliacao from "../screens/avaliacao";
 
 import { Entypo, MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'

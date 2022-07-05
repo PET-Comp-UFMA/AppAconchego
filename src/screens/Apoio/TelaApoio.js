@@ -1,10 +1,10 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Text } from 'react-native'
-import GlobalColors from '../componentes/Global/GlobalColors'
+import GlobalColors from '../../componentes/Global/GlobalColors'
 
-import MenuApoio from '../componentes/Botoes/MenuApoio'
+import MenuApoio from '../../componentes/Botoes/MenuApoio'
 
-import RotasBottom from '../rotas'
+import RotasBottom from '../../rotas'
 
 export default function SaibaMais(){
     return(
