@@ -2,7 +2,6 @@ import React from 'react'
 import { Image, SafeAreaView, StyleSheet, Text, ScrollView, View } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
-import Logo from '../../assets/logo.svg'
 import Botao from '../componentes/Botoes/Padrao'
 import { useNavigation } from '@react-navigation/native'
 
@@ -13,7 +12,7 @@ export default function SaibaMais(){
     return(
         <ScrollView>
         <SafeAreaView style={localStyles.container}>
-            <Logo style={localStyles.logo} />
+            <Image style={localStyles.logo} source={require('../../assets/logo.png')} />
             <View style={GlobalStyles.paragrafo}>
                 <Text style={GlobalStyles.titulo1}>Aconchego é um aplicativo de Apoio em Saúde mental</Text>
             </View>
@@ -93,6 +92,8 @@ const localStyles = StyleSheet.create({
     logo: {
         marginBottom: 30,
         marginTop: 35,
-        padding: 10
+        padding: 10,
+        width: 200,
+        height: 200
     }
 })
