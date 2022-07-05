@@ -27,6 +27,7 @@ import CanalCaps from './src/screens/CanalCaps';
 import CanalUnicef from './src/screens/CanalUnicef';
 import CanalUbs from './src/screens/CanalUbs';
 import TelaAvaliacao from './src/screens/avaliacao'
+import Home from './src/screens/Apoio/TelaApoio'
 //import TelaApoio from './src/screens/TelaApoio'
 //import Teste1Int from './src/screens/Teste1Int';
 
@@ -43,7 +44,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste4'
-            component={TelaAvaliacao}
+            component={Teste4}
             options={{
               headerShown: false
             }}
