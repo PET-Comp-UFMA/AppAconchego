@@ -45,8 +45,8 @@ export default StyleSheet.create({
     },
     butaoMusica:{
         fontFamily: 'IBMPlexSans_Bold',
-        height: 50,
-        width: '85%',
+        height: 55,
+        width: '90%',
         marginVertical: 10,
         borderRadius: 10,
         borderWidth: 1,
@@ -56,6 +56,13 @@ export default StyleSheet.create({
         justifyContent: 'flex-start',
         backgroundColor: GlobalColors.CorFundoCard,
         flexDirection: 'row'
+    },
+    microTexto: {
+        fontFamily: 'IBMPlexSans_Medium',
+        fontSize: 12,
+        letterSpacing: 0.2,
+        color: GlobalColors.CorTextoFraco,
+        marginTop: -2
     },
     butaoEmoji:{
         fontFamily: 'IBMPlexSans_Bold',
@@ -147,6 +154,12 @@ export default StyleSheet.create({
         maxWidth: 320,
         textTransform: 'uppercase',
         letterSpacing: 3,
+    },
+    headerStyle: {
+        height: 70,
+        backgroundColor: GlobalColors.CorFundo,
+        borderBottomWidth: 2,
+        borderBottomColor: GlobalColors.CorTextoFraco,
     },
     botaopeqprox: {
         fontFamily: 'IBMPlexSans_Bold',

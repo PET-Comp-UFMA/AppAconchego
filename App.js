@@ -30,6 +30,7 @@ import TelaAvaliacao from './src/screens/avaliacao'
 import Home from './src/screens/Apoio/TelaApoio'
 //import TelaApoio from './src/screens/TelaApoio'
 //import Teste1Int from './src/screens/Teste1Int';
+import Musicas from './src/screens/Apoio/musicas';
 
 const Stack = createStackNavigator();
 
@@ -41,7 +42,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <View style={{flex: 1}}>
-        <Stack.Navigator >
+        <Stack.Navigator screenOptions={{headerTitleAlign:'center'}}>
           <Stack.Screen
             name='teste4'
             component={Teste4}
@@ -55,12 +56,18 @@ export default function App() {
             component={SaibaMais}
             options={{
               headerTitleStyle: GlobalStyles.header,
-              headerStyle: {
-                height: 70,
-                backgroundColor: GlobalColors.CorFundo,
-                borderBottomWidth: 2,
-                borderBottomColor: GlobalColors.CorTextoFraco,
-              },
+              headerStyle: GlobalStyles.headerStyle,
+              headerBackTitleVisible: false,
+              headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />
+            }}
+          />
+
+          <Stack.Screen
+            name='músicas'
+            component={Musicas}
+            options={{
+              headerTitleStyle: GlobalStyles.header,
+              headerStyle: GlobalStyles.headerStyle,
               headerBackTitleVisible: false,
               headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />
             }}

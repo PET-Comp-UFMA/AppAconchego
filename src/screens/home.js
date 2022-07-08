@@ -37,6 +37,7 @@ export default function Home() {
                     title = 'Sobre o Aconchego'
                 />
                 <BotaoPadrao
+                    onPress={() => navigation.navigate('músicas')}
                     title = 'Meus Registros'
                 />
             </View>
