@@ -16,7 +16,7 @@ import { Entypo } from '@expo/vector-icons'
 //import Teste1 from './src/screens/teste1';
 //import Teste2 from './src/screens/teste2';
 //import Teste3 from './src/screens/teste3';
-import Teste4 from './src/screens/teste4';
+import Aconchego from './src/screens/Aconchego';
 import Teste2 from './src/screens/teste2'
 import Teste1 from './src/screens/Teste1Int2'
 import SaibaMais from './src/screens/saibaMais'
@@ -55,7 +55,7 @@ export default function App() {
               headerBackTitleVisible: false,
               headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />}}>
                 
-          <Stack.Screen name='teste4' component={Teste4} options={{headerShown: false}} />
+          <Stack.Screen name='Aconchego' component={Aconchego} options={{headerShown: false}} />
 
           <Stack.Screen name='sobre o aconchego' component={SaibaMais} />
 
