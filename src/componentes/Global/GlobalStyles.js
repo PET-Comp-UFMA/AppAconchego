@@ -153,7 +153,7 @@ export default StyleSheet.create({
         fontFamily: 'IBMPlexSans_Bold',
         maxWidth: 320,
         textTransform: 'uppercase',
-        letterSpacing: 3,
+        letterSpacing: 2,
     },
     headerStyle: {
         height: 70,

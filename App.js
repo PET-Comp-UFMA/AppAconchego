@@ -31,6 +31,8 @@ import Home from './src/screens/Apoio/TelaApoio'
 //import TelaApoio from './src/screens/TelaApoio'
 //import Teste1Int from './src/screens/Teste1Int';
 import Musicas from './src/screens/Apoio/musicas';
+import Series from './src/screens/Apoio/series';
+import Filmes from './src/screens/Apoio/filmes';
 
 const Stack = createStackNavigator();
 
@@ -42,38 +44,26 @@ export default function App() {
   return (
     <NavigationContainer>
       <View style={{flex: 1}}>
-        <Stack.Navigator screenOptions={{headerTitleAlign:'center'}}>
-          <Stack.Screen
-            name='teste4'
-            component={Teste4}
-            options={{
-              headerShown: false
-            }}
-          />
-
-          <Stack.Screen
-            name='sobre o aconchego'
-            component={SaibaMais}
-            options={{
+        <Stack.Navigator
+          screenOptions={
+            {
+              headerTitleAlign:'center',
               headerTitleStyle: GlobalStyles.header,
               headerStyle: GlobalStyles.headerStyle,
               headerBackTitleVisible: false,
-              headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />
-            }}
-          />
+              headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />}}>
+                
+          <Stack.Screen name='teste4' component={Teste4} options={{headerShown: false}} />
 
-          <Stack.Screen
-            name='músicas'
-            component={Musicas}
-            options={{
-              headerTitleStyle: GlobalStyles.header,
-              headerStyle: GlobalStyles.headerStyle,
-              headerBackTitleVisible: false,
-              headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />
-            }}
-          />
+          <Stack.Screen name='sobre o aconchego' component={SaibaMais} />
 
+          <Stack.Screen name='músicas' component={Musicas} />
+
+          <Stack.Screen name='séries' component={Series} />
+
+          <Stack.Screen name='filmes' component={Filmes} />
         </Stack.Navigator>
+
       </View>
     </NavigationContainer>
   );

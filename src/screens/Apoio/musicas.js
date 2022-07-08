@@ -97,15 +97,17 @@ export default function Musicas() {
     return(
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
-                {musicas.map((musica, i) => (
-                    <View key = {i}>
-                        <BotaoMusicas
-                            title = {musica.name}
-                            singer = {musica.singer}
-                            onPress = {() => {Linking.openURL(musica.url)}}
-                        />
+                <View style={localStyles.buttonsContainer}>
+                    {musicas.map((musica, i) => (
+                        <View key = {i}>
+                            <BotaoMusicas
+                                title = {musica.name}
+                                singer = {musica.singer}
+                                onPress = {() => {Linking.openURL(musica.url)}}
+                            />
+                    </View>
+                    ))}
                 </View>
-                ))}
             </ScrollView>
         </SafeAreaView>
     )
@@ -116,4 +118,7 @@ const localStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: GlobalColors.CorFundo,
     },
+    buttonsContainer: {
+        paddingVertical: 12
+    }
 });
