@@ -47,9 +47,9 @@ const localStyles = StyleSheet.create({
     },
     imagem: {
         position: "absolute",
-        bottom: 0,
+        bottom: -1,
         left: 5,
-        width: 250,
-        height: 140
+        width: 280,
+        height: 160
     }
 });

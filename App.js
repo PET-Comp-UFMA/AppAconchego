@@ -34,6 +34,7 @@ import Musicas from './src/screens/Apoio/musicas';
 import Series from './src/screens/Apoio/series';
 import Filmes from './src/screens/Apoio/filmes';
 import Alimentacao from './src/screens/Apoio/alimentacao';
+import CanaisApoio from './src/screens/Apoio/canaisApoio';
 
 const Stack = createStackNavigator();
 
@@ -65,6 +66,16 @@ export default function App() {
           <Stack.Screen name='filmes' component={Filmes} />
 
           <Stack.Screen name='alimentação' component={Alimentacao} />
+
+          <Stack.Screen name='canais de apoio' component={CanaisApoio} />
+
+          <Stack.Screen name='CVV' component={CanalCvv} />
+
+          <Stack.Screen name='UNICEF' component={CanalUnicef} />
+
+          <Stack.Screen name='CAPS' component={CanalCaps} />
+
+          <Stack.Screen name='UBS' component={CanalUbs} />
 
         </Stack.Navigator>
 
