@@ -44,8 +44,22 @@ export default StyleSheet.create({
         flexDirection: 'row'
     },
     butaoMusica:{
-        fontFamily: 'IBMPlexSans_Bold',
+        fontFamily: 'IBMPlexSans_Regular',
         height: 55,
+        width: '90%',
+        marginVertical: 10,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: GlobalColors.CorTextoForte,
+        borderBottomWidth: 5,
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        backgroundColor: GlobalColors.CorFundoCard,
+        flexDirection: 'row'
+    },
+    butaoAlimentacao:{
+        fontFamily: 'IBMPlexSans_Regular',
+        height: 90,
         width: '90%',
         marginVertical: 10,
         borderRadius: 10,

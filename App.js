@@ -33,6 +33,7 @@ import Home from './src/screens/Apoio/TelaApoio'
 import Musicas from './src/screens/Apoio/musicas';
 import Series from './src/screens/Apoio/series';
 import Filmes from './src/screens/Apoio/filmes';
+import Alimentacao from './src/screens/Apoio/alimentacao';
 
 const Stack = createStackNavigator();
 
@@ -62,6 +63,9 @@ export default function App() {
           <Stack.Screen name='séries' component={Series} />
 
           <Stack.Screen name='filmes' component={Filmes} />
+
+          <Stack.Screen name='alimentação' component={Alimentacao} />
+
         </Stack.Navigator>
 
       </View>

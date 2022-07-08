@@ -8,56 +8,57 @@ import {
     Text,
     StyleSheet,
     Dimensions,
-    View
+    View,
+    Linking
 } from 'react-native'
 
-export default class MenuApoio extends Component {
-    constructor(props){
-        super(props)
-    }
+import { useNavigation } from '@react-navigation/native'
 
-    render(){
+export default function MenuApoio () {
+
+    const navigation = useNavigation();
+        
         return(
             <ScrollView>
             <SafeAreaView style={localStyles.container}> 
                 <View style={localStyles.botoes}>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/meditacao.png')} /> 
                         <Text style={GlobalStyles.nomes}>Meditação</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity onPress = {() => {Linking.openURL('https://open.spotify.com/show/7qAi5cjDUt8HbKjekWBcAI?si=a6137ca102fa465a&nd=1')}}>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/lisamcast.png')} /> 
                         <Text style={GlobalStyles.nomes}>LISAMCAST</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('músicas')}>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/musicas.png')} /> 
                         <Text style={GlobalStyles.nomes}>Músicas</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('alimentação')}>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/alimentacao.png')} /> 
                         <Text style={GlobalStyles.nomes}>Alimentação</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('filmes')}>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/filmes.png')} /> 
                         <Text style={GlobalStyles.nomes}>Filmes</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('séries')}>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/series.png')} /> 
                         <Text style={GlobalStyles.nomes}>Séries</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity>
                     <View style={localStyles.containerImagem}>
                         <Image source={require('../../../assets/canaisdeapoio.png')} /> 
                         <Text style={GlobalStyles.nomes}>Canais de Apoio</Text>
@@ -67,7 +68,6 @@ export default class MenuApoio extends Component {
                 </SafeAreaView>
             </ScrollView>
         )
-    }
 }
 
 const localStyles = StyleSheet.create({
