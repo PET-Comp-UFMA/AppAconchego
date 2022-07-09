@@ -1,15 +1,18 @@
 import React from 'react'
-import { Image, SafeAreaView, Text, StyleSheet, View, Dimensions } from 'react-native'
+import { Image, SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import Botao from '../../componentes/Botoes/Padrao'
 
-export default function Resultado13(){
+export default function Resultado37(){
     return(
     <SafeAreaView style={localStyles.container}>
-        <View >
-            <Text style={localStyles.resposta}>Resposta Correta:</Text><Text style={GlobalStyles.descricao}>Sim, Adotar um bom hábito de sono auxilia na preservação da sáude física e mental. “O momento de repouso é fundamental e sua falta acarreta um estado pró-inflamatório que prejudica o organismo e facilita o surgimento de doenças como depressão. ter um horário habitual para despertar auxilia o ciclo fisiológico e mantém o organismo saudável”, explica o psiquiatra. </Text>
-        </View>
+        <Text style={localStyles.resposta}>Resposta Correta:</Text>
+        <ScrollView>
+            <View >
+                <Text style={GlobalStyles.descricao}>Sim. Compartilhar, como a própria palavra sugere, é dividir, é repartir. Ao desabafar e expressar seus sentimentos, é possivel reduzir a angústia , sentir-se amparado, incentivado e acolhido. Isso, por si só, já reduz o sofrimento, mas é importante estar respaldado por apoio profissional para falar sobre suas emoções, mesmo se você não estiver passando por um momento de crise ou suspeita de algum transtorno mental.</Text>
+            </View>
+        </ScrollView>
         <View>
             <Botao title='Próximo' />
         </View>
@@ -25,6 +28,7 @@ const localStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,
+        paddingTop: 50,
         },
     resposta: {
         color: GlobalColors.CorTextoForte,

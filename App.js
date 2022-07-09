@@ -31,6 +31,8 @@ import Home from './src/screens/Apoio/TelaApoio'
 //import TelaApoio from './src/screens/TelaApoio'
 //import Teste1Int from './src/screens/Teste1Int';
 
+import Pergunta11 from './src/screens/Teste3/Pergunta3-1';
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -44,7 +46,7 @@ export default function App() {
         <Stack.Navigator >
           <Stack.Screen
             name='teste4'
-            component={Teste4}
+            component={Pergunta11}
             options={{
               headerShown: false
             }}

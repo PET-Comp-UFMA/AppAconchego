@@ -6,20 +6,28 @@ import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 
-export default function Pergunta12(){
+export default function Pergunta113(){
     return(
         <SafeAreaView style={localStyles.container}>
             <View>
-                <Text style={GlobalStyles.titulo1}>Você tem dores de cabeça frequente?</Text>
+                <Text style={GlobalStyles.titulo1}>Senti-me depressivo(a) e sem ânimo</Text>
             </View>
             <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
                     number = {0}
-                    title = 'Sim'
+                    title = 'Não se aplicou de maneira alguma'
                 />
                 <BotaoEscolhaTeste
                     number = {1}
-                    title = 'Não'
+                    title = 'Aplicou-se em algum grau ou por pouco tempo'
+                />
+                <BotaoEscolhaTeste
+                    number = {2}
+                    title = 'Aplicou-se em um grau considerável ou por uma boa parte do tempo'
+                />
+                <BotaoEscolhaTeste
+                    number = {3}
+                    title = 'Aplicou-se muito ou na maioria do tempo'
                 />
             </View>
             <View style={GlobalStyles.botoesTeste}>

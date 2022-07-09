@@ -6,20 +6,28 @@ import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 
-export default function Pergunta13(){
+export default function Pergunta14(){
     return(
         <SafeAreaView style={localStyles.container}>
             <View>
-                <Text style={GlobalStyles.titulo1}>Você procura seguir uma rotina em relação ao sono, manetendo um horário para ir para cama e despertar, de forma a acordar descnasado e revigorado?</Text>
+                <Text style={GlobalStyles.titulo1}>Tive dificuldade de respirar em alguns momentos</Text>
             </View>
             <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
                     number = {0}
-                    title = 'Sim'
+                    title = 'Não se aplicou de maneira alguma'
                 />
                 <BotaoEscolhaTeste
                     number = {1}
-                    title = 'Não'
+                    title = 'Aplicou-se em algum grau ou por pouco tempo'
+                />
+                <BotaoEscolhaTeste
+                    number = {2}
+                    title = 'Aplicou-se em um grau considerável ou por uma boa parte do tempo'
+                />
+                <BotaoEscolhaTeste
+                    number = {3}
+                    title = 'Aplicou-se muito ou na maioria do tempo'
                 />
             </View>
             <View style={GlobalStyles.botoesTeste}>

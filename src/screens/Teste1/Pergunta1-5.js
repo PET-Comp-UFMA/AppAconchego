@@ -6,11 +6,11 @@ import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 
-export default function Pergunta11(){
+export default function Pergunta15(){
     return(
         <SafeAreaView style={localStyles.container}>
             <View>
-                <Text style={GlobalStyles.titulo1}>Achei difícil me acalmar</Text>
+                <Text style={GlobalStyles.titulo1}>Achei difícil ter iniciativa para fazer as coisas</Text>
             </View>
             <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
