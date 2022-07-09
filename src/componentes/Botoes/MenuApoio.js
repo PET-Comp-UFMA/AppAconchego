@@ -23,7 +23,7 @@ export default function MenuApoio () {
         <ScrollView>
         <SafeAreaView style={localStyles.container}> 
             <View style={localStyles.botoes}>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={() => navigation.navigate('meditação')}>
                     <View style={localStyles.containerImagem}>
                         <View style={localStyles.botaoImagem}>
                             <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/icon_zen.png')} /> 

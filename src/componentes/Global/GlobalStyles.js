@@ -161,7 +161,7 @@ export default StyleSheet.create({
     },
     header: {
         color: GlobalColors.CorTextoForte,
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: '600',
         textAlign: 'center',
         fontFamily: 'IBMPlexSans_Bold',
@@ -242,5 +242,27 @@ export default StyleSheet.create({
         textAlign: 'justify',
         padding: 16,
         maxWidth: 330
+    },
+    canalMeditacao: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 18,
+        fontWeight: '600',
+        textAlign: 'left',
+        fontFamily: 'IBMPlexSans_Bold',
+        lineHeight: 22,
+    },
+    tituloMeditacao: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 14,
+        fontWeight: '500',
+        textAlign: 'left',
+        fontFamily: 'IBMPlexSans_Medium',
+        lineHeight: 18,
+    },
+    barra: {
+        width: 2,
+        backgroundColor: GlobalColors.CorTextoFraco,
+        height: '100%',
+        marginHorizontal: 12
     }
 });

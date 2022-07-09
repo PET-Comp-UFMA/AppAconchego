@@ -35,6 +35,10 @@ import Series from './src/screens/Apoio/series';
 import Filmes from './src/screens/Apoio/filmes';
 import Alimentacao from './src/screens/Apoio/alimentacao';
 import CanaisApoio from './src/screens/Apoio/canaisApoio';
+import Meditacao from './src/screens/Apoio/meditacao';
+import MeditacaoGuiada from './src/screens/Apoio/meditaçãoGuiada';
+import Autoquestionamento from './src/screens/Apoio/autoquestionamento';
+import Mantras from './src/screens/Apoio/mantras';
 
 const Stack = createStackNavigator();
 
@@ -76,6 +80,14 @@ export default function App() {
           <Stack.Screen name='CAPS' component={CanalCaps} />
 
           <Stack.Screen name='UBS' component={CanalUbs} />
+          
+          <Stack.Screen name='meditação' component={Meditacao} />
+          
+          <Stack.Screen name='meditação guiada' component={MeditacaoGuiada} />
+          
+          <Stack.Screen name='autoquestionamento' component={Autoquestionamento} />
+          
+          <Stack.Screen name='mantras' component={Mantras} />
 
         </Stack.Navigator>
 
