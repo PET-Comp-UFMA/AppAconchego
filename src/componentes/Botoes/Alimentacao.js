@@ -12,7 +12,7 @@ import {
 } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
-export default class BotaoMidias extends Component {
+export default class BotaoAlimentacao extends Component {
     constructor(props){
         super(props);
     }
@@ -20,13 +20,13 @@ export default class BotaoMidias extends Component {
     render(){
         return(
             <SafeAreaView style={localStyles.container}>
-                <TouchableOpacity style={GlobalStyles.butaoMusica} onPress = {this.props.onPress}>
+                <TouchableOpacity style={GlobalStyles.butaoAlimentacao} onPress = {this.props.onPress}>
                     <View style={localStyles.containerImagemMusica}>
-                        <Feather name="play" size={25} color={'#FFF'}/>
+                        <Feather name="youtube" size={45} color={'#FFF'}/>
                     </View>
 
                     <View style={localStyles.containerTexto}>
-                        <Text numberOfLines={1} style={GlobalStyles.textoOpcoes}>    
+                        <Text style={GlobalStyles.textoOpcoes}>    
                             {this.props.title}
                         </Text>
                     </View>
@@ -46,8 +46,8 @@ const localStyles = StyleSheet.create({
     },
     containerImagemMusica: {
         backgroundColor: GlobalColors.CorAcao,
-        width: 50,
-        height: 53,
+        width: 80,
+        height: 88,
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
         borderColor: GlobalColors.CorTextoForte,

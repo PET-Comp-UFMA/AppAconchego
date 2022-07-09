@@ -1,16 +1,19 @@
 import React from 'react'
-import { Text, StyleSheet, SafeAreaView, Image } from 'react-native'
+import { Text, StyleSheet, SafeAreaView, Image, Linking } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
-import Botao from '../componentes/Botoes/Padrao'
+import BotaoPadrao from '../../componentes/Botoes/Padrao'
 
 export default function CanalCVV(){
     return(
         <SafeAreaView style={localStyles.container}>
         <Image source={require('../../assets/apoio.png')} />
-            <Text style={GlobalStyles.titulo1}>Centro de Valorização da Vida(CVV)</Text>
-            <Text style={GlobalStyles.descricao}>O CVV — Centro de Valorização da Vida, fundado em São Paulo, em 1962, é uma associação civil sem fins lucrativos, filantrópica que presta serviço voluntário e gratuito de apoio emocional e prevenção do suicídio para todas as pessoas que querem e precisam conversar, sob total sigilo e anonimato. </Text>
-            <Botao title='Acessar'/>
+        <Text style={GlobalStyles.titulo1}>Centro de Valorização da Vida(CVV)</Text>
+        <Text style={GlobalStyles.descricao}>O CVV — Centro de Valorização da Vida, fundado em São Paulo, em 1962, é uma associação civil sem fins lucrativos, filantrópica que presta serviço voluntário e gratuito de apoio emocional e prevenção do suicídio para todas as pessoas que querem e precisam conversar, sob total sigilo e anonimato. </Text>
+        <BotaoPadrao
+            onPress={() => Linking.openURL("https://www.cvv.org.br/")}
+            title = 'Acessar'
+        />
         </SafeAreaView>
     )
 }

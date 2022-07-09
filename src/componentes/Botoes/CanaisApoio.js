@@ -12,7 +12,7 @@ import {
 } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
-export default class BotaoMidias extends Component {
+export default class BotaoCanaisApoio extends Component {
     constructor(props){
         super(props);
     }
@@ -22,11 +22,11 @@ export default class BotaoMidias extends Component {
             <SafeAreaView style={localStyles.container}>
                 <TouchableOpacity style={GlobalStyles.butaoMusica} onPress = {this.props.onPress}>
                     <View style={localStyles.containerImagemMusica}>
-                        <Feather name="play" size={25} color={'#FFF'}/>
+                        <Feather name="help-circle" size={30} color={'#FFF'}/>
                     </View>
 
                     <View style={localStyles.containerTexto}>
-                        <Text numberOfLines={1} style={GlobalStyles.textoOpcoes}>    
+                        <Text style={GlobalStyles.textoOpcoes}>    
                             {this.props.title}
                         </Text>
                     </View>

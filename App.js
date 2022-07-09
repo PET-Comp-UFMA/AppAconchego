@@ -16,7 +16,7 @@ import { Entypo } from '@expo/vector-icons'
 //import Teste1 from './src/screens/teste1';
 //import Teste2 from './src/screens/teste2';
 //import Teste3 from './src/screens/teste3';
-import Teste4 from './src/screens/teste4';
+import Aconchego from './src/screens/Aconchego';
 import Teste2 from './src/screens/teste2'
 import Teste1 from './src/screens/Teste1Int2'
 import SaibaMais from './src/screens/saibaMais'
@@ -30,6 +30,15 @@ import TelaAvaliacao from './src/screens/avaliacao'
 import Home from './src/screens/Apoio/TelaApoio'
 //import TelaApoio from './src/screens/TelaApoio'
 //import Teste1Int from './src/screens/Teste1Int';
+import Musicas from './src/screens/Apoio/musicas';
+import Series from './src/screens/Apoio/series';
+import Filmes from './src/screens/Apoio/filmes';
+import Alimentacao from './src/screens/Apoio/alimentacao';
+import CanaisApoio from './src/screens/Apoio/canaisApoio';
+import Meditacao from './src/screens/Apoio/meditacao';
+import MeditacaoGuiada from './src/screens/Apoio/meditaçãoGuiada';
+import Autoquestionamento from './src/screens/Apoio/autoquestionamento';
+import Mantras from './src/screens/Apoio/mantras';
 
 import Pergunta11 from './src/screens/Teste3/Pergunta3-1';
 
@@ -43,32 +52,47 @@ export default function App() {
   return (
     <NavigationContainer>
       <View style={{flex: 1}}>
-        <Stack.Navigator >
-          <Stack.Screen
-            name='teste4'
-            component={Pergunta11}
-            options={{
-              headerShown: false
-            }}
-          />
-
-          <Stack.Screen
-            name='sobre o aconchego'
-            component={SaibaMais}
-            options={{
+        <Stack.Navigator
+          screenOptions={
+            {
+              headerTitleAlign:'center',
               headerTitleStyle: GlobalStyles.header,
-              headerStyle: {
-                height: 70,
-                backgroundColor: GlobalColors.CorFundo,
-                borderBottomWidth: 2,
-                borderBottomColor: GlobalColors.CorTextoFraco,
-              },
+              headerStyle: GlobalStyles.headerStyle,
               headerBackTitleVisible: false,
-              headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />
-            }}
-          />
+              headerBackImage: () => <Entypo name='chevron-left' size={40} color={GlobalColors.CorTextoForte} style={{marginRight: -15}} />}}>
+                
+          <Stack.Screen name='Aconchego' component={Aconchego} options={{headerShown: false}} />
+
+          <Stack.Screen name='sobre o aconchego' component={SaibaMais} />
+
+          <Stack.Screen name='músicas' component={Musicas} />
+
+          <Stack.Screen name='séries' component={Series} />
+
+          <Stack.Screen name='filmes' component={Filmes} />
+
+          <Stack.Screen name='alimentação' component={Alimentacao} />
+
+          <Stack.Screen name='canais de apoio' component={CanaisApoio} />
+
+          <Stack.Screen name='CVV' component={CanalCvv} />
+
+          <Stack.Screen name='UNICEF' component={CanalUnicef} />
+
+          <Stack.Screen name='CAPS' component={CanalCaps} />
+
+          <Stack.Screen name='UBS' component={CanalUbs} />
+          
+          <Stack.Screen name='meditação' component={Meditacao} />
+          
+          <Stack.Screen name='meditação guiada' component={MeditacaoGuiada} />
+          
+          <Stack.Screen name='autoquestionamento' component={Autoquestionamento} />
+          
+          <Stack.Screen name='mantras' component={Mantras} />
 
         </Stack.Navigator>
+
       </View>
     </NavigationContainer>
   );

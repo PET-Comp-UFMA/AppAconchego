@@ -44,9 +44,9 @@ export default StyleSheet.create({
         flexDirection: 'row'
     },
     butaoMusica:{
-        fontFamily: 'IBMPlexSans_Bold',
-        height: 50,
-        width: '85%',
+        fontFamily: 'IBMPlexSans_Regular',
+        height: 55,
+        width: '90%',
         marginVertical: 10,
         borderRadius: 10,
         borderWidth: 1,
@@ -56,6 +56,27 @@ export default StyleSheet.create({
         justifyContent: 'flex-start',
         backgroundColor: GlobalColors.CorFundoCard,
         flexDirection: 'row'
+    },
+    butaoAlimentacao:{
+        fontFamily: 'IBMPlexSans_Regular',
+        height: 90,
+        width: '90%',
+        marginVertical: 10,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: GlobalColors.CorTextoForte,
+        borderBottomWidth: 5,
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        backgroundColor: GlobalColors.CorFundoCard,
+        flexDirection: 'row'
+    },
+    microTexto: {
+        fontFamily: 'IBMPlexSans_Medium',
+        fontSize: 12,
+        letterSpacing: 0.2,
+        color: GlobalColors.CorTextoFraco,
+        marginTop: -2
     },
     butaoEmoji:{
         fontFamily: 'IBMPlexSans_Bold',
@@ -140,13 +161,19 @@ export default StyleSheet.create({
     },
     header: {
         color: GlobalColors.CorTextoForte,
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: '600',
         textAlign: 'center',
         fontFamily: 'IBMPlexSans_Bold',
         maxWidth: 320,
         textTransform: 'uppercase',
-        letterSpacing: 3,
+        letterSpacing: 2,
+    },
+    headerStyle: {
+        height: 70,
+        backgroundColor: GlobalColors.CorFundo,
+        borderBottomWidth: 2,
+        borderBottomColor: GlobalColors.CorTextoFraco,
     },
     botaopeqprox: {
         fontFamily: 'IBMPlexSans_Bold',
@@ -215,5 +242,27 @@ export default StyleSheet.create({
         textAlign: 'justify',
         padding: 16,
         maxWidth: 330
+    },
+    canalMeditacao: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 18,
+        fontWeight: '600',
+        textAlign: 'left',
+        fontFamily: 'IBMPlexSans_Bold',
+        lineHeight: 22,
+    },
+    tituloMeditacao: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 14,
+        fontWeight: '500',
+        textAlign: 'left',
+        fontFamily: 'IBMPlexSans_Medium',
+        lineHeight: 18,
+    },
+    barra: {
+        width: 2,
+        backgroundColor: GlobalColors.CorTextoFraco,
+        height: '100%',
+        marginHorizontal: 12
     }
 });

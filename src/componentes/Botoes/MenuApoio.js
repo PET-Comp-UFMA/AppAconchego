@@ -8,66 +8,88 @@ import {
     Text,
     StyleSheet,
     Dimensions,
-    View
+    View,
+    Linking
 } from 'react-native'
 
-export default class MenuApoio extends Component {
-    constructor(props){
-        super(props)
-    }
+import { useNavigation } from '@react-navigation/native'
+import GlobalColors from '../Global/GlobalColors';
 
-    render(){
-        return(
-            <ScrollView>
-            <SafeAreaView style={localStyles.container}> 
-                <View style={localStyles.botoes}>
-                <TouchableOpacity onPress={this.props.onPress}>
+export default function MenuApoio () {
+
+    const navigation = useNavigation();
+        
+    return(
+        <ScrollView>
+        <SafeAreaView style={localStyles.container}> 
+            <View style={localStyles.botoes}>
+                <TouchableOpacity onPress={() => navigation.navigate('meditação')}>
                     <View style={localStyles.containerImagem}>
-                        <Image source={require('../../../assets/meditacao.png')} /> 
+                        <View style={localStyles.botaoImagem}>
+                            <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/icon_zen.png')} /> 
+                        </View>
                         <Text style={GlobalStyles.nomes}>Meditação</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+
+                <TouchableOpacity onPress={() => {Linking.openURL('https://open.spotify.com/show/7qAi5cjDUt8HbKjekWBcAI?si=a6137ca102fa465a&nd=1')}}>
                     <View style={localStyles.containerImagem}>
-                        <Image source={require('../../../assets/lisamcast.png')} /> 
-                        <Text style={GlobalStyles.nomes}>LISAMCAST</Text>
+                        <View style={localStyles.botaoImagem}>
+                            <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/fones.png')} /> 
+                        </View>
+                        <Text style={GlobalStyles.nomes}>LISCAMCAST</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('músicas')}>
                     <View style={localStyles.containerImagem}>
-                        <Image source={require('../../../assets/musicas.png')} /> 
+                        <View style={localStyles.botaoImagem}>
+                            <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/icon_music.png')} /> 
+                        </View>
                         <Text style={GlobalStyles.nomes}>Músicas</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('alimentação')}>
                     <View style={localStyles.containerImagem}>
-                        <Image source={require('../../../assets/alimentacao.png')} /> 
+                        <View style={localStyles.botaoImagem}>
+                            <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/Food.png')} /> 
+                        </View>
                         <Text style={GlobalStyles.nomes}>Alimentação</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('filmes')}>
                     <View style={localStyles.containerImagem}>
-                        <Image source={require('../../../assets/filmes.png')} /> 
+                        <View style={localStyles.botaoImagem}>
+                            <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/movies.png')} /> 
+                        </View>
                         <Text style={GlobalStyles.nomes}>Filmes</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('séries')}>
                     <View style={localStyles.containerImagem}>
-                        <Image source={require('../../../assets/series.png')} /> 
+                        <View style={localStyles.botaoImagem}>
+                            <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/icon_tv.png')} /> 
+                        </View>
                         <Text style={GlobalStyles.nomes}>Séries</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.props.onPress}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('canais de apoio')}>
                     <View style={localStyles.containerImagem}>
-                        <Image source={require('../../../assets/canaisdeapoio.png')} /> 
+                        <View style={localStyles.botaoImagem}>
+                            <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/duvida.png')} /> 
+                        </View>
                         <Text style={GlobalStyles.nomes}>Canais de Apoio</Text>
                     </View>
                 </TouchableOpacity>
-                </View>
-                </SafeAreaView>
-            </ScrollView>
-        )
-    }
+
+            </View>
+        </SafeAreaView>
+        </ScrollView>
+    )
 }
 
 const localStyles = StyleSheet.create({
@@ -81,11 +103,27 @@ const localStyles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
-        paddingTop: 5
+        paddingTop: 5,
+        paddingBottom: 30
     },
     containerImagem: {
         alignItems: 'center',
         justifyContent: 'center',
         paddingTop: 15
+    },
+    botaoImagem: {
+        backgroundColor: GlobalColors.CorAcao,
+        borderColor: GlobalColors.CorTextoForte,
+        borderWidth: 1,
+        borderBottomWidth: 5,
+        borderRadius: 10,
+        width: 110,
+        height: 110,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    imagem: {
+        height: 50,
+        width: 50
     }
 })
