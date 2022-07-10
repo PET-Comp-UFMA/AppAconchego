@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import GlobalStyles from '../Global/GlobalStyles';
+
 import { 
     ScrollView,
     Image,

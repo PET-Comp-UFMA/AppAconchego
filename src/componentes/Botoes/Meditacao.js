@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import GlobalStyles from '../Global/GlobalStyles';
-import GlobalColors from '../Global/GlobalColors';
 
 import { 
-    SafeAreaView,
     TouchableOpacity, 
     Text,
     StyleSheet,

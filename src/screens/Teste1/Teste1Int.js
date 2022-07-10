@@ -4,16 +4,20 @@ import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Teste1Int(){
+
+    const navigation = useNavigation();
+    
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
             <Text style={GlobalStyles.titulo1}>Avaliando Ansiedade, Depressão e Estresse</Text>
             <Text style={GlobalStyles.descricao}>É um instrumento de autorelato com 21 questões, onde são avaliados os sinais e ansiedade, depressão e estresse. Ao final é apresentado um resultado baseado na classificação das 03 dimensões para Normal, Leve, Moderada, Severa e Extremamente Severa.</Text>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar'/>
-                    <BotaoPeqProx title='Próximo'/>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Avaliação')} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1Int2')} />
                 </View>
                 <Image source={require('../../../assets/figavaliacao.png')}/>
         </SafeAreaView>

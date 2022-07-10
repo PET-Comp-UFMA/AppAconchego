@@ -4,8 +4,12 @@ import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Teste1Int2(){
+
+    const navigation = useNavigation();
+    
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
@@ -17,8 +21,8 @@ export default function Teste1Int2(){
                     <Text style={GlobalStyles.descricao}>A pontuação indicará o quanto ela se aplicou a você durante a última semana, conforme as indicações. </Text>
                     </View>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar'/>
-                    <BotaoPeqProx title='Próximo'/>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1Int')} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P1')} />
                 </View>
                 <Image source={require('../../../assets/figavaliacao.png')}/>
         </SafeAreaView>

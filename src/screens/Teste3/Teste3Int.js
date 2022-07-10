@@ -4,8 +4,12 @@ import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Teste3Int(){
+
+    const navigation = useNavigation();
+    
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
@@ -13,7 +17,7 @@ export default function Teste3Int(){
             <Text style={GlobalStyles.descricao}>Trata de um quiz com 10 questões sobre cuidados de saúde mental, onde são avaliados suas atitudes e comportamentos no dia-a-dia. Ao final é apresentado o resultado com base na pontuação de acertos.</Text>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar'/>
-                    <BotaoPeqProx title='Próximo'/>
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3P1')}  />
                 </View>
                 <Image source={require('../../../assets/figavaliacao.png')}/>
         </SafeAreaView>

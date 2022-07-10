@@ -3,8 +3,12 @@ import { Image, SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView } f
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import Botao from '../../componentes/Botoes/Padrao'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Resultado34(){
+
+    const navigation = useNavigation();
+    
     return(
     <SafeAreaView style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
@@ -14,7 +18,7 @@ export default function Resultado34(){
             </View>
         </ScrollView>
         <View>
-            <Botao title='Próximo' />
+            <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P5')}  />
         </View>
     </SafeAreaView>
     )

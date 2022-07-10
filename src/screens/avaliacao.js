@@ -8,8 +8,11 @@ import {
 import Titulo from "../componentes/Titulos/Titulo";
 import BotaoAvaliacao from '../componentes/Botoes/Avaliacao'
 import GlobalColors from "../componentes/Global/GlobalColors";
+import { useNavigation } from '@react-navigation/native'
 
 export default function Avaliacao() {
+    const navigation = useNavigation();
+
     return(
         <View style={localStyles.container}>
             <Image style={localStyles.imagem} source={require('../../assets/figavaliacao.png')}/>
@@ -20,12 +23,15 @@ export default function Avaliacao() {
 
             <View style={localStyles.botoesAvaliacao}>
                 <BotaoAvaliacao
+                    onPress={() => navigation.navigate('Teste1P1')}
                     title = 'Avaliando ansiedade, depressão e estresse'
                 />
                 <BotaoAvaliacao
+                    onPress={() => navigation.navigate('Teste2P1')}
                     title = 'Avaliando o sofrimento mental'
                 />
                 <BotaoAvaliacao
+                onPress={() => navigation.navigate('Teste3P1')}
                     title = 'Avaliando os cuidados em saúde mental'
                 />
             </View>

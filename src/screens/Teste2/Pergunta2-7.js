@@ -5,12 +5,16 @@ import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Pergunta27(){
+
+    const navigation = useNavigation();
+    
     return(
         <SafeAreaView style={localStyles.container}>
             <View>
-                <Text style={GlobalStyles.titulo1}>Tem dificuldade de pensar com clareza?   </Text>
+                <Text style={GlobalStyles.titulo1}>Tem dificuldade de pensar com clareza?</Text>
             </View>
             <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
@@ -23,8 +27,8 @@ export default function Pergunta27(){
                 />
             </View>
             <View style={GlobalStyles.botoesTeste}>
-                <BotaoPeqVol title='Voltar'/>
-                <BotaoPeqProx title='Próximo'/>
+                <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P6')}/>
+                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P8')} />
             </View>
         </SafeAreaView>
     )

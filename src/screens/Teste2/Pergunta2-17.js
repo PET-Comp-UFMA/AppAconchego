@@ -5,8 +5,12 @@ import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Pergunta217(){
+
+    const navigation = useNavigation();
+    
     return(
         <SafeAreaView style={localStyles.container}>
             <View>
@@ -23,7 +27,7 @@ export default function Pergunta217(){
                 />
             </View>
             <View style={GlobalStyles.botoesTeste}>
-                <BotaoPeqVol title='Voltar'/>
+                <BotaoPeqVol title='Voltar'onPress={() => navigation.navigate('Teste2P16')} />
                 <BotaoPeqProx title='Próximo'/>
             </View>
         </SafeAreaView>

@@ -12,7 +12,7 @@ export default class BotaoPequeno extends Component{
 
     render(){
         return(
-            <TouchableOpacity style={GlobalStyles.botaopeqvoltar}>
+            <TouchableOpacity style={GlobalStyles.botaopeqvoltar} onPress = {this.props.onPress} >
                 <Text style={GlobalStyles.textoBotaoPeq}>    
                     {this.props.title}
                 </Text>

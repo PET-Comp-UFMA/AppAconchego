@@ -1,18 +1,25 @@
 import React from 'react'
-import { Image, SafeAreaView, Text, StyleSheet, View, Dimensions } from 'react-native'
+import { Image, SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView} from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import Botao from '../../componentes/Botoes/Padrao'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Resultado32(){
+
+    const navigation = useNavigation();
+    
     return(
     <SafeAreaView style={localStyles.container}>
-        <View >
-            <Text style={localStyles.resposta}>Resposta Correta:</Text><Text style={GlobalStyles.descricao}>Sim, O estresse é um importante fator para desencadear a depressão, principalmente o primeiro episódio. Segundo Fráguas, o apoio do cônjuge, família e amigos, assim como dos pais, em particulas para ciranças e adolescentes tem papel fundamenta na proteção contra a doença.
-            “O suporte social, seja por meio de incentivos, trocas de ideias, amparo e auxilio na resolução de problemas ajuda a lidar melhor com o estresse e contribui para a promoção da saúde emocional.”.</Text>
-        </View>
+        <Text style={localStyles.resposta}>Resposta Correta:</Text>
+        <ScrollView>
+            <View>
+                <Text style={GlobalStyles.descricao}>Sim, O estresse é um importante fator para desencadear a depressão, principalmente o primeiro episódio. Segundo Fráguas, o apoio do cônjuge, família e amigos, assim como dos pais, em particulas para ciranças e adolescentes tem papel fundamenta na proteção contra a doença.
+                “O suporte social, seja por meio de incentivos, trocas de ideias, amparo e auxilio na resolução de problemas ajuda a lidar melhor com o estresse e contribui para a promoção da saúde emocional.”.</Text>
+            </View>
+        </ScrollView>
         <View>
-            <Botao title='Próximo' />
+            <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P3')}  />
         </View>
     </SafeAreaView>
     )
