@@ -13,7 +13,7 @@ import {
 
 import { Entypo } from '@expo/vector-icons'
 
-
+import Home from './src/screens/home'
 import Aconchego from './src/screens/Aconchego';
 import SaibaMais from './src/screens/saibaMais'
 import GlobalStyles from './src/componentes/Global/GlobalStyles';

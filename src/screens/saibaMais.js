@@ -77,7 +77,7 @@ FUNCAP</Text>
             <Text style={GlobalStyles.nomes}>Ana Lara Carvalho Mesquita</Text>
             <Text style={GlobalStyles.nomes}>Joyce Ávila Ximenes</Text>
             </View>
-            <Botao title='Voltar à Tela Principal' onPress={() => navigation.navigate('teste4')} />
+            <Botao title='Voltar à Tela Principal' onPress={() => navigation.navigate('Aconchego')} />
         </SafeAreaView>
         </ScrollView>
     )

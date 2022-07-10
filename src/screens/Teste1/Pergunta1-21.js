@@ -5,7 +5,7 @@ import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
-import { useNavigation } from '@react-  navigation/native'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Pergunta121(){
 
