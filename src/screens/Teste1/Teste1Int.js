@@ -19,7 +19,7 @@ export default function Teste1Int(){
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Avaliação')} />
                     <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1Int2')} />
                 </View>
-                <Image source={require('../../../assets/figavaliacao.png')}/>
+                <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
         </SafeAreaView>
     )
 }
@@ -36,6 +36,14 @@ const localStyles = StyleSheet.create({
         tintColor: '#0066FF',
         height: 80,
         width: 72
-    }    
+    },
+    Imagem2: {
+        position: "absolute",
+        bottom: -1,
+        left: 5,
+        width: 280,
+        height: 160
+    }
+
     }
 )

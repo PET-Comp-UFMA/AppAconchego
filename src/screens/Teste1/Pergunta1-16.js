@@ -12,8 +12,8 @@ export default function Pergunta116(){
     const navigation = useNavigation();
 
     return(
-        <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+        <SafeAreaView>
+            <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
                     <Text style={GlobalStyles.titulo1}>Não consegui me entusiasmar com nada</Text>
                 </View>
@@ -35,11 +35,11 @@ export default function Pergunta116(){
                         title = 'Aplicou-se muito ou na maioria do tempo'
                     />
                 </View>
+                <View style={GlobalStyles.botoesTeste}>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P15')} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P17')} />
+                </View>
             </ScrollView>
-            <View style={GlobalStyles.botoesTeste}>
-                <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P15')} />
-                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P7')} />
-            </View>
         </SafeAreaView>
     )
 }
@@ -47,7 +47,7 @@ const localStyles = StyleSheet.create({
     container:{
         height: Dimensions.get('window').height,
         width: Dimensions.get('window').width,
-        flex: 1,
+        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,

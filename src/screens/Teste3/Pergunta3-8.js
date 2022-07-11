@@ -12,8 +12,8 @@ export default function Pergunta38(){
     const navigation = useNavigation();
     
     return(
-        <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+        <SafeAreaView>
+            <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
                     <Text style={GlobalStyles.titulo1}>Você incorpora à sua rotina a prática de ioga, meditação ou alguma terapia alternativa que ajude a maneter o equilíbrio e o bem estar emocional?</Text>
                 </View>
@@ -27,11 +27,11 @@ export default function Pergunta38(){
                         title = 'Não'
                     />
                 </View>
+                <View style={GlobalStyles.botoesTeste}>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3P1')} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R2')}/>
+                </View>
             </ScrollView>
-            <View style={GlobalStyles.botoesTeste}>
-                <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3P7')} />
-                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R8')}/>
-            </View>
         </SafeAreaView>
     )
 }
@@ -39,7 +39,7 @@ const localStyles = StyleSheet.create({
     container:{
         height: Dimensions.get('window').height,
         width: Dimensions.get('window').width,
-        flex: 1,
+        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,

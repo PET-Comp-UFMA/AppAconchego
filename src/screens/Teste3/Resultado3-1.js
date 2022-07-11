@@ -39,7 +39,7 @@ const localStyles = StyleSheet.create({
         fontSize: 25,
         fontFamily: 'IBMPlexSans_Bold',
         justifyContent: 'center',
-        textAlign: 'center',
+        textAlign: 'justify',
         maxWidth: 330
         }
     }

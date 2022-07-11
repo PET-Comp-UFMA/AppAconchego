@@ -12,8 +12,8 @@ export default function Pergunta31(){
     const navigation = useNavigation();
     
     return(
-        <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+        <SafeAreaView>
+            <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
                     <Text style={GlobalStyles.titulo1}>Você procura seguir uma rotina em relação ao sono, manetendo um horário para ir para cama e despertar, de forma a acordar descnasado e revigorado?</Text>
                 </View>
@@ -27,11 +27,11 @@ export default function Pergunta31(){
                         title = 'Não'
                     />
                 </View>
+                <View style={GlobalStyles.botoesTeste}>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3Int')} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R1')}/>
+                </View>
             </ScrollView>
-            <View style={GlobalStyles.botoesTeste}>
-                <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3Int')} />
-                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R1')}/>
-            </View>
         </SafeAreaView>
     )
 }
@@ -39,7 +39,7 @@ const localStyles = StyleSheet.create({
     container:{
         height: Dimensions.get('window').height,
         width: Dimensions.get('window').width,
-        flex: 1,
+        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,

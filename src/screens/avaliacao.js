@@ -23,15 +23,15 @@ export default function Avaliacao() {
 
             <View style={localStyles.botoesAvaliacao}>
                 <BotaoAvaliacao
-                    onPress={() => navigation.navigate('Teste1P1')}
+                    onPress={() => navigation.navigate('Teste1Int')}
                     title = 'Avaliando ansiedade, depressão e estresse'
                 />
                 <BotaoAvaliacao
-                    onPress={() => navigation.navigate('Teste2P1')}
+                    onPress={() => navigation.navigate('Teste2Int')}
                     title = 'Avaliando o sofrimento mental'
                 />
                 <BotaoAvaliacao
-                onPress={() => navigation.navigate('Teste3P1')}
+                onPress={() => navigation.navigate('Teste3Int')}
                     title = 'Avaliando os cuidados em saúde mental'
                 />
             </View>

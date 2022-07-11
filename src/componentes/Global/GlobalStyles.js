@@ -96,7 +96,7 @@ export default StyleSheet.create({
         color: GlobalColors.CorTextoForte,
         fontSize: 24,
         fontWeight: '600',
-        textAlign: 'center',
+        textAlign: 'justify',
         fontFamily: 'IBMPlexSans_Bold',
         lineHeight: 28,
         maxWidth: 330,
@@ -143,7 +143,7 @@ export default StyleSheet.create({
         fontSize: 16,
         fontWeight: '400',
         fontFamily: 'IBMPlexSans_Regular',
-        maxWidth: '90%',
+        maxWidth: '80%',
         textAlign: 'left'
     },
     textoTabBottom: {
@@ -231,8 +231,10 @@ export default StyleSheet.create({
     },
     
     paragrafo: {
+        textAlign:'justify',
         alignItems:'center',
-        paddingBottom: 15
+        paddingBottom: 15,
+        
     },
     descricao:{
         color: GlobalColors.CorTextoForte,
@@ -240,8 +242,8 @@ export default StyleSheet.create({
         fontFamily: 'IBMPlexSans_Medium',
         justifyContent: 'center',
         textAlign: 'justify',
-        padding: 16,
-        maxWidth: 330
+        paddingBottom: 15,
+        maxWidth: '90%',
     },
     canalMeditacao: {
         color: GlobalColors.CorTextoForte,

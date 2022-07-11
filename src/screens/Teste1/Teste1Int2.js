@@ -15,16 +15,14 @@ export default function Teste1Int2(){
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
             <Text style={GlobalStyles.titulo1}>Instruções</Text>
                     <View style={GlobalStyles.paragrafo}>
-                    <Text style={GlobalStyles.descricao}>Por favor, leia cuidadosamente cada uma das afirmações e assinale o número apropriado 0, 1, 2 ou 3.</Text>
-                    </View>
-                    <View style={GlobalStyles.paragrafo}>
-                    <Text style={GlobalStyles.descricao}>A pontuação indicará o quanto ela se aplicou a você durante a última semana, conforme as indicações. </Text>
+                        <Text style={GlobalStyles.descricao}>Por favor, leia cuidadosamente cada uma das afirmações e assinale o número apropriado 0, 1, 2 ou 3.</Text>
+                        <Text style={GlobalStyles.descricao}>A pontuação indicará o quanto ela se aplicou a você durante a última semana, conforme as indicações. </Text>
                     </View>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1Int')} />
                     <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P1')} />
                 </View>
-                <Image source={require('../../../assets/figavaliacao.png')}/>
+                <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
         </SafeAreaView>
     )
 }
@@ -41,6 +39,13 @@ const localStyles = StyleSheet.create({
         tintColor: '#0066FF',
         height: 80,
         width: 72
+    },
+    Imagem2: {
+        position: "absolute",
+        bottom: -1,
+        left: 5,
+        width: 280,
+        height: 160
     }
     }
 )

@@ -16,10 +16,10 @@ export default function Teste2Int(){
             <Text style={GlobalStyles.titulo1}>Avaliando o Sofrimento Mental</Text>
             <Text style={GlobalStyles.descricao}>É um instrumento que detecta sintomas relacionados a problemas de saúde mental. Composto de 20 itens, com relação aos últimos 30 dias. Pode ser considerado um teste de triagem para detecção de sintomas importantes na área da saúde mental.</Text>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar' />
+                <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Avaliação')} />
                     <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P1')} />
                 </View>
-                <Image source={require('../../../assets/figavaliacao.png')}/>
+                <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
         </SafeAreaView>
     )
 }
@@ -36,6 +36,13 @@ const localStyles = StyleSheet.create({
         tintColor: '#0066FF',
         height: 80,
         width: 72
-    }    
+    },
+    Imagem2: {
+        position: "absolute",
+        bottom: -1,
+        left: 5,
+        width: 280,
+        height: 160
+    }
     }
 )
