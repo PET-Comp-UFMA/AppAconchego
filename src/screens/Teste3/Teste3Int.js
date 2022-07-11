@@ -13,13 +13,13 @@ export default function Teste3Int(){
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
+            <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
             <Text style={GlobalStyles.titulo1}>Avaliando os Cuidados em Saúde Mental</Text>
             <Text style={GlobalStyles.descricao}>Trata de um quiz com 10 questões sobre cuidados de saúde mental, onde são avaliados suas atitudes e comportamentos no dia-a-dia. Ao final é apresentado o resultado com base na pontuação de acertos.</Text>
                 <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Avaliação')} />
                     <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3P1')}  />
                 </View>
-                <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
         </SafeAreaView>
     )
 }

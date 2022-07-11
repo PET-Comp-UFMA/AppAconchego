@@ -13,6 +13,7 @@ export default function Teste1Int2(){
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
+            <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
             <Text style={GlobalStyles.titulo1}>Instruções</Text>
                     <View style={GlobalStyles.paragrafo}>
                         <Text style={GlobalStyles.descricao}>Por favor, leia cuidadosamente cada uma das afirmações e assinale o número apropriado 0, 1, 2 ou 3.</Text>
@@ -22,7 +23,7 @@ export default function Teste1Int2(){
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1Int')} />
                     <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P1')} />
                 </View>
-                <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
+                
         </SafeAreaView>
     )
 }

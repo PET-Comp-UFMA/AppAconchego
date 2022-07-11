@@ -13,13 +13,14 @@ export default function Teste1Int(){
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
+            <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
             <Text style={GlobalStyles.titulo1}>Avaliando Ansiedade, Depressão e Estresse</Text>
             <Text style={GlobalStyles.descricao}>É um instrumento de autorelato com 21 questões, onde são avaliados os sinais e ansiedade, depressão e estresse. Ao final é apresentado um resultado baseado na classificação das 03 dimensões para Normal, Leve, Moderada, Severa e Extremamente Severa.</Text>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Avaliação')} />
                     <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1Int2')} />
                 </View>
-                <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
+                
         </SafeAreaView>
     )
 }

@@ -13,13 +13,13 @@ export default function Teste2Int(){
     return(
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/vector.png')} style={localStyles.Imagem}/>
+            <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
             <Text style={GlobalStyles.titulo1}>Avaliando o Sofrimento Mental</Text>
             <Text style={GlobalStyles.descricao}>É um instrumento que detecta sintomas relacionados a problemas de saúde mental. Composto de 20 itens, com relação aos últimos 30 dias. Pode ser considerado um teste de triagem para detecção de sintomas importantes na área da saúde mental.</Text>
                 <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Avaliação')} />
                     <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P1')} />
                 </View>
-                <Image source={require('../../../assets/figavaliacao.png')} style={localStyles.Imagem2}/>
         </SafeAreaView>
     )
 }
