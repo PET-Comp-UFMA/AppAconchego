@@ -16,6 +16,7 @@ export default function Pergunta216(){
             <View>
                 <Text style={GlobalStyles.titulo1}>Sente-se cansado(a) o tempo todo?</Text>
             </View>
+            <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
                     number = {0}
@@ -46,6 +47,10 @@ const localStyles = StyleSheet.create({
     container2:{
         paddingTop: 50,
         paddingBottom: 50
+    },
+    Imagem2: {
+        width: 280,
+        height: 200
     }
     }
 )
