@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text, StyleSheet, SafeAreaView, Image } from 'react-native'
-import GlobalColors from '../componentes/Global/GlobalColors'
-import GlobalStyles from '../componentes/Global/GlobalStyles'
-import Botao from '../componentes/Botoes/Padrao'
+import GlobalColors from '../../componentes/Global/GlobalColors'
+import GlobalStyles from '../../componentes/Global/GlobalStyles'
+import Botao from '../../componentes/Botoes/Padrao'
 
 export default function CanalCaps(){
     return(
