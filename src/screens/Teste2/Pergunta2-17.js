@@ -29,7 +29,7 @@ export default function Pergunta217(){
             </View>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar'onPress={() => navigation.navigate('Teste2P16')} />
-                <BotaoPeqProx title='Próximo'/>
+                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2R1')} />
             </View>
         </SafeAreaView>
     )

@@ -110,7 +110,8 @@ export default StyleSheet.create({
         fontFamily: 'IBMPlexSans_Medium',
         lineHeight: 24,
         padding: 3,
-        maxWidth: 330
+        maxWidth: 330,
+        textAlign: 'justify'
     },
     descricao:{
         color: GlobalColors.CorTextoForte,
@@ -266,5 +267,13 @@ export default StyleSheet.create({
         backgroundColor: GlobalColors.CorTextoFraco,
         height: '100%',
         marginHorizontal: 12
-    }
+    },
+    resposta: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 25,
+        fontFamily: 'IBMPlexSans_Bold',
+        justifyContent: 'center',
+        textAlign: 'justify',
+        maxWidth: 330
+        }
 });

@@ -77,6 +77,7 @@ import Teste2P14 from './src/screens/Teste2/Pergunta2-14'
 import Teste2P15 from './src/screens/Teste2/Pergunta2-15'
 import Teste2P16 from './src/screens/Teste2/Pergunta2-16'
 import Teste2P17 from './src/screens/Teste2/Pergunta2-17'
+import Teste2R1 from './src/screens/Teste2/Resultado2-1'
 
 //Telas teste 3
 
@@ -154,7 +155,7 @@ export default function App() {
           
           <Stack.Screen name='mantras' component={Mantras} />
 
-          <Stack.Screen name='Avaliaçaõ' component={Avaliacao} />
+          <Stack.Screen name='Avaliação' component={Avaliacao} />
 
           <Stack.Screen name='Teste1Int' component={Teste1Int} />
 
@@ -237,6 +238,8 @@ export default function App() {
           <Stack.Screen name='Teste2P16' component={Teste2P16} />
 
           <Stack.Screen name='Teste2P17' component={Teste2P17} />
+
+          <Stack.Screen name='Teste2R1' component={Teste2R1} />
 
           <Stack.Screen name='Teste3Int' component={Teste3Int} />
 
