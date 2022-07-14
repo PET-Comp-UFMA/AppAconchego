@@ -10,17 +10,17 @@ export default function Resultado39(){
     const navigation = useNavigation();
     
     return(
-    <SafeAreaView style={localStyles.container}>
+    <View style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
-            <View >
+            <View style={{width: '100%', alignItems: 'center'}}>
                 <Text style={GlobalStyles.descricao}>Sim. Fráguas explica que a auto observação é o primeiro passo para o cuidar, pois perceber os estados emocionais indicativos de uma disfunção como a depressão permite lidar melhor com as emoções. Por exemplo, a percepção de uma autoexigência excessiva ajuda a desenvolver tolerância e compaixão consigo mesmo e o cuidar de si mesmo com ternura. “Quem está sofrendo depressão precisa entender que seu estado emocional é diferente de uma tristeza normal para, a partir daí, conseguir buscar ajuda. Vale lembrar que a redução de interesse e prazer por aquilo de que gosta também pode ser um sintoma depressivo e é tão importante quanto o humor depressivo em si .”</Text>
             </View>
         </ScrollView>
         <View>
             <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P10')} />
         </View>
-    </SafeAreaView>
+    </View>
     )
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import {
   useFonts,
@@ -102,17 +102,17 @@ import Teste3R7 from './src/screens/Teste3/Resultado3-7'
 import Teste3R8 from './src/screens/Teste3/Resultado3-8'
 import Teste3R9 from './src/screens/Teste3/Resultado3-9'
 import Teste3R10 from './src/screens/Teste3/Resultado3-10'
-
+import BackButton from './src/componentes/Botoes/HeaderBackButton';
 
 
 
 const Stack = createStackNavigator();
 
-export default function App() {
+export default function App({}) {
 
   let[fontsLoaded] = useFonts({ IBMPlexSans_Bold, IBMPlexSans_Regular, IBMPlexSans_Medium });
   if(!fontsLoaded) { return <AppLoading /> };
-
+  
   return (
     <NavigationContainer>
       <View style={{flex: 1}}>
@@ -157,131 +157,571 @@ export default function App() {
 
           <Stack.Screen name='Avaliação' component={Avaliacao} />
 
-          <Stack.Screen name='Teste1Int' component={Teste1Int} />
+          <Stack.Screen
+            name='Teste1Int'
+            component={Teste1Int}
+            options={{
+              headerLeft: () => <BackButton />,
+              title: 'Avaliando Ansiedade, Depressão e Estresse',
+              headerTitleStyle: GlobalStyles.headerTitle }
+          }/>
 
-          <Stack.Screen name='Teste1Int2' component={Teste1Int2} />
+          <Stack.Screen
+          name='Teste1Int2'
+          component={Teste1Int2}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
           
-          <Stack.Screen name='Teste1P1' component={Teste1P1} />
+          <Stack.Screen
+          name='Teste1P1'
+          component={Teste1P1}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
           
-          <Stack.Screen name='Teste1P2' component={Teste1P2} />
+          <Stack.Screen
+          name='Teste1P2'
+          component={Teste1P2}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P3' component={Teste1P3} />
+          <Stack.Screen
+          name='Teste1P3'
+          component={Teste1P3}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P4' component={Teste1P4} />
+          <Stack.Screen
+          name='Teste1P4'
+          component={Teste1P4}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P5' component={Teste1P5} />
+          <Stack.Screen
+          name='Teste1P5'
+          component={Teste1P5}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P6' component={Teste1P6} />
+          <Stack.Screen
+          name='Teste1P6'
+          component={Teste1P6}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P7' component={Teste1P7} />
+          <Stack.Screen
+          name='Teste1P7'
+          component={Teste1P7}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P8' component={Teste1P8} />
+          <Stack.Screen
+          name='Teste1P8'
+          component={Teste1P8}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P9' component={Teste1P9} />
+          <Stack.Screen
+          name='Teste1P9'
+          component={Teste1P9}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P10' component={Teste1P10} />
+          <Stack.Screen
+          name='Teste1P10'
+          component={Teste1P10}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P11' component={Teste1P11} />
+          <Stack.Screen
+          name='Teste1P11'
+          component={Teste1P11}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
           
-          <Stack.Screen name='Teste1P12' component={Teste1P12} />
+          <Stack.Screen
+          name='Teste1P12'
+          component={Teste1P12}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P13' component={Teste1P13} />
+          <Stack.Screen
+          name='Teste1P13'
+          component={Teste1P13}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P14' component={Teste1P14} />
+          <Stack.Screen
+          name='Teste1P14'
+          component={Teste1P14}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P15' component={Teste1P15} />
+          <Stack.Screen
+          name='Teste1P15'
+          component={Teste1P15}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P16' component={Teste1P16} />
+          <Stack.Screen
+          name='Teste1P16'
+          component={Teste1P16}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P17' component={Teste1P17} />
+          <Stack.Screen
+          name='Teste1P17'
+          component={Teste1P17}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P18' component={Teste1P18} />
+          <Stack.Screen
+          name='Teste1P18'
+          component={Teste1P18}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P19' component={Teste1P19} />
+          <Stack.Screen
+          name='Teste1P19'
+          component={Teste1P19}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P20' component={Teste1P20} />
+          <Stack.Screen
+          name='Teste1P20'
+          component={Teste1P20}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste1P21' component={Teste1P21} />
+          <Stack.Screen
+          name='Teste1P21'
+          component={Teste1P21}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2Int' component={Teste2Int} />
+          <Stack.Screen
+          name='Teste2Int'
+          component={Teste2Int}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P1' component={Teste2P1} />
+          <Stack.Screen
+          name='Teste2P1'
+          component={Teste2P1}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P2' component={Teste2P2} />
+          <Stack.Screen
+          name='Teste2P2'
+          component={Teste2P2}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P3' component={Teste2P3} />
+          <Stack.Screen
+          name='Teste2P3'
+          component={Teste2P3}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P4' component={Teste2P4} />
+          <Stack.Screen
+          name='Teste2P4'
+          component={Teste2P4}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
           
-          <Stack.Screen name='Teste2P5' component={Teste2P5} />
+          <Stack.Screen
+          name='Teste2P5'
+          component={Teste2P5}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P6' component={Teste2P6} />
+          <Stack.Screen
+          name='Teste2P6'
+          component={Teste2P6}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P7' component={Teste2P7} />
+          <Stack.Screen
+          name='Teste2P7'
+          component={Teste2P7}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P8' component={Teste2P8} />
+          <Stack.Screen
+          name='Teste2P8'
+          component={Teste2P8}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P9' component={Teste2P9} />
+          <Stack.Screen
+          name='Teste2P9'
+          component={Teste2P9}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
+          <Stack.Screen
+          name='Teste2P10'
+          component={Teste2P10}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P10' component={Teste2P10} />
+          <Stack.Screen
+          name='Teste2P11'
+          component={Teste2P11}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P11' component={Teste2P11} />
+          <Stack.Screen
+          name='Teste2P12'
+          component={Teste2P12}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P12' component={Teste2P12} />
+          <Stack.Screen
+          name='Teste2P13'
+          component={Teste2P13}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P13' component={Teste2P13} />
+          <Stack.Screen
+          name='Teste2P14'
+          component={Teste2P14}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P14' component={Teste2P14} />
+          <Stack.Screen
+          name='Teste2P15'
+          component={Teste2P15}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P15' component={Teste2P15} />
+          <Stack.Screen
+          name='Teste2P16'
+          component={Teste2P16}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P16' component={Teste2P16} />
+          <Stack.Screen
+          name='Teste2P17'
+          component={Teste2P17}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2P17' component={Teste2P17} />
+          <Stack.Screen
+          name='Teste2R1'
+          component={Teste2R1}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste2R1' component={Teste2R1} />
+          <Stack.Screen
+          name='Teste3Int'
+          component={Teste3Int}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3Int' component={Teste3Int} />
+          <Stack.Screen
+          name='Teste3P1'
+          component={Teste3P1}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P1' component={Teste3P1} />
+          <Stack.Screen
+          name='Teste3P2'
+          component={Teste3P2}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P2' component={Teste3P2} />
+          <Stack.Screen
+          name='Teste3P3'
+          component={Teste3P3}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P3' component={Teste3P3} />
+          <Stack.Screen
+          name='Teste3P4'
+          component={Teste3P4}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P4' component={Teste3P4} />
+          <Stack.Screen
+          name='Teste3P5'
+          component={Teste3P5}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P5' component={Teste3P5} />
+          <Stack.Screen
+          name='Teste3P6'
+          component={Teste3P6}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P6' component={Teste3P6} />
+          <Stack.Screen
+          name='Teste3P7'
+          component={Teste3P7}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P7' component={Teste3P7} />
+          <Stack.Screen
+          name='Teste3P8'
+          component={Teste3P8}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P8' component={Teste3P8} />
+          <Stack.Screen
+          name='Teste3P9'
+          component={Teste3P9}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P9' component={Teste3P9} />
+          <Stack.Screen
+          name='Teste3P10'
+          component={Teste3P10}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3P10' component={Teste3P10} />
+          <Stack.Screen
+          name='Teste3R1'
+          component={Teste3R1}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R1' component={Teste3R1} />
+          <Stack.Screen
+          name='Teste3R2'
+          component={Teste3R2}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R2' component={Teste3R2} />
+          <Stack.Screen
+          name='Teste3R3'
+          component={Teste3R3}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R3' component={Teste3R3} />
+          <Stack.Screen
+          name='Teste3R4'
+          component={Teste3R4}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R4' component={Teste3R4} />
+          <Stack.Screen
+          name='Teste3R5'
+          component={Teste3R5}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R5' component={Teste3R5} />
+          <Stack.Screen
+          name='Teste3R6'
+          component={Teste3R6}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R6' component={Teste3R6} />
+          <Stack.Screen
+          name='Teste3R7'
+          component={Teste3R7}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
+          
+          <Stack.Screen
+          name='Teste3R8'
+          component={Teste3R8}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R7' component={Teste3R7} />
+          <Stack.Screen
+          name='Teste3R9'
+          component={Teste3R9}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
-          <Stack.Screen name='Teste3R8' component={Teste3R8} />
-
-          <Stack.Screen name='Teste3R9' component={Teste3R9} />
-
-          <Stack.Screen name='Teste3R10' component={Teste3R10} />
+          <Stack.Screen
+          name='Teste3R10'
+          component={Teste3R10}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
 
         </Stack.Navigator>
 

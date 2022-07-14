@@ -10,10 +10,10 @@ export default function Resultado32(){
     const navigation = useNavigation();
     
     return(
-    <SafeAreaView style={localStyles.container}>
+    <View style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
-            <View>
+            <View style={{width: '100%', alignItems: 'center'}}>
                 <Text style={GlobalStyles.descricao}>Sim, O estresse é um importante fator para desencadear a depressão, principalmente o primeiro episódio. Segundo Fráguas, o apoio do cônjuge, família e amigos, assim como dos pais, em particulas para ciranças e adolescentes tem papel fundamenta na proteção contra a doença.
                 “O suporte social, seja por meio de incentivos, trocas de ideias, amparo e auxilio na resolução de problemas ajuda a lidar melhor com o estresse e contribui para a promoção da saúde emocional.”.</Text>
             </View>
@@ -21,7 +21,7 @@ export default function Resultado32(){
         <View>
             <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P3')}  />
         </View>
-    </SafeAreaView>
+    </View>
     )
 }
 

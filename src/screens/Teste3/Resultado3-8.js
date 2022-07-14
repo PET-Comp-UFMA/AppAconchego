@@ -10,17 +10,17 @@ export default function Resultado38(){
     const navigation = useNavigation();
     
     return(
-    <SafeAreaView style={localStyles.container}>
+    <View style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
-            <View >
+            <View style={{width: '100%', alignItems: 'center'}}>
             <Text style={GlobalStyles.descricao}>Sim. Segundo Fráguas, atividades como ioga e meditação têm eficácia reconhecida na redução do quadro depressivo. Ele explica que essas práticas atuam na sequência de reações cerebrais e hormonais que regulam o cortisol, diminuindo sua liberação. Vale lembrar que o cortisol é um hormônio relacionado ao estresse e, quando em excesso, pode levar à depressão, ansiedade, entre outros problemas.</Text>
             </View>
         </ScrollView>
         <View>
             <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P9')}  />
         </View>
-    </SafeAreaView>
+    </View>
     )
 }
 
