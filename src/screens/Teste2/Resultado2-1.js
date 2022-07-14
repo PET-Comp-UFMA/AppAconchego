@@ -20,7 +20,7 @@ export default function Resultado21(){
             </View>
             <View style={localStyles.container2}>
             <Botao title='Preciso de Apoio' onPress={() => navigation.navigate('canais de apoio')}/>
-            <Botao title='Voltar à tela de Avaliação' onPress={() => navigation.navigate('Avaliação')}/>
+            <Botao title='Voltar à tela de Avaliação' onPress={() => navigation.navigate('Aconchego')}/>
             </View>
         </SafeAreaView>
     )

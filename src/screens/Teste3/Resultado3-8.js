@@ -10,7 +10,7 @@ export default function Resultado38(){
     const navigation = useNavigation();
     
     return(
-    <SafeAreaView style={localStyles.container}>
+    <View style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
             <View style={{width: '100%', alignItems: 'center'}}>
@@ -20,7 +20,7 @@ export default function Resultado38(){
         <View>
             <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P9')}  />
         </View>
-    </SafeAreaView>
+    </View>
     )
 }
 
