@@ -13,8 +13,9 @@ export default function Pergunta212(){
     
     return(
         <SafeAreaView style={localStyles.container}>
+            <ScrollView>
             <View>
-                <Text style={GlobalStyles.titulo1}>É incapaz de desempenhar um papel útil em sua vida?</Text>
+                <Text style={GlobalStyles.titulo1}>12. É incapaz de desempenhar um papel útil em sua vida?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
@@ -27,6 +28,7 @@ export default function Pergunta212(){
                     title = 'Não'
                 />
             </View>
+            </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P11')} />
                 <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P13')} />

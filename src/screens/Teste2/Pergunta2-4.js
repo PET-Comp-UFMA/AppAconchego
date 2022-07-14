@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions  } from 'react-native'
+import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView  } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
@@ -13,8 +13,9 @@ export default function Pergunta24(){
 
     return(
         <SafeAreaView style={localStyles.container}>
+            <ScrollView>
             <View>
-                <Text style={GlobalStyles.titulo1}>Tem tremores nas mãos?</Text>
+                <Text style={GlobalStyles.titulo1}>4. Tem tremores nas mãos?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
@@ -27,6 +28,7 @@ export default function Pergunta24(){
                     title = 'Não'
                 />
             </View>
+            </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P3')} />
                 <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P5')} />

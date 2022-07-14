@@ -13,8 +13,9 @@ export default function Pergunta29(){
     
     return(
         <SafeAreaView style={localStyles.container}>
+            <ScrollView>
             <View>
-                <Text style={GlobalStyles.titulo1}>Encontra dificuldades para realizar com satisfação suas atividades diárias?</Text>
+                <Text style={GlobalStyles.titulo1}>9. Encontra dificuldades para realizar com satisfação suas atividades diárias?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
@@ -27,6 +28,7 @@ export default function Pergunta29(){
                     title = 'Não'
                 />
             </View>
+            </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P8')}/>
                 <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P10')} />

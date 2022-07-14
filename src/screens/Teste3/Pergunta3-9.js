@@ -15,7 +15,7 @@ export default function Pergunta39(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>Você lida bem com suas emoções? Por exemplo, caso se sinta agustiado(a) ou triste, observa se esse sentimento vai além da tristeza habitual?</Text>
+                    <Text style={GlobalStyles.titulo1}>9. Você lida bem com suas emoções? Por exemplo, caso se sinta agustiado(a) ou triste, observa se esse sentimento vai além da tristeza habitual?</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

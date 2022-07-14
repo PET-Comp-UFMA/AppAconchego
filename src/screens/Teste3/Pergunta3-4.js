@@ -15,7 +15,7 @@ export default function Pergunta34(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>Você consegue encaixar a prática da atividade física na sua rotina?</Text>
+                    <Text style={GlobalStyles.titulo1}>4. Você consegue encaixar a prática da atividade física na sua rotina?</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

@@ -15,7 +15,7 @@ export default function Pergunta11(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Achei difícil me acalmar</Text>
+                    <Text style={GlobalStyles.titulo1}>1. Achei difícil me acalmar</Text>
                 </View>
             
                 <View style={localStyles.container2}>

@@ -15,7 +15,7 @@ export default function Pergunta310(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>Se respondeu sim para a questão anterior, você procura ajuda especializada?</Text>
+                    <Text style={GlobalStyles.titulo1}>10. Se respondeu sim para a questão anterior, você procura ajuda especializada?</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

@@ -13,8 +13,9 @@ export default function Pergunta211(){
     
     return(
         <SafeAreaView style={localStyles.container}>
+            <ScrollView>
             <View>
-                <Text style={GlobalStyles.titulo1}>Tem dificuldade no serviço (seu trabalho é penoso, causa-lhe sofrimento?)</Text>
+                <Text style={GlobalStyles.titulo1}>11. Tem dificuldade no serviço (seu trabalho é penoso, causa-lhe sofrimento?)</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
@@ -27,6 +28,7 @@ export default function Pergunta211(){
                     title = 'Não'
                 />
             </View>
+            </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P10')} />
                 <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P12')} />

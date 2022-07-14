@@ -15,7 +15,7 @@ export default function Pergunta36(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>Você tem algum hobby, ou se dedica a alguma atividade recreativa que lhe dê prazer?</Text>
+                    <Text style={GlobalStyles.titulo1}>6. Você tem algum hobby, ou se dedica a alguma atividade recreativa que lhe dê prazer?</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

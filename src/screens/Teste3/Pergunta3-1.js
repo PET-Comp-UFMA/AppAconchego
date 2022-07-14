@@ -15,7 +15,7 @@ export default function Pergunta31(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>Você procura seguir uma rotina em relação ao sono, manetendo um horário para ir para cama e despertar, de forma a acordar descnasado e revigorado?</Text>
+                    <Text style={GlobalStyles.titulo1}>1. Você procura seguir uma rotina em relação ao sono, manetendo um horário para ir para cama e despertar, de forma a acordar descnasado e revigorado?</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

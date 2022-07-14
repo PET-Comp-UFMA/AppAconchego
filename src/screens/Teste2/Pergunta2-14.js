@@ -13,8 +13,9 @@ export default function Pergunta214(){
     
     return(
         <SafeAreaView style={localStyles.container}>
+            <ScrollView>
             <View>
-                <Text style={GlobalStyles.titulo1}>Você se sente uma pessoa inúti, sem préstimo?</Text>
+                <Text style={GlobalStyles.titulo1}>14. Você se sente uma pessoa inúti, sem préstimo?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
@@ -27,6 +28,7 @@ export default function Pergunta214(){
                     title = 'Não'
                 />
             </View>
+            </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P13')} />
                 <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P15')} />

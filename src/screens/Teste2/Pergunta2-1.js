@@ -6,6 +6,7 @@ import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
+import { ScrollView } from 'react-native-gesture-handler'
 
 export default function Pergunta21(){
     
@@ -13,8 +14,9 @@ export default function Pergunta21(){
 
     return(
         <SafeAreaView style={localStyles.container}>
+            <ScrollView>
             <View>
-                <Text style={GlobalStyles.titulo1}>Você tem dores de cabeça frequente?</Text>
+                <Text style={GlobalStyles.titulo1}>1. Você tem dores de cabeça frequente?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
@@ -27,6 +29,7 @@ export default function Pergunta21(){
                     title = 'Não'
                 />
             </View>
+            </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2Int')} />
                 <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P2')} />

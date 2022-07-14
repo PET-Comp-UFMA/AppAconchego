@@ -15,7 +15,7 @@ export default function Pergunta113(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Senti-me depressivo(a) e sem ânimo</Text>
+                    <Text style={GlobalStyles.titulo1}>13. Senti-me depressivo(a) e sem ânimo</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

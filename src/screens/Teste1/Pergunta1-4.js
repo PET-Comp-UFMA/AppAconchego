@@ -15,7 +15,7 @@ export default function Pergunta14(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Tive dificuldade de respirar em alguns momentos</Text>
+                    <Text style={GlobalStyles.titulo1}>4. Tive dificuldade de respirar em alguns momentos</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

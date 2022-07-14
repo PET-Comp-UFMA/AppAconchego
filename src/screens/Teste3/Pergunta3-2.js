@@ -15,7 +15,7 @@ export default function Pergunta32(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>Você convive bastante com amigos e familiares, gosta de estar cercado das pessoas queridas?</Text>
+                    <Text style={GlobalStyles.titulo1}>2. Você convive bastante com amigos e familiares, gosta de estar cercado das pessoas queridas?</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

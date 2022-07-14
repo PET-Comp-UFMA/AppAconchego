@@ -15,7 +15,7 @@ export default function Pergunta13(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Não consegui vivenciar nenhum sentimento positivo</Text>
+                    <Text style={GlobalStyles.titulo1}>3. Não consegui vivenciar nenhum sentimento positivo</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

@@ -15,7 +15,7 @@ export default function Pergunta17(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Senti tremores (ex: nas mãos)</Text>
+                    <Text style={GlobalStyles.titulo1}>7. Senti tremores (ex: nas mãos)</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

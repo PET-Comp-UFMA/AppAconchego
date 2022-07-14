@@ -15,7 +15,7 @@ export default function Pergunta114(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Fui intolarante com as coisas que me impediam de continuar o que eu estava fazendo</Text>
+                    <Text style={GlobalStyles.titulo1}>14. Fui intolarante com as coisas que me impediam de continuar o que eu estava fazendo</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

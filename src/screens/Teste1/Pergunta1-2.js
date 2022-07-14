@@ -15,7 +15,7 @@ export default function Pergunta12(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Senti minha boca seca</Text>
+                    <Text style={GlobalStyles.titulo1}>2. Senti minha boca seca</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

@@ -13,8 +13,9 @@ export default function Pergunta210(){
     
     return(
         <SafeAreaView style={localStyles.container}>
+            <ScrollView>
             <View>
-                <Text style={GlobalStyles.titulo1}>Tem dificuldades de tomar decisões?</Text>
+                <Text style={GlobalStyles.titulo1}>10. Tem dificuldades de tomar decisões?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
@@ -27,6 +28,7 @@ export default function Pergunta210(){
                     title = 'Não'
                 />
             </View>
+            </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P9')} />
                 <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P11')}/>

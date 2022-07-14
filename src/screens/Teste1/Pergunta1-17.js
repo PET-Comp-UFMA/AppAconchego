@@ -15,7 +15,7 @@ export default function Pergunta117(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>Senti que não tinha valor como pessoa</Text>
+                    <Text style={GlobalStyles.titulo1}>17. Senti que não tinha valor como pessoa</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste

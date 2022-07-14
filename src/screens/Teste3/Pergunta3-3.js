@@ -15,7 +15,7 @@ export default function Pergunta33(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>Em relação aos hábitos alimentares, você consome apenas o que apetece, come carboidratos, frituras e açúcares, pois comer é um prazer sem regras?</Text>
+                    <Text style={GlobalStyles.titulo1}>3. Em relação aos hábitos alimentares, você consome apenas o que apetece, come carboidratos, frituras e açúcares, pois comer é um prazer sem regras?</Text>
                 </View>
                 <View style={localStyles.container2}>
                     <BotaoEscolhaTeste
