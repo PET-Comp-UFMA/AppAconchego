@@ -28,8 +28,8 @@ export default function Pergunta38(){
                     />
                 </View>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3P1')} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R2')}/>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3P7')} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R8')}/>
                 </View>
             </ScrollView>
         </SafeAreaView>

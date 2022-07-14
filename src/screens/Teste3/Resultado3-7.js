@@ -13,7 +13,7 @@ export default function Resultado37(){
     <SafeAreaView style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
-            <View >
+            <View style={{width: '100%', alignItems: 'center'}}>
                 <Text style={GlobalStyles.descricao}>Sim. Compartilhar, como a própria palavra sugere, é dividir, é repartir. Ao desabafar e expressar seus sentimentos, é possivel reduzir a angústia , sentir-se amparado, incentivado e acolhido. Isso, por si só, já reduz o sofrimento, mas é importante estar respaldado por apoio profissional para falar sobre suas emoções, mesmo se você não estiver passando por um momento de crise ou suspeita de algum transtorno mental.</Text>
             </View>
         </ScrollView>

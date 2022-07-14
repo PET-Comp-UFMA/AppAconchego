@@ -13,7 +13,7 @@ export default function Resultado34(){
     <SafeAreaView style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
-            <View >
+            <View style={{width: '100%', alignItems: 'center'}}>
                 <Text style={GlobalStyles.descricao}>Sim. Segundo Frágua Junior, a prática de atividade física libera o fator neurotrófico derivado do cérebro , uma reação que contribui para a formação de mais pontos de contato entre os neurônios e os circuitos que processam as emoções negativas e positivas voltam a se comunicar. “Consequentemente, aumenta o prazer e o interesse por aquilo de que a pessoa gosta, enquanto diminui a tendência de se sentir triste e desanimado. Cabe lembrar que, para quem não consegue fazer atividade física cinco vezes por semana, fazer três vezes por semana já é muito melhor do que não se exercitar. O importante é começar.”</Text>
             </View>
         </ScrollView>

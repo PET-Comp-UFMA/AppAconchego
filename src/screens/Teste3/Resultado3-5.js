@@ -13,7 +13,7 @@ export default function Resultado35(){
     <SafeAreaView style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
-            <View >
+            <View style={{width: '100%', alignItems: 'center'}}>
                 <Text style={GlobalStyles.descricao}>Não. A exposição ao sol permite que a vitamina D2 seja transformada em vitamina D3, que desempenha funções importantes no sistema nervoso central, ela ativa por exemplo uma enzima (triptofano hidroxilase 2) qua atua na transformação do triptofano em serotonina cerebral, um neurotransmissor relacionado ao humor. Por outro lado, níveis reduzidos de vitamina D podem levar a uma ativação disfuncional da serotonina, contribuindo para o surgimento da depressão.</Text>
             </View>
         </ScrollView>

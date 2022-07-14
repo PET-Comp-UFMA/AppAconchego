@@ -96,7 +96,7 @@ export default StyleSheet.create({
         color: GlobalColors.CorTextoForte,
         fontSize: 24,
         fontWeight: '600',
-        textAlign: 'justify',
+        textAlign: 'center',
         fontFamily: 'IBMPlexSans_Bold',
         lineHeight: 28,
         maxWidth: 330,
@@ -106,12 +106,20 @@ export default StyleSheet.create({
         color: GlobalColors.CorTextoForte,
         fontSize: 20,
         fontWeight: '500',
-        textAlign: 'center',
         fontFamily: 'IBMPlexSans_Medium',
         lineHeight: 24,
         padding: 3,
         maxWidth: 330,
         textAlign: 'justify'
+    },
+    headerTitle: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 20,
+        fontWeight: '600',
+        fontFamily: 'IBMPlexSans_Bold',
+        lineHeight: 20,
+        textAlign: 'center',
+        textTransform: 'uppercase'
     },
     descricao:{
         color: GlobalColors.CorTextoForte,
