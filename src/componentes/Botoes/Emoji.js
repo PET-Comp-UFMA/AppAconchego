@@ -15,12 +15,12 @@ export default class BotaoEmoji
 
     render(){
         // Troca da imagem do emoji
-        var emoji = require('../../../assets/feliz.png');
+        var emoji = require('../../../assets/happy.png');
 
         if (this.props.emoji == "normal") {
-            emoji = require('../../../assets/normal.png');
+            emoji = require('../../../assets/normall.png');
         } else if (this.props.emoji == "triste") {
-            emoji = require('../../../assets/triste.png');
+            emoji = require('../../../assets/sad.png');
         }
         
         return(
@@ -39,7 +39,7 @@ const localStyles = StyleSheet.create({
         justifyContent: 'center',
     },
     emoji: {    
-        width: 39,
-        height: 39
+        width: 60,
+        height: 60
     }
 });
