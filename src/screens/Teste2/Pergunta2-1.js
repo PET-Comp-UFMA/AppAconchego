@@ -45,7 +45,6 @@ const localStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,
-        paddingTop: 40
         },
     container2:{
         paddingTop: 50,

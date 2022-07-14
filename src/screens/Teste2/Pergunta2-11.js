@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions  } from 'react-native'
+import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView  } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
@@ -43,8 +43,7 @@ const localStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: GlobalColors.CorFundo,
-        paddingTop: 40
+        backgroundColor: GlobalColors.CorFundo
         },
     container2:{
         paddingTop: 50,

@@ -43,8 +43,7 @@ const localStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: GlobalColors.CorFundo,
-        paddingTop: 40
+        backgroundColor: GlobalColors.CorFundo
         },
     container2:{
         paddingTop: 50,
