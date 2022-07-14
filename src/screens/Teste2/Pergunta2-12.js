@@ -13,7 +13,7 @@ export default function Pergunta212(){
     
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
             <View>
                 <Text style={GlobalStyles.titulo1}>12. É incapaz de desempenhar um papel útil em sua vida?</Text>
             </View>

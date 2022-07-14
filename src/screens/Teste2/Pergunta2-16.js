@@ -13,7 +13,7 @@ export default function Pergunta216(){
     
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
             <View>
                 <Text style={GlobalStyles.titulo1}>16. Sente-se cansado(a) o tempo todo?</Text>
             </View>

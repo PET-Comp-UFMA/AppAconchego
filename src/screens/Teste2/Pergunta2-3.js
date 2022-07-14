@@ -13,7 +13,7 @@ export default function Pergunta23(){
     
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
             <View>
                 <Text style={GlobalStyles.titulo1}>3. Assusta-se com facilidade?</Text>
             </View>

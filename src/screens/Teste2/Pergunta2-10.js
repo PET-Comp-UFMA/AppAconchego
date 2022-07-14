@@ -13,7 +13,7 @@ export default function Pergunta210(){
     
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
             <View>
                 <Text style={GlobalStyles.titulo1}>10. Tem dificuldades de tomar decisões?</Text>
             </View>

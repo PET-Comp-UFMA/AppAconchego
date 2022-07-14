@@ -13,7 +13,7 @@ export default function Pergunta215(){
     
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
             <View>
                 <Text style={GlobalStyles.titulo1}>15. Tem tido ideia de acabar com a vida?</Text>
             </View>
