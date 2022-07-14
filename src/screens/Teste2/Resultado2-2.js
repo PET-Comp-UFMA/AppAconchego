@@ -5,7 +5,7 @@ import GlobalColors from '../../componentes/Global/GlobalColors'
 import Botao from '../../componentes/Botoes/Padrao'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Resultado21(){
+export default function Resultado22(){
 
     const navigation = useNavigation();
     
@@ -13,10 +13,10 @@ export default function Resultado21(){
         <SafeAreaView style={localStyles.container}>
             <View style={localStyles.container2}>
             <Text style={GlobalStyles.resposta}>Resultado</Text>
-            <Text style={GlobalStyles.titulo1}>Seu resultado requer atenção</Text>
+            <Text style={GlobalStyles.titulo1}>Seu resultado foi adequado!</Text>
             </View>
             <View style={localStyles.container2}>
-                <Text style={GlobalStyles.titulo2}>Atenção! Seu resultado apontou sinais de sofrimento mental. Fique atento às situações negativas e busque ajuda em um serviço de saúde mental  caso esses sinais aumentem.</Text>
+                <Text style={GlobalStyles.titulo2}>Parabéns! Seu resultado apontou ausência de sinais de sofrimento mental. Continue tendo comportamentos e atitudes positivas e cuidando de sua saúde mental.</Text>
             </View>
             <View style={localStyles.container2}>
             <Botao title='Preciso de Apoio' onPress={() => navigation.navigate('canais de apoio')}/>

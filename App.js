@@ -77,7 +77,7 @@ import Teste2P14 from './src/screens/Teste2/Pergunta2-14'
 import Teste2P15 from './src/screens/Teste2/Pergunta2-15'
 import Teste2P16 from './src/screens/Teste2/Pergunta2-16'
 import Teste2P17 from './src/screens/Teste2/Pergunta2-17'
-import Teste2R1 from './src/screens/Teste2/Resultado2-1'
+import Teste2R1 from './src/screens/Teste2/Resultado2-2'
 
 //Telas teste 3
 
