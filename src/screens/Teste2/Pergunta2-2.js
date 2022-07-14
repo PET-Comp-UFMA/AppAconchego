@@ -13,8 +13,8 @@ export default function Pergunta22(){
     
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
-            <View>
+            <ScrollView contentContainerStyle={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+            <View style={localStyles.container2}>
                 <Text style={GlobalStyles.titulo1}>2. Dorme mal?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
@@ -46,8 +46,9 @@ const localStyles = StyleSheet.create({
         backgroundColor: GlobalColors.CorFundo
         },
     container2:{
-        paddingTop: 50,
-        paddingBottom: 50
+        paddingTop: 40,
+        paddingBottom: 20, 
+        alignItems: 'center',
     },
     Imagem2: {
         width: 280,

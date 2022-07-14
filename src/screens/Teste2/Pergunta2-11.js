@@ -13,8 +13,8 @@ export default function Pergunta211(){
     
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
-            <View>
+            <ScrollView contentContainerStyle={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+            <View style={localStyles.container2}>
                 <Text style={GlobalStyles.titulo1}>11. Tem dificuldade no serviço (seu trabalho é penoso, causa-lhe sofrimento?)</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
@@ -45,10 +45,11 @@ const localStyles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo
         },
-    container2:{
-        paddingTop: 50,
-        paddingBottom: 50
-    },
+        container2:{
+            paddingTop: 40,
+            paddingBottom: 20, 
+            alignItems: 'center'
+        },
     Imagem2: {
         width: 280,
         height: 200

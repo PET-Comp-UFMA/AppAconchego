@@ -14,7 +14,7 @@ export default function Pergunta21(){
 
     return(
         <SafeAreaView style={localStyles.container}>
-            <ScrollView contentContainerStyle={{alignItems: 'center'}}>
+            <ScrollView contentContainerStyle={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
             <View style={localStyles.container2}>
                 <Text style={GlobalStyles.titulo1}>1. Você tem dores de cabeça frequente?</Text>
             </View>
@@ -47,8 +47,8 @@ const localStyles = StyleSheet.create({
         backgroundColor: GlobalColors.CorFundo,
         },
     container2:{
-        paddingTop: 50,
-        paddingBottom: 50, 
+        paddingTop: 40,
+        paddingBottom: 20, 
         alignItems: 'center'
     },
     Imagem2: {
