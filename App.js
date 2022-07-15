@@ -16,6 +16,7 @@ import { Entypo } from '@expo/vector-icons'
 import Home from './src/screens/home'
 import Aconchego from './src/screens/Aconchego';
 import SaibaMais from './src/screens/saibaMais'
+import Registros from './src/screens/registros';
 import GlobalStyles from './src/componentes/Global/GlobalStyles';
 import GlobalColors from './src/componentes/Global/GlobalColors';
 import CanalCvv from './src/screens/CanalCvv';
@@ -722,6 +723,8 @@ export default function App({}) {
             title: 'Avaliando os Cuidados em Saúde Mental',
             headerTitleStyle: GlobalStyles.headerTitle }}
           />
+
+          <Stack.Screen name='meus registros' component={Registros} />
 
         </Stack.Navigator>
 
