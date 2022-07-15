@@ -29,7 +29,7 @@ import Filmes from './src/screens/Apoio/filmes';
 import Alimentacao from './src/screens/Apoio/alimentacao';
 import CanaisApoio from './src/screens/Apoio/canaisApoio';
 import Meditacao from './src/screens/Apoio/meditacao';
-import MeditacaoGuiada from './src/screens/Apoio/meditaçãoGuiada';
+import MeditacaoGuiada from './src/screens/Apoio/meditacaoGuiada';
 import Autoquestionamento from './src/screens/Apoio/autoquestionamento';
 import Mantras from './src/screens/Apoio/mantras';
 
