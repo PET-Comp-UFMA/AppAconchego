@@ -127,8 +127,8 @@ export default StyleSheet.create({
         fontFamily: 'IBMPlexSans_Medium',
         justifyContent: 'center',
         textAlign: 'justify',
-        padding: 1,
-        maxWidth: 330
+        paddingBottom: 15,
+        maxWidth: '90%',
     },
     nomes:{
         color: GlobalColors.CorTextoForte,
@@ -244,15 +244,6 @@ export default StyleSheet.create({
         alignItems:'center',
         paddingBottom: 15,
         
-    },
-    descricao:{
-        color: GlobalColors.CorTextoForte,
-        fontSize: 20,
-        fontFamily: 'IBMPlexSans_Medium',
-        justifyContent: 'center',
-        textAlign: 'justify',
-        paddingBottom: 15,
-        maxWidth: '90%',
     },
     canalMeditacao: {
         color: GlobalColors.CorTextoForte,

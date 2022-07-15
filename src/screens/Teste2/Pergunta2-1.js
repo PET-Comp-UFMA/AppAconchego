@@ -1,12 +1,11 @@
 import React from 'react'
-import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions  } from 'react-native'
+import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView  } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
-import { ScrollView } from 'react-native-gesture-handler'
 
 export default function Pergunta21(){
     
