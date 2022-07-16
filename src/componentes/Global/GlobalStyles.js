@@ -274,5 +274,25 @@ export default StyleSheet.create({
         justifyContent: 'center',
         textAlign: 'justify',
         maxWidth: 330
-        }
+    },
+    resultado: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 20,
+        fontWeight: '400',
+        fontFamily: 'IBMPlexSans_Regular',
+        lineHeight: 22,
+        padding: 3,
+        maxWidth: 330,
+        textAlign: 'justify'
+    },
+    subtitulo: {
+        color: GlobalColors.CorTextoForte,
+        fontSize: 20,
+        fontWeight: '500',
+        fontFamily: 'IBMPlexSans_Medium',
+        lineHeight: 24,
+        padding: 30,
+        maxWidth: '95%',
+        textAlign: 'center'
+    },
 });

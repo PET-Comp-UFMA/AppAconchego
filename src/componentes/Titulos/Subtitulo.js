@@ -7,7 +7,7 @@ import {
     Dimensions
 } from 'react-native'
 
-export default class Titulo extends Component {
+export default class SubTitulo extends Component {
     constructor(props){
         super(props);
     }
