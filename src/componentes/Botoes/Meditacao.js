@@ -27,7 +27,13 @@ export default class BotaoMeditacao extends Component {
                     <View style={GlobalStyles.barra} />
 
                     <View style={localStyles.descricao}>
-                        <Text numberOfLines={1} style={GlobalStyles.canalMeditacao}>{this.props.canal}</Text>
+                        <View style={localStyles.canalContainer}>
+                            <Image
+                                style={localStyles.imgCanal}
+                                source={this.props.imgCanal}
+                            />
+                            <Text numberOfLines={1} style={GlobalStyles.canalMeditacao}>{this.props.canal}</Text>
+                        </View>
 
                         <Text style={GlobalStyles.tituloMeditacao}>    
                             {this.props.nome}
@@ -54,6 +60,17 @@ const localStyles = StyleSheet.create({
     descricao: {
         flex: 1,
         justifyContent: 'flex-start',
-        height: '100%'
+        height: '100%',
+        paddingRight: 12
+    },
+    canalContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    imgCanal: {
+        width: 22,
+        height: 22,
+        borderRadius: 11,
+        marginRight: 4
     }
 });

@@ -28,12 +28,14 @@ export default function Meditacao() {
                                 nome = 'Meditação para ansidade (Guiada)'
                                 canal = 'Tadashi Kadomoto'
                                 thumb = {require(`../../../assets/guiada/1.jpg`)}
+                                imgCanal = {require(`../../../assets/guiada/1.1.jpg`)}
                                 onPress = {() => {Linking.openURL('https://www.youtube.com/watch?v=cuAGVyfCt5o')}}
                             />
                             <BotaoMeditacao
                                 nome = 'Meditação Guiada (Autohipnose)'
                                 canal = 'Poetoterapia por Lázaro Ramon'
                                 thumb = {require(`../../../assets/guiada/2.jpg`)}
+                                imgCanal = {require(`../../../assets/guiada/2.1.jpg`)}
                                 onPress = {() => {Linking.openURL('https://www.youtube.com/watch?v=7x2AXkpjG8U')}}
                             />
                             <BotaoPadrao
@@ -51,12 +53,14 @@ export default function Meditacao() {
                                 nome = 'Autobiografia em 5 capítulos'
                                 canal = 'Tadashi Kadomoto'
                                 thumb = {require(`../../../assets/autoquestionamento/1.jpg`)}
+                                imgCanal = {require(`../../../assets/autoquestionamento/1.1.jpg`)}
                                 onPress = {() => {Linking.openURL('https://www.youtube.com/watch?v=I7Uix0Ym52E')}}
                             />
                             <BotaoMeditacao
                                 nome = 'Eckhart Tolle - Você não é a sua Mente'
                                 canal = 'Corvo Seco'
                                 thumb = {require(`../../../assets/autoquestionamento/2.jpg`)}
+                                imgCanal = {require(`../../../assets/autoquestionamento/2.1.jpg`)}
                                 onPress = {() => {Linking.openURL('https://www.youtube.com/watch?v=cuAGVyfCt5o')}}
                             />
                             <BotaoPadrao
@@ -73,12 +77,14 @@ export default function Meditacao() {
                                 nome = 'Música Reiki - Cura Profunda: Emocional, Física, Energética e Espiritual'
                                 canal = 'MenteCalma'
                                 thumb = {require(`../../../assets/mantras/1.jpg`)}
+                                imgCanal = {require(`../../../assets/mantras/1.1.jpg`)}
                                 onPress = {() => {Linking.openURL('https://www.youtube.com/watch?v=5eIH6sSl7Lk')}}
                             />
                             <BotaoMeditacao
                                 nome = 'Mantra Ganesha Remove Obstáculos e traz a Prosperidade'
                                 canal = 'Butterfly Terapias'
                                 thumb = {require(`../../../assets/mantras/2.jpg`)}
+                                imgCanal = {require(`../../../assets/mantras/2.1.jpg`)}
                                 onPress = {() => {Linking.openURL('https://www.youtube.com/watch?v=hlq282HUkGw')}}
                             />
                             <BotaoPadrao
@@ -102,6 +108,6 @@ const localStyles = StyleSheet.create({
     },
     secao: {
         marginTop: 10,
-        marginBottom: 15
+        marginBottom: 20
     }
 });

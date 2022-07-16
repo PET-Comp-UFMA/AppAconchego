@@ -12,7 +12,7 @@ export default function CanalCaps(){
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../assets/apoio.png')} />
             <Text style={GlobalStyles.titulo1}>Centro de Atenção Psicossocial (CAPS)</Text>
-            <Text style={GlobalStyles.descricao}>Os Centros de Atenção Psicossocial (CAPS) nas suas diferentes modalidades são pontos de atenção estratégicos da Rede de Atenção Psicossocial (RAPS): serviços de saúde de caráter aberto e comunitário constituídos por equipe multiprofissional e que atua sob a ótica interdisciplinar e realiza...</Text>
+            <Text style={[GlobalStyles.descricao, {marginTop: 15, marginBottom: 40}]}>Os Centros de Atenção Psicossocial (CAPS) nas suas diferentes modalidades são pontos de atenção estratégicos da Rede de Atenção Psicossocial (RAPS): serviços de saúde de caráter aberto e comunitário constituídos por equipe multiprofissional e que atua sob a ótica interdisciplinar e realiza...</Text>
             <Botao title='Voltar' onPress={() => navigation.goBack()}/>
         </SafeAreaView>
     )
