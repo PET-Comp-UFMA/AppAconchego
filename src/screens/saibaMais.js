@@ -29,7 +29,7 @@ export default function SaibaMais() {
                     <Text style={GlobalStyles.titulo2}>Curso de Enfermagem</Text>
                     <Image style={localStyles.logo} source={require('../../assets/aracau.png')} />
                     <Text style={GlobalStyles.titulo2}>Grupo de Estudo e Pesquisa Saúde Mental e Cuidado</Text>
-                    <Image source={require('../../assets/gesam.png')} />
+                    <Image style={localStyles.logo} source={require('../../assets/gesam.png')} />
                     <Text style={GlobalStyles.titulo1}>Apoio Financeiro</Text>
                     <Text style={GlobalStyles.titulo2}>Fundação Cearense de Apoio ao Desenvolvimento Cientifico e Tecnológico
                         FUNCAP</Text>
