@@ -12,6 +12,7 @@ import Titulo from "../componentes/Titulos/Titulo";
 import BotaoEmoji from "../componentes/Botoes/Emoji";
 import BotaoPadrao from "../componentes/Botoes/Padrao";
 import GlobalColors from "../componentes/Global/GlobalColors";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Home() {
 
@@ -21,22 +22,28 @@ export default function Home() {
     const [normalActive, setNormalActive] = useState(false)
     const [happyActive, setHappyActive] = useState(false)
 
-    const handleSad = () => {
+    async function handleSad () {
         setNormalActive(false)
         setHappyActive(false)
         setSadActive(current => !current)
+
+        await AsyncStorage.setItem('@saveemoji:emoji', 'triste')
     }
 
-    const handleNormal = () => {
+    async function handleNormal () {
         setHappyActive(false)
         setSadActive(false)
         setNormalActive(current => !current)
+
+        await AsyncStorage.setItem('@saveemoji:emoji', 'normal')
     }
 
-    const handleHappy = () => {
+    async function handleHappy () {
         setSadActive(false)
         setNormalActive(false)
         setHappyActive(current => !current)
+
+        await AsyncStorage.setItem('@saveemoji:emoji', 'feliz')
     }
 
     return(
@@ -50,7 +57,7 @@ export default function Home() {
             <View style={localStyles.botoesEmoji}>
                 <BotaoEmoji emoji='triste' color={sadActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleSad} />
                 <BotaoEmoji emoji='normal' color={normalActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleNormal} />
-                <BotaoEmoji color={happyActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleHappy} />
+                <BotaoEmoji emoji='feliz' color={happyActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleHappy} />
             </View>
 
             <View>

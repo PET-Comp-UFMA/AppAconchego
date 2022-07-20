@@ -10,12 +10,14 @@ import {
 
 export default function BotaoEmoji (props) {
         // Troca da imagem do emoji
-        var emoji = require('../../../assets/happy.png');
+        let emoji;
 
         if (props.emoji == "normal") {
             emoji = require('../../../assets/normall.png');
         } else if (props.emoji == "triste") {
             emoji = require('../../../assets/sad.png');
+        } else if (props.emoji == "feliz") {
+            emoji = require('../../../assets/happy.png');
         }
         
         return(

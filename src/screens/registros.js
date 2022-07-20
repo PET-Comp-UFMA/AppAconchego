@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyleSheet, Text, ScrollView, View, Dimensions } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
@@ -8,6 +8,7 @@ import { Calendar, LocaleConfig } from 'react-native-calendars'
 import Titulo from '../componentes/Titulos/Titulo'
 import { Entypo } from '@expo/vector-icons'
 import BotaoEmoji from '../componentes/Botoes/Emoji'
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Registros(){
 
@@ -35,15 +36,27 @@ export default function Registros(){
     const [day, setDay] = useState(getCurrentDate())
     const [marked, setMarked] = useState({getCurrentDate : { selected: true }})
 
-    console.log()
-
     const getSelectedDayEvents = (date) => {
         let markedDates = {};
         markedDates[date] = { selected: true };
         setMarked(markedDates)
     };
 
-    
+    const [humor, setHumor] = useState(<Text style={GlobalStyles.resultado}>
+        Não existem dados registrados para este teste do dia DD/MM/AAAA.
+    </Text>)
+
+    async function handleEmoji() {
+        const response = await AsyncStorage.getItem('@saveemoji:emoji')
+        const data = response ? setHumor(<BotaoEmoji emoji={response} color={GlobalColors.CorAcao} />) : <Text style={GlobalStyles.resultado}>
+                Não existem dados registrados para este teste do dia DD/MM/AAAA.
+            </Text>
+    }
+
+    useEffect(() => {
+        handleEmoji()
+    },[])
+
 
     return(
         <ScrollView>
@@ -80,7 +93,7 @@ export default function Registros(){
                     Como você estava se sentindo?
                 </Text>
 
-                <BotaoEmoji emoji='normal' color={GlobalColors.CorAcao}/>
+                {humor}
 
                 <Text style={GlobalStyles.subtitulo}>
                     Teste Avaliando ansiedade, depressão e estresse
