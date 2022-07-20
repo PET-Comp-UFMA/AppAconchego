@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     View,
     StyleSheet,
@@ -17,6 +17,28 @@ export default function Home() {
 
     const navigation = useNavigation();
 
+    const [sadActive, setSadActive] = useState(false)
+    const [normalActive, setNormalActive] = useState(false)
+    const [happyActive, setHappyActive] = useState(false)
+
+    const handleSad = () => {
+        setNormalActive(false)
+        setHappyActive(false)
+        setSadActive(current => !current)
+    }
+
+    const handleNormal = () => {
+        setHappyActive(false)
+        setSadActive(false)
+        setNormalActive(current => !current)
+    }
+
+    const handleHappy = () => {
+        setSadActive(false)
+        setNormalActive(false)
+        setHappyActive(current => !current)
+    }
+
     return(
         <View style={localStyles.container}>
             <Image style={localStyles.logo} source={require('../../assets/logo.png')} />
@@ -26,9 +48,9 @@ export default function Home() {
             />
 
             <View style={localStyles.botoesEmoji}>
-                <BotaoEmoji emoji='triste' />
-                <BotaoEmoji emoji='normal' />
-                <BotaoEmoji />
+                <BotaoEmoji emoji='triste' color={sadActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleSad} />
+                <BotaoEmoji emoji='normal' color={normalActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleNormal} />
+                <BotaoEmoji color={happyActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleHappy} />
             </View>
 
             <View>

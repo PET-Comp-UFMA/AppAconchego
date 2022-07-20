@@ -42,10 +42,8 @@ export default function Registros(){
         markedDates[date] = { selected: true };
         setMarked(markedDates)
     };
-    
-    console.log(marked)
 
-    // console.log(day)
+    
 
     return(
         <ScrollView>
@@ -82,7 +80,7 @@ export default function Registros(){
                     Como você estava se sentindo?
                 </Text>
 
-                <BotaoEmoji emoji='normal' />
+                <BotaoEmoji emoji='normal' color={GlobalColors.CorAcao}/>
 
                 <Text style={GlobalStyles.subtitulo}>
                     Teste Avaliando ansiedade, depressão e estresse
