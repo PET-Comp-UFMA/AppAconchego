@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
@@ -11,6 +11,39 @@ export default function Pergunta11(){
     
     const navigation = useNavigation();
 
+    const [umAtivado, setUmAtivado] = useState(false)
+    const [doisAtivado, setDoisAtivado] = useState(false)
+    const [tresAtivado, setTresAtivado] = useState(false)
+    const [quatroAtivado, setQuatroAtivado] = useState(false)
+
+    const handleUm = () => {
+        setDoisAtivado(false)
+        setTresAtivado(false)
+        setQuatroAtivado(false)
+        setUmAtivado(current => !current)
+    }
+
+    const handleDois = () => {
+        setUmAtivado(false)
+        setTresAtivado(false)
+        setQuatroAtivado(false)
+        setDoisAtivado(current => !current)
+    }
+
+    const handleTres = () => {
+        setUmAtivado(false)
+        setDoisAtivado(false)
+        setQuatroAtivado(false)
+        setTresAtivado(current => !current)
+    }
+
+    const handleQuatro = () => {
+        setUmAtivado(false)
+        setDoisAtivado(false)
+        setTresAtivado(false)
+        setQuatroAtivado(current => !current)
+    }
+
     return(
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
@@ -20,21 +53,29 @@ export default function Pergunta11(){
             
                 <View style={localStyles.container2}>
                     
-                    <BotaoEscolhaTeste
+                    <BotaoEscolhaTeste 
+                        color = {umAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
                         number = {0}
                         title = 'Não se aplicou de maneira alguma'
+                        onPress = {handleUm}
                     />
                     <BotaoEscolhaTeste
+                        color = {doisAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
                         number = {1}
                         title = 'Aplicou-se em algum grau ou por pouco tempo'
+                        onPress = {handleDois}
                     />
                     <BotaoEscolhaTeste
+                        color = {tresAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
                         number = {2}
                         title = 'Aplicou-se em um grau considerável ou por uma boa parte do tempo'
+                        onPress = {handleTres}
                     />
                     <BotaoEscolhaTeste
+                        color = {quatroAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
                         number = {3}
                         title = 'Aplicou-se muito ou na maioria do tempo'
+                        onPress = {handleQuatro}
                     />
                 </View>
             </ScrollView>

@@ -55,9 +55,9 @@ export default function Home() {
             />
 
             <View style={localStyles.botoesEmoji}>
-                <BotaoEmoji emoji='triste' color={sadActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleSad} />
-                <BotaoEmoji emoji='normal' color={normalActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleNormal} />
-                <BotaoEmoji emoji='feliz' color={happyActive? '#153B50' : GlobalColors.CorAcao} onPress = {handleHappy} />
+                <BotaoEmoji emoji='triste' color={sadActive? GlobalColors.CorSecundaria : GlobalColors.CorAcao} onPress = {handleSad} />
+                <BotaoEmoji emoji='normal' color={normalActive? GlobalColors.CorSecundaria : GlobalColors.CorAcao} onPress = {handleNormal} />
+                <BotaoEmoji emoji='feliz' color={happyActive? GlobalColors.CorSecundaria : GlobalColors.CorAcao} onPress = {handleHappy} />
             </View>
 
             <View>

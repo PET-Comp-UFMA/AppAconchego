@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
@@ -10,6 +10,19 @@ import { useNavigation } from '@react-navigation/native'
 export default function Pergunta210(){
 
     const navigation = useNavigation();
+
+    const [umAtivado, setUmAtivado] = useState(false)
+    const [doisAtivado, setDoisAtivado] = useState(false)
+
+    const handleUm = () => {
+        setDoisAtivado(false)
+        setUmAtivado(current => !current)
+    }
+
+    const handleDois = () => {
+        setUmAtivado(false)
+        setDoisAtivado(current => !current)
+    }
     
     return(
         <SafeAreaView style={localStyles.container}>
@@ -20,12 +33,16 @@ export default function Pergunta210(){
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
+                    color = {umAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
                     number = {0}
                     title = 'Sim'
+                    onPress = {handleUm}
                 />
                 <BotaoEscolhaTeste
+                    color = {doisAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
                     number = {1}
                     title = 'Não'
+                    onPress = {handleDois}
                 />
             </View>
             </ScrollView>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions,ScrollView } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
@@ -10,6 +10,19 @@ import { useNavigation } from '@react-navigation/native'
 export default function Pergunta37(){
 
     const navigation = useNavigation();
+
+    const [umAtivado, setUmAtivado] = useState(false)
+    const [doisAtivado, setDoisAtivado] = useState(false)
+
+    const handleUm = () => {
+        setDoisAtivado(false)
+        setUmAtivado(current => !current)
+    }
+
+    const handleDois = () => {
+        setUmAtivado(false)
+        setDoisAtivado(current => !current)
+    }
     
     return(
         <SafeAreaView>
@@ -18,14 +31,18 @@ export default function Pergunta37(){
                     <Text style={GlobalStyles.titulo1}>7. Quando está angustiado(a) com alguma problema, você costuma compartilhar essa preucupação com amigos, familiares ou até mesmo com um terapeuta?</Text>
                 </View>
                 <View style={localStyles.container2}>
-                    <BotaoEscolhaTeste
-                        number = {0}
-                        title = 'Sim'
-                    />
-                    <BotaoEscolhaTeste
-                        number = {1}
-                        title = 'Não'
-                    />
+                <BotaoEscolhaTeste
+                    color = {umAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
+                    number = {0}
+                    title = 'Sim'
+                    onPress = {handleUm}
+                />
+                <BotaoEscolhaTeste
+                    color = {doisAtivado? GlobalColors.CorSecundaria : GlobalColors.CorAcao}
+                    number = {1}
+                    title = 'Não'
+                    onPress = {handleDois}
+                />
                 </View>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3P6')} />

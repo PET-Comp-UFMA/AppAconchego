@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import GlobalStyles from '../Global/GlobalStyles';
+import GlobalColors from '../Global/GlobalColors';
 
 import { 
     SafeAreaView,
@@ -10,27 +11,23 @@ import {
     View
 } from 'react-native'
 
-export default class BotaoEscolhaTeste extends Component {
-    constructor(props){
-        super(props);
-    }
+export default function BotaoEscolhaTeste(props){
 
-    render(){
         return(
             <SafeAreaView style={localStyles.container}>
-                <TouchableOpacity style={GlobalStyles.butaoTeste} onPress = {this.props.onPress}>
-                    <View style={GlobalStyles.circulo}>
-                        <Text style={GlobalStyles.numero}>{this.props.number}</Text>
+                <TouchableOpacity style={GlobalStyles.butaoTeste} onPress = {props.onPress}>
+                    <View style={[GlobalStyles.circulo, {backgroundColor: props.color}]}>
+                        <Text style={GlobalStyles.numero}>{props.number}</Text>
                     </View>
 
                     <Text style={GlobalStyles.textoOpcoes}>    
-                        {this.props.title}
+                        {props.title}
                     </Text>
                 </TouchableOpacity>
             </SafeAreaView>
         )
     }
-}
+
 
 const localStyles = StyleSheet.create({
     container:{
