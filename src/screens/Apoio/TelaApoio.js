@@ -4,8 +4,6 @@ import GlobalColors from '../../componentes/Global/GlobalColors'
 
 import MenuApoio from '../../componentes/Botoes/MenuApoio'
 
-import RotasBottom from '../../rotas'
-
 export default function SaibaMais(){
     return(
         <SafeAreaView style={localStyles.container}>

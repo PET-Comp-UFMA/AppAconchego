@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { StatusBar } from 'expo-status-bar';
 import { Text, View, Button } from 'react-native';
 import AppLoading from 'expo-app-loading';
+import * as SplashScreen from 'expo-splash-screen';
+import * as Font from 'expo-font';
 import {
   useFonts,
   IBMPlexSans_600SemiBold as IBMPlexSans_Bold,
@@ -109,10 +111,28 @@ import BackButton from './src/componentes/Botoes/HeaderBackButton';
 
 const Stack = createStackNavigator();
 
-export default function App({}) {
 
-  let[fontsLoaded] = useFonts({ IBMPlexSans_Bold, IBMPlexSans_Regular, IBMPlexSans_Medium });
-  if(!fontsLoaded) { return <AppLoading /> };
+export default function App({}) {
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        SplashScreen.preventAutoHideAsync();
+        await Font.loadAsync({ IBMPlexSans_Regular, IBMPlexSans_Medium, IBMPlexSans_Bold });
+      } catch (e) {
+        console.warn(e);
+      } finally {
+        setAppIsReady(true);
+        SplashScreen.hideAsync();
+      }
+    }
+    prepare();
+  }, []);
+
+  if (!appIsReady) {
+    return null;
+  }
   
   return (
     <NavigationContainer>
