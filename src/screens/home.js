@@ -26,25 +26,55 @@ export default function Home() {
         setNormalActive(false)
         setHappyActive(false)
         setSadActive(current => !current)
-
-        await AsyncStorage.setItem('@saveemoji:emoji', 'triste')
+        handleNew('triste')
     }
 
     async function handleNormal () {
         setHappyActive(false)
         setSadActive(false)
         setNormalActive(current => !current)
-
-        await AsyncStorage.setItem('@saveemoji:emoji', 'normal')
+        handleNew('normal')
     }
 
     async function handleHappy () {
         setSadActive(false)
         setNormalActive(false)
         setHappyActive(current => !current)
-
-        await AsyncStorage.setItem('@saveemoji:emoji', 'feliz')
+        handleNew('feliz')
     }
+
+
+    const getCurrentDate=()=>{
+        let totalDate
+        let date = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+  
+        totalDate =(month > 10) ? (year + '-' + month + '-' + date) : (year + '-0' + month + '-' + date);
+        return totalDate;
+    }
+
+    async function handleNew (emocao) {
+        let date = getCurrentDate()
+        // const newData = {
+        //     [date]: {
+        //         emocao
+        //     },
+        // }
+
+        const newData = new Object();
+        newData[date] = {emocao}
+
+        // const response = await AsyncStorage.getItem('@saveemoji:emoji')
+        // const previousData = response ? JSON.parse(response) : {}
+        // console.log(previousData)
+        // const data = previousData[date] ? previousData[date] = {emocao} : previousData[date] = {emocao}
+        await AsyncStorage.setItem('@saveemoji:emoji', JSON.stringify(newData))
+
+        // console.log(newData)
+
+    }
+
 
     return(
         <View style={localStyles.container}>

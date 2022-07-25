@@ -29,7 +29,17 @@ export default function Registros(){
         let month = new Date().getMonth() + 1;
         let year = new Date().getFullYear();
   
-        totalDate =(month > 10) ? (year + '-0' + month + '-' + date) : (year + '-0' + month + '-' + date);
+        totalDate =(month > 10) ? (year + '-' + month + '-' + date) : (year + '-0' + month + '-' + date);
+        return totalDate;
+    }
+
+    const getFormatedDate=()=>{
+        let totalDate
+        let date = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+  
+        totalDate =(month > 10) ? (date + '-' + month + '-' + year) : (date + '-0' + month + '-' + year);
         return totalDate;
     }
 
@@ -43,14 +53,15 @@ export default function Registros(){
     };
 
     const [humor, setHumor] = useState(<Text style={GlobalStyles.resultado}>
-        Não existem dados registrados para este teste do dia DD/MM/AAAA.
+        Não existem dados registrados para este teste do dia {getFormatedDate()}.
     </Text>)
 
-    async function handleEmoji() {
+    async function handleEmoji(day = getCurrentDate()) {
         const response = await AsyncStorage.getItem('@saveemoji:emoji')
-        const data = response ? setHumor(<BotaoEmoji emoji={response} color={GlobalColors.CorAcao} />) : <Text style={GlobalStyles.resultado}>
-                Não existem dados registrados para este teste do dia DD/MM/AAAA.
-            </Text>
+        const data = response ? JSON.parse(response) : {};
+        data[day] ? setHumor(<BotaoEmoji emoji={data[day].emocao} color={GlobalColors.CorAcao} />) : setHumor(<Text style={GlobalStyles.resultado}>
+                Não existem dados registrados para este teste do dia {day}.
+            </Text>)
     }
 
     useEffect(() => {
@@ -77,6 +88,7 @@ export default function Registros(){
                     onDayPress={(e) => {
                         setDay(e.dateString)
                         getSelectedDayEvents(e.dateString)
+                        handleEmoji(e.dateString)
                     }}
                     enableSwipeMonths
                     renderHeader={date => {
