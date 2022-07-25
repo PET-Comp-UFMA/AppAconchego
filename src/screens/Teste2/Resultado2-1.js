@@ -10,7 +10,7 @@ export default function Resultado21(){
     const navigation = useNavigation();
     
     return(
-        <SafeAreaView style={localStyles.container}>
+        <View style={localStyles.container}>
             <View style={localStyles.container2}>
             <Text style={GlobalStyles.resposta}>Resultado</Text>
             <Text style={GlobalStyles.titulo1}>Seu resultado requer atenção</Text>
@@ -22,23 +22,21 @@ export default function Resultado21(){
             <Botao title='Preciso de Apoio' onPress={() => navigation.navigate('canais de apoio')}/>
             <Botao title='Voltar à tela de Avaliação' onPress={() => navigation.navigate('Aconchego')}/>
             </View>
-        </SafeAreaView>
+        </View>
     )
 }
 
 const localStyles = StyleSheet.create({
     container:{
-        height: Dimensions.get('window').height,
+        flex: 1,
         width: Dimensions.get('window').width,
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,
         paddingTop: 40
-        },
-        container2:{
-            paddingTop: 50,
-            paddingBottom: 50,
-            alignItems: 'center',
-        },
+    },
+    container2:{
+        alignItems: 'center',
+    },
 
 })

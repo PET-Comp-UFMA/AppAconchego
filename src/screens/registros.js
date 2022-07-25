@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, ScrollView, View, Dimensions } from 'react-native'
+import { StyleSheet, Text, ScrollView, View, Dimensions, Image } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
 import Botao from '../componentes/Botoes/Padrao'
@@ -40,7 +40,17 @@ export default function Registros(){
         let month = new Date().getMonth() + 1;
         let year = new Date().getFullYear();
   
-        totalDate =(month > 10) ? (date + '-' + month + '-' + year) : (date + '-0' + month + '-' + year);
+        totalDate =(month > 10) ? (date + '/' + month + '/' + year) : (date + '/0' + month + '/' + year);
+        return totalDate;
+    }
+
+    const getFormatedCalendarDate=(date)=>{
+        let totalDate
+        let day = date.day
+        let month = date.month;
+        let year = date.year;
+  
+        totalDate =(month > 10) ? (day + '/' + month + '/' + year) : (day + '/0' + month + '/' + year);
         return totalDate;
     }
 
@@ -59,19 +69,46 @@ export default function Registros(){
         Não existem dados registrados para este teste do dia {getFormatedDate()}.
     </Text>)
 
+    const [ansiedade, setAnsiedade] = useState(<Text style={GlobalStyles.resultado}>
+        Não existem dados registrados para este teste do dia {getFormatedDate()}.
+    </Text>)
+
     const [sofrimento, setSofrimento] = useState(<Text style={GlobalStyles.resultado}>
         Não existem dados registrados para este teste do dia {getFormatedDate()}.
     </Text>)
 
+    const [cuidados, setCuidados] = useState(<Text style={GlobalStyles.resultado}>
+        Não existem dados registrados para este teste do dia {getFormatedDate()}.
+    </Text>)
 
+    const [imgSofrimento, setImgSofrimento] = useState()
 
-    async function handleEmoji(day = getCurrentDate()) {
+    const [imgCuidados, setImgCuidados] = useState()
+
+// resultado do botão emoji
+
+    async function handleEmoji(day = getCurrentDate(), date) {
         const response = await AsyncStorage.getItem('@saveemoji:emoji')
         const data = response ? JSON.parse(response) : {};
         data[day] ? setHumor(<BotaoEmoji emoji={data[day].emocao} color={GlobalColors.CorAcao} />) : setHumor(<Text style={GlobalStyles.resultado}>
-                Não existem dados registrados para este teste do dia {day}.
+                Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
             </Text>)
     }
+
+// resultado teste 1 Teste Avaliando ansiedade, depressão e estresse
+
+    async function handleAnsiedade(day = getCurrentDate(), date) {
+        const response = await AsyncStorage.getItem('@saveansiedade:ansiedade')
+        const data = response ? JSON.parse(response) : {};
+        data[day] ? setAnsiedade(<Text style={GlobalStyles.resultado}>
+            Não existem dados registrados para este teste do dia.
+        </Text>):
+            setAnsiedade(<Text style={GlobalStyles.resultado}>
+                Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
+            </Text>)
+    }
+
+// Resultados do teste 2: Teste Avaliando sofrimento mental
 
     function resultadoSofrimento(result) {
         if(result <= 7){
@@ -93,7 +130,13 @@ export default function Registros(){
         }
     }
 
-    async function handleSofrimento(day = getCurrentDate()) {
+    function renderImageSofrimento() {
+        setImgSofrimento(
+            <Image style={localStyles.imageSofrimento} source={require('../../assets/sofrimento.png')} />
+        )
+    }
+
+    async function handleSofrimento(day = getCurrentDate(), date) {
         const response = await AsyncStorage.getItem('@savesavaliacao:sofrimento')
         const data = response ? JSON.parse(response) : {};
         data[day] ?
@@ -101,14 +144,75 @@ export default function Registros(){
             :
             setSofrimento(
                 <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia {day}.
+                    Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
                 </Text>
             )
+        data[day] ?
+            renderImageSofrimento()
+            :
+            setImgSofrimento()
     }
+
+// Resultados do teste 3: Teste Avaliando os cuidados em saúde mental
+
+    function resultadoCuidados(result) {
+        if(result <= 4){
+            setCuidados(
+                <View>
+                    <Text style={GlobalStyles.resultado}>
+                    Tenha muita atenção aos seus hábitos e comportamentos. Adote uma rotina saudável também para sua mente. Pratique atividade física, siga uma alimentação nutritiva e equilibrada, cultive um hobby que lhe dê prazer, conviva com amigos e familiares. E informe-se sobre a depressão, pois a informação é o melhor caminho para identificar os sinais da doença e/ou apoiar quem sofre de depressão.
+                    </Text>
+                </View>
+            )
+        } else if (result <= 7){
+            setCuidados(
+                <View>
+                    <Text style={GlobalStyles.resultado}>
+                    Parabéns, você já está cuidando da sua saúde mental. Mas sempre dá para melhorar, certo? Confira no teste quais respostas você errou e tente incorporar hábitos mais saudáveis ao seu dia a dia. Pratique atividade física, durma bem, siga uma alimentação nutritiva e equilibrada, cultive um hobby que lhe dê prazer, conviva com amigos e familiares. E informe-se sobre a depressão.
+                    </Text>
+                </View>
+            )
+        } else {
+            setCuidados(
+                <View>
+                    <Text style={GlobalStyles.resultado}>
+                    Excelente, você sabe cuidar da sua saúde mental, parabéns. Ainda assim, vale a pena ampliar seu conhecimento sobre a depressão e saber, além das formas de prevenção, quais são os sinais da doença, os tratamentos e como apoiar quem sofre do transtorno. Disseminar boas informações a respeito da depressão é o caminho para construirmos uma sociedade mais empática. 
+                    </Text>
+                </View>
+            )
+        }
+    }
+
+    function renderImageCuidados() {
+        setImgCuidados(
+            <Image style={localStyles.imageCuidados} source={require('../../assets/cuidados.png')} />
+        )
+    }
+
+    async function handleCuidados(day = getCurrentDate(), date) {
+        const response = await AsyncStorage.getItem('@savecuidados:cuidados')
+        const data = response ? JSON.parse(response) : {};
+        data[day] ?
+            resultadoCuidados(data[day].resultado)
+            :
+            setCuidados(
+                <Text style={GlobalStyles.resultado}>
+                    Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
+                </Text>
+            )
+        data[day] ?
+            renderImageCuidados()
+            :
+            setImgCuidados()
+    }
+
+// Renderizando os resultados na tela ao abrir os registros
 
     useEffect(() => {
         handleEmoji()
+        // handleAnsiedade()
         handleSofrimento()
+        handleCuidados()
     },[])
 
 
@@ -131,8 +235,10 @@ export default function Registros(){
                     onDayPress={(e) => {
                         setDay(e.dateString)
                         getSelectedDayEvents(e.dateString)
-                        handleEmoji(e.dateString)
-                        handleSofrimento(e.dateString)
+                        handleEmoji(e.dateString, e)
+                        // handleAnsiedade(e.dateString, e)
+                        handleSofrimento(e.dateString, e)
+                        handleCuidados(e.dateString, e)
                     }}
                     enableSwipeMonths
                     renderHeader={date => {
@@ -155,9 +261,7 @@ export default function Registros(){
                     Teste Avaliando ansiedade, depressão e estresse
                 </Text>
 
-                <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia DD/MM/AAAA.
-                </Text>
+                {ansiedade}
 
                 <Text style={GlobalStyles.subtitulo}>
                     Teste Avaliando sofrimento mental
@@ -165,13 +269,15 @@ export default function Registros(){
 
                 {sofrimento}
 
+                {imgSofrimento}
+
                 <Text style={GlobalStyles.subtitulo}>
                     Teste Avaliando os cuidados em saúde mental
                 </Text>
 
-                <Text style={[GlobalStyles.resultado, {marginBottom: 40}]}>
-                    Não existem dados registrados para este teste do dia DD/MM/AAAA.
-                </Text>
+                {cuidados}
+
+                {imgCuidados}
 
                 <Botao title='Voltar à Tela Principal' onPress={() => navigation.navigate('Aconchego')} />
 
@@ -205,4 +311,16 @@ const localStyles = StyleSheet.create({
 
         elevation: 10,
     },
+    imageSofrimento: {
+        width:120,
+        height: 130,
+        marginTop: 30,
+        marginBottom: 20
+    },
+    imageCuidados: {
+        width:160,
+        height: 130,
+        marginTop: 30,
+        marginBottom: 30
+    }
 })

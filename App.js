@@ -106,6 +106,7 @@ import Teste3R7 from './src/screens/Teste3/Resultado3-7'
 import Teste3R8 from './src/screens/Teste3/Resultado3-8'
 import Teste3R9 from './src/screens/Teste3/Resultado3-9'
 import Teste3R10 from './src/screens/Teste3/Resultado3-10'
+import Teste3R from './src/screens/Teste3/Resultado3';
 import BackButton from './src/componentes/Botoes/HeaderBackButton';
 
 
@@ -748,6 +749,15 @@ export default function App({}) {
           <Stack.Screen
           name='Teste3R10'
           component={Teste3R10}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando os Cuidados em Saúde Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
+
+          <Stack.Screen
+          name='Teste3R'
+          component={Teste3R}
           options={{
             headerLeft: () => <BackButton />,
             title: 'Avaliando os Cuidados em Saúde Mental',

@@ -5,7 +5,9 @@ import GlobalColors from '../../componentes/Global/GlobalColors'
 import Botao from '../../componentes/Botoes/Padrao'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Resultado31(){
+export default function Resultado31({route}){
+
+    let resultado = route.params?.resposta
 
     const navigation = useNavigation();
     
@@ -18,7 +20,7 @@ export default function Resultado31(){
             </View>
         </ScrollView>
         <View>
-            <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P2')} />
+            <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P2', {resposta: resultado})} />
         </View>
     </View>
     )

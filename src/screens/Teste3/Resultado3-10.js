@@ -4,10 +4,36 @@ import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import Botao from '../../componentes/Botoes/Padrao'
 import { useNavigation } from '@react-navigation/native'
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export default function Resultado310(){
+export default function Resultado310({route}){
 
     const navigation = useNavigation();
+
+    function irResultado() {
+        let resultado = route.params?.resposta
+        handleNew(resultado)
+        navigation.navigate('Teste3R', {resposta: resultado})
+    }
+
+    const getCurrentDate=()=>{
+        let totalDate
+        let date = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+  
+        totalDate =(month > 10) ? (year + '-' + month + '-' + date) : (year + '-0' + month + '-' + date);
+        return totalDate;
+    }
+
+    async function handleNew (resultado) {
+        let date = getCurrentDate()
+
+        const newCuidados = new Object();
+        newCuidados[date] = {resultado}
+
+        await AsyncStorage.setItem('@savecuidados:cuidados', JSON.stringify(newCuidados))
+    }
 
     return(
     <View style={localStyles.container}>
@@ -18,7 +44,7 @@ export default function Resultado310(){
             </View>
         </ScrollView>
         <View>
-            <Botao title='Próximo' />
+            <Botao title='Próximo' onPress={irResultado} />
         </View>
     </View>
     )
