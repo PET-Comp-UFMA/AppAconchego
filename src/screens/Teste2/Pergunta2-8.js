@@ -7,12 +7,14 @@ import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Pergunta28(){
+export default function Pergunta28({route}){
 
     const navigation = useNavigation();
 
     const [umAtivado, setUmAtivado] = useState(false)
     const [doisAtivado, setDoisAtivado] = useState(false)
+
+    let resultado = route.params?.resposta
 
     const handleUm = () => {
         setDoisAtivado(false)
@@ -48,7 +50,7 @@ export default function Pergunta28(){
             </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P7')} />
-                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P9')} />
+                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2P9', {resposta: umAtivado? 1 + resultado : 0 + resultado})} />
             </View>
         </SafeAreaView>
     )

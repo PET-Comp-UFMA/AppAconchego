@@ -6,8 +6,9 @@ import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export default function Pergunta217(){
+export default function Pergunta217({route}){
 
     const navigation = useNavigation();
 
@@ -22,6 +23,32 @@ export default function Pergunta217(){
     const handleDois = () => {
         setUmAtivado(false)
         setDoisAtivado(current => !current)
+    }
+
+    function irResultado() {
+        let resultado = route.params?.resposta
+        umAtivado? resultado++ : resultado = resultado
+        handleNew(resultado)
+        resultado <= 7 ? navigation.navigate('Teste2R1') : navigation.navigate('Teste2R2')
+    }
+
+    const getCurrentDate=()=>{
+        let totalDate
+        let date = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+  
+        totalDate =(month > 10) ? (year + '-' + month + '-' + date) : (year + '-0' + month + '-' + date);
+        return totalDate;
+    }
+
+    async function handleNew (resultado) {
+        let date = getCurrentDate()
+
+        const newSofrimento = new Object();
+        newSofrimento[date] = {resultado}
+
+        await AsyncStorage.setItem('@savesavaliacao:sofrimento', JSON.stringify(newSofrimento))
     }
     
     return(
@@ -48,7 +75,7 @@ export default function Pergunta217(){
             </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar'onPress={() => navigation.navigate('Teste2P16')} />
-                <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste2R1')} />
+                <BotaoPeqProx title='Próximo' onPress={irResultado} />
             </View>
         </SafeAreaView>
     )

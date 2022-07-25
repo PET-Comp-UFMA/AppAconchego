@@ -81,6 +81,7 @@ import Teste2P15 from './src/screens/Teste2/Pergunta2-15'
 import Teste2P16 from './src/screens/Teste2/Pergunta2-16'
 import Teste2P17 from './src/screens/Teste2/Pergunta2-17'
 import Teste2R1 from './src/screens/Teste2/Resultado2-2'
+import Teste2R2 from './src/screens/Teste2/Resultado2-1'
 
 //Telas teste 3
 
@@ -549,6 +550,15 @@ export default function App({}) {
           <Stack.Screen
           name='Teste2R1'
           component={Teste2R1}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando o Sofrimento Mental',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
+
+          <Stack.Screen
+          name='Teste2R2'
+          component={Teste2R2}
           options={{
             headerLeft: () => <BackButton />,
             title: 'Avaliando o Sofrimento Mental',
