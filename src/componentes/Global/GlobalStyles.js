@@ -179,7 +179,7 @@ export default StyleSheet.create({
         letterSpacing: 2,
     },
     headerStyle: {
-        height: 70,
+        height: 80,
         backgroundColor: GlobalColors.CorFundo,
         borderBottomWidth: 2,
         borderBottomColor: GlobalColors.CorTextoFraco,

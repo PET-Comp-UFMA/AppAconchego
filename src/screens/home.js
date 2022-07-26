@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+    SafeAreaView,
     View,
     StyleSheet,
     Image,
@@ -77,7 +78,7 @@ export default function Home() {
 
 
     return(
-        <View style={localStyles.container}>
+        <SafeAreaView style={localStyles.container}>
             <Image style={localStyles.logo} source={require('../../assets/logo.png')} />
 
             <Titulo
@@ -100,20 +101,19 @@ export default function Home() {
                     title = 'Meus Registros'
                 />
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 
 const localStyles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: GlobalColors.CorFundo,
     },
     logo: {
         marginBottom: 30,
-        marginTop: 35,
         width: 200,
         height: 200
     },

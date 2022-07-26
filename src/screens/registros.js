@@ -70,7 +70,7 @@ export default function Registros(){
     </Text>)
 
     const [ansiedade, setAnsiedade] = useState(<Text style={GlobalStyles.resultado}>
-        Não existem dados registrados para este teste do dia {getFormatedDate()}.
+        Não existem dados registrados para este teste do dia {getCurrentDate()}.
     </Text>)
 
     const [sofrimento, setSofrimento] = useState(<Text style={GlobalStyles.resultado}>
@@ -91,7 +91,7 @@ export default function Registros(){
         const response = await AsyncStorage.getItem('@saveemoji:emoji')
         const data = response ? JSON.parse(response) : {};
         data[day] ? setHumor(<BotaoEmoji emoji={data[day].emocao} color={GlobalColors.CorAcao} />) : setHumor(<Text style={GlobalStyles.resultado}>
-                Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
+                Não existem dados registrados para este teste do dia {day}.
             </Text>)
     }
 
@@ -104,7 +104,7 @@ export default function Registros(){
             Não existem dados registrados para este teste do dia.
         </Text>):
             setAnsiedade(<Text style={GlobalStyles.resultado}>
-                Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
+                Não existem dados registrados para este teste do dia {day}.
             </Text>)
     }
 
@@ -144,7 +144,7 @@ export default function Registros(){
             :
             setSofrimento(
                 <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
+                    Não existem dados registrados para este teste do dia {day}.
                 </Text>
             )
         data[day] ?
@@ -197,7 +197,7 @@ export default function Registros(){
             :
             setCuidados(
                 <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia {getFormatedCalendarDate(date)}.
+                    Não existem dados registrados para este teste do dia {day}.
                 </Text>
             )
         data[day] ?
@@ -210,7 +210,7 @@ export default function Registros(){
 
     useEffect(() => {
         handleEmoji()
-        // handleAnsiedade()
+        handleAnsiedade()
         handleSofrimento()
         handleCuidados()
     },[])
@@ -236,7 +236,7 @@ export default function Registros(){
                         setDay(e.dateString)
                         getSelectedDayEvents(e.dateString)
                         handleEmoji(e.dateString, e)
-                        // handleAnsiedade(e.dateString, e)
+                        handleAnsiedade(e.dateString, e)
                         handleSofrimento(e.dateString, e)
                         handleCuidados(e.dateString, e)
                     }}
