@@ -50,7 +50,7 @@ export default function Resultado21(props){
     handleNew(respostaGeral)
 
     // Estresse
-    if (respostasEstresse < 11) {
+    if (respostasEstresse < 15) {
         // Estresse = normal
         estresseTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Estresse - Normal</Text>
         estresseTexto = <Text style={GlobalStyles.titulo2}>Seu nível de estresse está baixo. Face aos fatores do cotidiano, você se adapta bem</Text>
@@ -60,12 +60,12 @@ export default function Resultado21(props){
         estresseTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Estresse - Leve</Text>
         estresseTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
         estresseIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Leve.png')} />
-    } else if (respostasEstresse < 27) {
+    } else if (respostasEstresse < 26) {
         // Estresse = moderado
         estresseTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Estresse - Moderado</Text>
         estresseTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
         estresseIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Moderado.png')} />
-    } else if (respostasEstresse < 35) {
+    } else if (respostasEstresse < 34) {
         // Estresse = severo
         estresseTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Estresse - Grave</Text>
         estresseTexto = <Text style={GlobalStyles.titulo2}>Os resultados demonstram um nível elevado de estresse. Você deve estar se sentindo exaurido pelos fatores estressantes do cotidiano. A tensão emocional produzida pelo acúmulo de fatores estressantes, o colocam sob risco de apresentar sintomas em um ou vários campos: relacional, intelectual, físico ou psíquico.</Text>
@@ -78,7 +78,7 @@ export default function Resultado21(props){
     }
 
     // Ansiedade
-    if (respostasAnsiedade < 7) {
+    if (respostasAnsiedade < 8) {
         // Ansiedade = normal
         ansiedadeTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Ansiedade - Normal</Text>
         ansiedadeTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação sobre a dimensão de ansiedade demonstra que você não está ansioso(a).</Text>
@@ -106,22 +106,22 @@ export default function Resultado21(props){
     }
 
         // Depresso
-        if (respostasDepressao < 7) {
+        if (respostasDepressao < 10) {
             // Depressão = normal
             depressaoTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Depressão - Normal</Text>
             depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação sobre a dimensão de depressão demonstra que você não está deprimido(a).</Text>
             depressaoIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Normal.png')} />
-        } else if (respostasDepressao < 10){
+        } else if (respostasDepressao < 14){
             // Depressão = leve
             depressaoTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Depressão - Leve</Text>
             depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de depressao está elevada. É importante falar com o seu médico a fim de traçar uma codunta.</Text>
             depressaoIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Leve.png')} />
-        } else if (respostasDepressao < 15) {
+        } else if (respostasDepressao < 21) {
             // Depressão = moderado
             depressaoTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Depressão - Moderada</Text>
             depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de depressao está elevada. É importante falar com o seu médico a fim de traçar uma codunta.</Text>
             depressaoIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Moderado.png')} />
-        } else if (respostasDepressao < 20) {
+        } else if (respostasDepressao < 28) {
             // Depressão = severo
             depressaoTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Depressão - Grave</Text>
             depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de depressão está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
@@ -133,9 +133,6 @@ export default function Resultado21(props){
             depressaoIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/DepressaoSevero.png')} />
         }
 
-
-
-    console.log(respostas)
 
     const navigation = useNavigation();
     

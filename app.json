@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app-aconchego",
-    "slug": "app-aconchego",
+    "name": "Aconchego",
+    "slug": "Aconchego",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,11 @@
       "supportsTablet": true
     },
     "android": {
+      "package" : "com.appaconchego",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
     },
     "web": {
       "favicon": "./assets/favicon.png"
