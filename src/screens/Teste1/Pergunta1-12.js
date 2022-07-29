@@ -7,7 +7,11 @@ import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Pergunta112(){
+export default function Pergunta112(props){
+
+    var respostas = props.route.params.respostas
+
+    console.log(respostas)
 
     const navigation = useNavigation();
 
@@ -20,6 +24,7 @@ export default function Pergunta112(){
         setDoisAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p12 = 0
         setUmAtivado(current => !current)
     }
 
@@ -27,6 +32,7 @@ export default function Pergunta112(){
         setUmAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p12 = 1
         setDoisAtivado(current => !current)
     }
 
@@ -34,6 +40,7 @@ export default function Pergunta112(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setQuatroAtivado(false)
+        respostas.p12 = 2
         setTresAtivado(current => !current)
     }
 
@@ -41,6 +48,7 @@ export default function Pergunta112(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setTresAtivado(false)
+        respostas.p12 = 3
         setQuatroAtivado(current => !current)
     }
 
@@ -81,8 +89,8 @@ export default function Pergunta112(){
 
             </ScrollView>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P11')}/>
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P13')}/>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P11', {respostas: respostas})}/>
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P13', {respostas: respostas})}/>
                 </View>
         </SafeAreaView>
     )

@@ -7,8 +7,12 @@ import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Pergunta17(){
+export default function Pergunta17(props){
     
+    var respostas = props.route.params.respostas
+
+    console.log(respostas)
+
     const navigation = useNavigation();
 
     const [umAtivado, setUmAtivado] = useState(false)
@@ -20,6 +24,7 @@ export default function Pergunta17(){
         setDoisAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p7 = 0
         setUmAtivado(current => !current)
     }
 
@@ -27,6 +32,7 @@ export default function Pergunta17(){
         setUmAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p7 = 1
         setDoisAtivado(current => !current)
     }
 
@@ -34,6 +40,7 @@ export default function Pergunta17(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setQuatroAtivado(false)
+        respostas.p7 = 2
         setTresAtivado(current => !current)
     }
 
@@ -41,6 +48,7 @@ export default function Pergunta17(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setTresAtivado(false)
+        respostas.p7 = 3
         setQuatroAtivado(current => !current)
     }
 
@@ -81,8 +89,8 @@ export default function Pergunta17(){
 
             </ScrollView>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P6')} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P8')}/>
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P6', {respostas: respostas})} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P8', {respostas: respostas})}/>
                 </View>
         </SafeAreaView>
     )

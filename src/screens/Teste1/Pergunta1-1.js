@@ -7,9 +7,17 @@ import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
 
+
+
 export default function Pergunta11(){
     
     const navigation = useNavigation();
+
+    var respostas = {
+        p1:  0, p6:  0, p8:  0, p11: 0, p12: 0, p14: 0, p18: 0, // Estresse
+        p2:  0, p4:  0, p7:  0, p9:  0, p15: 0, p19: 0, p20: 0, // Ansiedade
+        p3:  0, p5:  0, p10: 0, p13: 0, p16: 0, p17: 0, p21: 0  // Depressão
+    }
 
     const [umAtivado, setUmAtivado] = useState(false)
     const [doisAtivado, setDoisAtivado] = useState(false)
@@ -37,10 +45,10 @@ export default function Pergunta11(){
         setTresAtivado(current => !current)
     }
 
+
     const handleQuatro = () => {
         setUmAtivado(false)
         setDoisAtivado(false)
-        setTresAtivado(false)
         setQuatroAtivado(current => !current)
     }
 
@@ -78,10 +86,20 @@ export default function Pergunta11(){
                         onPress = {handleQuatro}
                     />
                 </View>
+                {/* navigation.navigate('Teste1P2') */}
             </ScrollView>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1Int2')} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P2')} />
+                    <BotaoPeqProx title='Próximo' onPress={() => {
+                        if (doisAtivado) {
+                            respostas.p1 = 1
+                        } else if (tresAtivado) {
+                            respostas.p1 = 2
+                        } else if (quatroAtivado) {
+                            respostas.p1 = 3
+                        }
+                        navigation.navigate('Teste1P2', {respostas: respostas})
+                        }} /> 
                 </View>           
         </SafeAreaView>
     )

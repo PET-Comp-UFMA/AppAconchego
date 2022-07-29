@@ -7,9 +7,15 @@ import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Pergunta15(){
+export default function Pergunta15(props){
+
+    var respostas = props.route.params.respostas
+
+    console.log(respostas)
+
 
     const navigation = useNavigation();
+
 
     const [umAtivado, setUmAtivado] = useState(false)
     const [doisAtivado, setDoisAtivado] = useState(false)
@@ -20,6 +26,7 @@ export default function Pergunta15(){
         setDoisAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p5 = 0
         setUmAtivado(current => !current)
     }
 
@@ -27,6 +34,7 @@ export default function Pergunta15(){
         setUmAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p5 = 1
         setDoisAtivado(current => !current)
     }
 
@@ -34,6 +42,7 @@ export default function Pergunta15(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setQuatroAtivado(false)
+        respostas.p5 = 2
         setTresAtivado(current => !current)
     }
 
@@ -41,6 +50,7 @@ export default function Pergunta15(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setTresAtivado(false)
+        respostas.p5 = 3
         setQuatroAtivado(current => !current)
     }
 
@@ -81,8 +91,8 @@ export default function Pergunta15(){
                     
             </ScrollView>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P4')} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P6')} />
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P4', {respostas: respostas})} />
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P6', {respostas: respostas})} />
                 </View>
         </SafeAreaView>
     )

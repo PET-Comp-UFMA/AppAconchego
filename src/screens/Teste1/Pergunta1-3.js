@@ -7,8 +7,12 @@ import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Pergunta13(){
-    
+export default function Pergunta13(props){
+
+    var respostas = props.route.params.respostas
+
+    console.log(respostas)
+
     const navigation = useNavigation();
 
     const [umAtivado, setUmAtivado] = useState(false)
@@ -20,6 +24,7 @@ export default function Pergunta13(){
         setDoisAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p3 = 0
         setUmAtivado(current => !current)
     }
 
@@ -27,6 +32,7 @@ export default function Pergunta13(){
         setUmAtivado(false)
         setTresAtivado(false)
         setQuatroAtivado(false)
+        respostas.p3 = 1
         setDoisAtivado(current => !current)
     }
 
@@ -34,6 +40,7 @@ export default function Pergunta13(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setQuatroAtivado(false)
+        respostas.p3 = 2
         setTresAtivado(current => !current)
     }
 
@@ -41,6 +48,7 @@ export default function Pergunta13(){
         setUmAtivado(false)
         setDoisAtivado(false)
         setTresAtivado(false)
+        respostas.p3 = 3
         setQuatroAtivado(current => !current)
     }
 
@@ -81,8 +89,8 @@ export default function Pergunta13(){
                     
             </ScrollView>
                 <View style={GlobalStyles.botoesTeste}>
-                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P2')} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P4')} />
+                    <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P2', {respostas: respostas})} />
+                    <BotaoPeqProx title='Próximo' onPress={() => { navigation.navigate('Teste1P4', {respostas: respostas})}} />
                 </View>
         </SafeAreaView>
     )
