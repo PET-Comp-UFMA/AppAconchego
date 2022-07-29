@@ -60,6 +60,7 @@ import Teste1P18 from './src/screens/Teste1/Pergunta1-18'
 import Teste1P19 from './src/screens/Teste1/Pergunta1-19'
 import Teste1P20 from './src/screens/Teste1/Pergunta1-20'
 import Teste1P21 from './src/screens/Teste1/Pergunta1-21'
+import Teste1R1 from './src/screens/Teste1/Resultado'
 
 //Telas teste 2
 import Teste2Int from './src/screens/Teste2/Teste2Int'
@@ -381,6 +382,15 @@ export default function App({}) {
           <Stack.Screen
           name='Teste1P21'
           component={Teste1P21}
+          options={{
+            headerLeft: () => <BackButton />,
+            title: 'Avaliando Ansiedade, Depressão e Estresse',
+            headerTitleStyle: GlobalStyles.headerTitle }}
+          />
+
+          <Stack.Screen
+          name='Teste1R1'
+          component={Teste1R1}
           options={{
             headerLeft: () => <BackButton />,
             title: 'Avaliando Ansiedade, Depressão e Estresse',

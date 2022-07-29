@@ -81,6 +81,8 @@ export default function Registros(){
         Não existem dados registrados para este teste do dia {getFormatedDate()}.
     </Text>)
 
+    const [imgAnsiedade, setImgAnsiedade] = useState()
+    
     const [imgSofrimento, setImgSofrimento] = useState()
 
     const [imgCuidados, setImgCuidados] = useState()
@@ -97,16 +99,60 @@ export default function Registros(){
 
 // resultado teste 1 Teste Avaliando ansiedade, depressão e estresse
 
-    async function handleAnsiedade(day = getCurrentDate(), date) {
-        const response = await AsyncStorage.getItem('@saveansiedade:ansiedade')
+function resultadoAnsiedade(result) {
+    console.log(result)
+    if(result <= 7){
+        setAnsiedade(
+            <View>
+                <Text style={GlobalStyles.resultado}>
+                Sua pontuação sobre a dimensão de depressão, ansiedade e estresse demonstra que você possui relativo bem estar mental
+                </Text>
+            </View>
+        )
+    } else if (result <= 14) {
+        setAnsiedade(
+            <View>
+                <Text style={GlobalStyles.resultado}>
+                Sua pontuação na escala de ansiedade, depressão e estresse foi ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.
+                </Text>
+            </View>
+        )
+    } else{
+        setAnsiedade(
+            <View>
+                <Text style={GlobalStyles.resultado}>
+                Sua pontuação na escala de ansiedade, depressão e estresse foi elevada. É importante falar com o seu médico a fim de traçar uma codunta.
+                </Text>
+            </View>
+        )
+    }
+}
+
+
+async function handleAnsiedade(day = getCurrentDate(), date) {
+        const response = await AsyncStorage.getItem('@savesavaliacao:ansiedade')
         const data = response ? JSON.parse(response) : {};
-        data[day] ? setAnsiedade(<Text style={GlobalStyles.resultado}>
-            Não existem dados registrados para este teste do dia.
-        </Text>):
+        data[day] ? resultadoAnsiedade(data[day].resultado):
             setAnsiedade(<Text style={GlobalStyles.resultado}>
                 Não existem dados registrados para este teste do dia {day}.
-            </Text>)
-    }
+            </Text>
+        )
+        data[day] ?
+        renderImageAnsiedade()
+        :
+        setImgAnsiedade()
+        
+}
+
+function renderImageAnsiedade() {
+    setImgAnsiedade(
+        <Image style={localStyles.imageAnsiedade} source={require('../../assets/ansiedade.png')} />
+    )
+}
+
+
+
+    
 
 // Resultados do teste 2: Teste Avaliando sofrimento mental
 
@@ -258,10 +304,11 @@ export default function Registros(){
                 {humor}
 
                 <Text style={GlobalStyles.subtitulo}>
-                    Teste Avaliando ansiedade, depressão e estresse
+                    Teste Avaliando Ansiedade, Depressão e Estresse
                 </Text>
-
                 {ansiedade}
+
+                {imgAnsiedade}
 
                 <Text style={GlobalStyles.subtitulo}>
                     Teste Avaliando sofrimento mental
@@ -320,6 +367,12 @@ const localStyles = StyleSheet.create({
     imageCuidados: {
         width:160,
         height: 130,
+        marginTop: 30,
+        marginBottom: 30
+    },
+    imageAnsiedade: {
+        width:217,
+        height: 160,
         marginTop: 30,
         marginBottom: 30
     }

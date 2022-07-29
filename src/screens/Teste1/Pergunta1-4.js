@@ -12,8 +12,6 @@ export default function Pergunta14(props){
 
     var respostas = props.route.params.respostas
 
-    console.log(respostas)
-
     const navigation = useNavigation();
 
     const [umAtivado, setUmAtivado] = useState(false)

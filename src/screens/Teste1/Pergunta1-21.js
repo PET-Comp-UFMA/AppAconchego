@@ -11,9 +11,6 @@ export default function Pergunta121(props){
 
     var respostas = props.route.params.respostas
 
-    console.log(respostas)
-
-
     const navigation = useNavigation();
 
     const [umAtivado, setUmAtivado] = useState(false)
@@ -91,7 +88,7 @@ export default function Pergunta121(props){
             </ScrollView>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P20', {respostas: respostas})} />
-                    <BotaoPeqProx title='Próximo'/>
+                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1R1', {respostas: respostas})}/>
                 </View>
         </SafeAreaView>
     )

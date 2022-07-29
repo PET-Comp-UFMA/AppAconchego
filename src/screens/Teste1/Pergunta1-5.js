@@ -11,8 +11,6 @@ export default function Pergunta15(props){
 
     var respostas = props.route.params.respostas
 
-    console.log(respostas)
-
 
     const navigation = useNavigation();
 
