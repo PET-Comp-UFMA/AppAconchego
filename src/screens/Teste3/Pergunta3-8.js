@@ -30,7 +30,7 @@ export default function Pergunta38({route}){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>8. Você incorpora à sua rotina a prática de ioga, meditação ou alguma terapia alternativa que ajude a maneter o equilíbrio e o bem estar emocional?</Text>
+                    <Text style={GlobalStyles.titulo1}>8. Você incorpora à sua rotina a prática de ioga, meditação ou alguma terapia alternativa que ajude a manter o equilíbrio e o bem estar emocional?</Text>
                 </View>
                 <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
