@@ -14,7 +14,9 @@ export default function Resultado21(props){
     var respostasEstresse = (respostas.p1 + respostas.p6 + respostas.p8 + respostas.p11 + respostas.p12 + respostas.p14 + respostas.p18)*2
     var respostasAnsiedade= (respostas.p2 + respostas.p4 + respostas.p7 + respostas.p9 + respostas.p15 + respostas.p19 + respostas.p20)*2
     var respostasDepressao = (respostas.p3 + respostas.p5 + respostas.p10 + respostas.p13 + respostas.p16 + respostas.p17 + respostas.p21)*2
-    var respostaGeral = ((respostasEstresse/2) + (respostasAnsiedade/2) + (respostasDepressao/2)) / 3
+    console.log(respostasEstresse)
+    console.log(respostasAnsiedade)
+    console.log(respostasDepressao)
 
     var estresseTitulo
     var estresseTexto
@@ -38,16 +40,18 @@ export default function Resultado21(props){
         return totalDate;
     }
 
-    async function handleNew (resultado) {
+    async function handleNew (chave, resultado) {
         let date = getCurrentDate()
 
-        const newSofrimento = new Object();
-        newSofrimento[date] = {resultado}
+        const resultadoFinal = new Object();
+        resultadoFinal[date] = {resultado}
 
-        await AsyncStorage.setItem('@savesavaliacao:ansiedade', JSON.stringify(newSofrimento))
+        await AsyncStorage.setItem('@savesavaliacao:' + chave, JSON.stringify(resultadoFinal))
     }
 
-    handleNew(respostaGeral)
+    handleNew('ansiedade', respostasAnsiedade);
+    handleNew('estresse', respostasEstresse);
+    handleNew('depressao', respostasDepressao);
 
     // Estresse
     if (respostasEstresse < 15) {
@@ -58,12 +62,12 @@ export default function Resultado21(props){
     } else if (respostasEstresse < 19){
         // Estresse = leve
         estresseTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Estresse - Leve</Text>
-        estresseTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
+        estresseTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de estresse está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
         estresseIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Leve.png')} />
     } else if (respostasEstresse < 26) {
         // Estresse = moderado
         estresseTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Estresse - Moderado</Text>
-        estresseTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
+        estresseTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de estresse está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
         estresseIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Moderado.png')} />
     } else if (respostasEstresse < 34) {
         // Estresse = severo
@@ -86,12 +90,12 @@ export default function Resultado21(props){
     } else if (respostasAnsiedade < 10){
         // Ansiedade = leve
         ansiedadeTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Ansiedade - Leve</Text>
-        ansiedadeTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma codunta.</Text>
+        ansiedadeTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
         ansiedadeIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Leve.png')} />
     } else if (respostasAnsiedade < 15) {
         // Ansiedade = moderado
         ansiedadeTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Ansiedade - Moderada</Text>
-        ansiedadeTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma codunta.</Text>
+        ansiedadeTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
         ansiedadeIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Moderado.png')} />
     } else if (respostasAnsiedade < 20) {
         // Ansiedade = severo
@@ -114,12 +118,12 @@ export default function Resultado21(props){
         } else if (respostasDepressao < 14){
             // Depressão = leve
             depressaoTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Depressão - Leve</Text>
-            depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de depressao está elevada. É importante falar com o seu médico a fim de traçar uma codunta.</Text>
+            depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de depressão está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
             depressaoIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Leve.png')} />
         } else if (respostasDepressao < 21) {
             // Depressão = moderado
             depressaoTitulo = <Text style={GlobalStyles.titulo1}>Dimensão Depressão - Moderada</Text>
-            depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de depressao está elevada. É importante falar com o seu médico a fim de traçar uma codunta.</Text>
+            depressaoTexto = <Text style={GlobalStyles.titulo2}>Sua pontuação na escala de depressao está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
             depressaoIMG = <Image style={localStyles.logo} source={require('../../../assets/teste1/Moderado.png')} />
         } else if (respostasDepressao < 28) {
             // Depressão = severo
