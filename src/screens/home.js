@@ -57,23 +57,23 @@ export default function Home() {
 
     async function handleNew (emocao) {
         let date = getCurrentDate()
-        // const newData = {
-        //     [date]: {
-        //         emocao
-        //     },
-        // }
+        // Pega o valor que já tava lá
+        const json = await AsyncStorage.getItem('@saveemoji:emoji')
+        var response = {}
+        if (json != null) {
+            response = JSON.parse(json)
+        }
 
-        const newData = new Object();
-        newData[date] = {emocao}
+        // Pegar a data
+        const data = date.split("-")
+        if (data[2].length < 2) {
+            data[2] = "0" + data[2]
+        }
 
-        // const response = await AsyncStorage.getItem('@saveemoji:emoji')
-        // const previousData = response ? JSON.parse(response) : {}
-        // console.log(previousData)
-        // const data = previousData[date] ? previousData[date] = {emocao} : previousData[date] = {emocao}
-        await AsyncStorage.setItem('@saveemoji:emoji', JSON.stringify(newData))
-
-        // console.log(newData)
-
+        // Botar o novo dia no json
+        response[data] = {emocao}
+        
+        await AsyncStorage.setItem('@saveemoji:emoji', JSON.stringify(response))
     }
 
 

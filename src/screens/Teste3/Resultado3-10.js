@@ -28,11 +28,23 @@ export default function Resultado310({route}){
 
     async function handleNew (resultado) {
         let date = getCurrentDate()
+        // Pega o valor que já tava lá
+        const json = await AsyncStorage.getItem('@savecuidados:cuidados')
+        var response = {}
+        if (json != null) {
+            response = JSON.parse(json)
+        }
 
-        const newCuidados = new Object();
-        newCuidados[date] = {resultado}
+        // Pegar a data
+        const data = date.split("-")
+        if (data[2].length < 2) {
+            data[2] = "0" + data[2]
+        }
 
-        await AsyncStorage.setItem('@savecuidados:cuidados', JSON.stringify(newCuidados))
+        // Botar o novo dia no json
+        response[data] = {resultado}
+        
+        await AsyncStorage.setItem('@savecuidados:cuidados', JSON.stringify(response))
     }
 
     return(

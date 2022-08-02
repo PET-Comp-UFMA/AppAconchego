@@ -96,62 +96,71 @@ export default function Registros(){
 
     async function handleEmoji(day = getCurrentDate(), date) {
         const response = await AsyncStorage.getItem('@saveemoji:emoji')
+        day = day.split("-");
+        if (day[2].length < 2) {
+            day[2] = "0" + day[2]
+        }
+        
         const data = response ? JSON.parse(response) : {};
         data[day] ? setHumor(<BotaoEmoji emoji={data[day].emocao} color={GlobalColors.CorAcao} />) : setHumor(<Text style={GlobalStyles.resultado}>
-                Não existem dados registrados para este teste do dia {day}.
+                Não existem dados registrados para este teste do dia {day[2]}/{day[1]}/{day[0]}.
             </Text>)
     }
 
 // resultado teste 1 Teste Avaliando ansiedade
 
-function resultadoAnsiedade(result) {
-    if(result < 8){
-        setAnsiedade(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Normal</Text>
-                <Text style={GlobalStyles.resultado}>
-                Sua pontuação sobre a dimensão de ansiedade demonstra que você não está ansioso(a).
-                </Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Normal.png')} />
-            </View>
-        )
-    } else if (result < 10) {
-        setAnsiedade(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Leve</Text>
-                <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Leve.png')} />
-            </View>
-        )
-    } else if (result < 15) {
-        setAnsiedade(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Moderada</Text>
-                <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Moderado.png')} />
-            </View>
-        )
-    } else if (result < 20) {
-        setAnsiedade(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Grave</Text>
-                <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Grave.png')} />
-            </View>
-        )
-    } else{
-        setAnsiedade(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Severa</Text>
-                <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/AnsiedadeSevera.png')} />
-            </View>
-        )
+    function resultadoAnsiedade(result) {
+        if(result < 8){
+            setAnsiedade(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Normal</Text>
+                    <Text style={GlobalStyles.resultado}>
+                    Sua pontuação sobre a dimensão de ansiedade demonstra que você não está ansioso(a).
+                    </Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Normal.png')} />
+                </View>
+            )
+        } else if (result < 10) {
+            setAnsiedade(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Leve</Text>
+                    <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Leve.png')} />
+                </View>
+            )
+        } else if (result < 15) {
+            setAnsiedade(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Moderada</Text>
+                    <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Moderado.png')} />
+                </View>
+            )
+        } else if (result < 20) {
+            setAnsiedade(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Grave</Text>
+                    <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Grave.png')} />
+                </View>
+            )
+        } else{
+            setAnsiedade(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade - Severa</Text>
+                    <Text style={GlobalStyles.resultado}>Sua pontuação na escala de ansiedade está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/AnsiedadeSevera.png')} />
+                </View>
+            )
+        }
     }
-}
 
 
-async function handleAnsiedade(day = getCurrentDate(), date) {
+    async function handleAnsiedade(day = getCurrentDate(), date) {
+        day = day.split("-");
+        if (day[2].length < 2) {
+            day[2] = "0" + day[2]
+        }
         const response = await AsyncStorage.getItem('@savesavaliacao:ansiedade')
         const data = response ? JSON.parse(response) : {};
         data[day] ? resultadoAnsiedade(data[day].resultado):
@@ -159,145 +168,163 @@ async function handleAnsiedade(day = getCurrentDate(), date) {
                 <View style={localStyles.container2}>
                     <Text style={GlobalStyles.subtitulo}>Teste Avaliando Ansiedade</Text>
                     <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia {day}.
+                    Não existem dados registrados para este teste do dia {day[2]}/{day[1]}/{day[0]}.
                     </Text>
             </View>
         )        
-}
+    }
 
 // resultado teste 1 Teste Avaliando Depressão
 
-function resultadoDepressao(result) {
-    if(result < 10){
-        setDepressao(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Normal</Text>
-                <Text style={GlobalStyles.resultado}>
-                    Sua pontuação sobre a dimensão de depressão demonstra que você não está deprimido(a).
-                </Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Normal.png')} />
-            </View>
-        )
-    } else if (result < 14) {
-        setDepressao(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Leve</Text>
-                <Text style={GlobalStyles.resultado}>
-                    Sua pontuação na escala de depressão está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.
-                </Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Leve.png')} />
-            </View>
-        )
-    } else if (result < 21) {
-        setDepressao(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Moderada</Text>
-                <Text style={GlobalStyles.resultado}>
-                    Sua pontuação na escala de depressao está elevada. É importante falar com o seu médico a fim de traçar uma conduta.
-                </Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Moderado.png')} />
-            </View>
-        )
-    } else if (result < 28) {
-        setDepressao(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Grave</Text>
-                <Text style={GlobalStyles.resultado}>
-                    Sua pontuação na escala de depressão está elevada. É importante falar com o seu médico a fim de traçar uma conduta.
-                </Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Grave.png')} />
-            </View>
-        )
-    } else{
-        setDepressao(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Severa</Text>
-                <Text style={GlobalStyles.resultado}>
-                    Sua pontuação na escala de depressão está elevada. É importante falar com o seu médico a fim de traçar uma conduta.
-                </Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/DepressaoSevero.png')} />
-            </View>
-        )
+    function resultadoDepressao(result) {
+        if(result < 10){
+            setDepressao(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Normal</Text>
+                    <Text style={GlobalStyles.resultado}>
+                        Sua pontuação sobre a dimensão de depressão demonstra que você não está deprimido(a).
+                    </Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Normal.png')} />
+                </View>
+            )
+        } else if (result < 14) {
+            setDepressao(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Leve</Text>
+                    <Text style={GlobalStyles.resultado}>
+                        Sua pontuação na escala de depressão está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.
+                    </Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Leve.png')} />
+                </View>
+            )
+        } else if (result < 21) {
+            setDepressao(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Moderada</Text>
+                    <Text style={GlobalStyles.resultado}>
+                        Sua pontuação na escala de depressao está elevada. É importante falar com o seu médico a fim de traçar uma conduta.
+                    </Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Moderado.png')} />
+                </View>
+            )
+        } else if (result < 28) {
+            setDepressao(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Grave</Text>
+                    <Text style={GlobalStyles.resultado}>
+                        Sua pontuação na escala de depressão está elevada. É importante falar com o seu médico a fim de traçar uma conduta.
+                    </Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Grave.png')} />
+                </View>
+            )
+        } else{
+            setDepressao(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão - Severa</Text>
+                    <Text style={GlobalStyles.resultado}>
+                        Sua pontuação na escala de depressão está elevada. É importante falar com o seu médico a fim de traçar uma conduta.
+                    </Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/DepressaoSevero.png')} />
+                </View>
+            )
+        }
     }
-}
 
 
-async function handleDepressao(day = getCurrentDate(), date) {
+    async function handleDepressao(day = getCurrentDate(), date) {
+        day = day.split("-");
+        if (day[2].length < 2) {
+            day[2] = "0" + day[2]
+        }
         const response = await AsyncStorage.getItem('@savesavaliacao:depressao')
         const data = response ? JSON.parse(response) : {};
+        //console.log("depresso")
+        //console.log(response)
         data[day] ? resultadoDepressao(data[day].resultado):
             setDepressao(
                 <View style={localStyles.container2}>
                     <Text style={GlobalStyles.subtitulo}>Teste Avaliando Depressão</Text>
                     <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia {day}.
+                    Não existem dados registrados para este teste do dia {day[2]}/{day[1]}/{day[0]}.
                     </Text>
             </View>
         )        
-}
+    }
 
 // resultado teste 1 Teste Avaliando Estresse
 
-function resultadoEstresse(result) {
-    if(result < 15){
-        setEstresse(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Normal</Text>
-                <Text style={GlobalStyles.resultado}>
-                    Seu nível de estresse está baixo. Face aos fatores do cotidiano, você se adapta bem
-                </Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Normal.png')} />
-            </View>
-        )
-    } else if (result < 10) {
-        setEstresse(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Leve</Text>
-                <Text style={GlobalStyles.resultado}>Sua pontuação na escala de estresse está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Leve.png')} />
-            </View>
-        )
-    } else if (result < 15) {
-        setEstresse(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Moderada</Text>
-                <Text style={GlobalStyles.resultado}>Sua pontuação na escala de estresse está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Moderado.png')} />
-            </View>
-        )
-    } else if (result < 20) {
-        setEstresse(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Grave</Text>
-                <Text style={GlobalStyles.resultado}>Os resultados demonstram um nível elevado de estresse. Você deve estar se sentindo exaurido pelos fatores estressantes do cotidiano. A tensão emocional produzida pelo acúmulo de fatores estressantes, o colocam sob risco de apresentar sintomas em um ou vários campos: relacional, intelectual, físico ou psíquico.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/Grave.png')} />
-            </View>
-        )
-    } else{
-        setEstresse(
-            <View style={localStyles.container2}>
-                <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Severa</Text>
-                <Text style={GlobalStyles.resultado}>Os resultados demonstram um nível de estresse muito elevado. As solicitações que você enfrenta no cotidiano ultrapassam a sua capacidade de adaptação que coloca sob risco a sua saúde. Recue, procure desligar-se por um período, delegue, viaje, tire férias e priorize a sua agenda.</Text>
-                <Image style={localStyles.logo} source={require('../../assets/teste1/EstresseSevero.png')} />
-            </View>
-        )
+    function resultadoEstresse(result) {
+        if(result < 15){
+            setEstresse(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Normal</Text>
+                    <Text style={GlobalStyles.resultado}>
+                        Seu nível de estresse está baixo. Face aos fatores do cotidiano, você se adapta bem
+                    </Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Normal.png')} />
+                </View>
+            )
+        } else if (result < 19) {
+            setEstresse(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Leve</Text>
+                    <Text style={GlobalStyles.resultado}>Sua pontuação na escala de estresse está ligeramente elevada. Entretanto, você não se encontra em níveis que coloam em risco sua saúde.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Leve.png')} />
+                </View>
+            )
+        } else if (result < 26) {
+            setEstresse(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Moderada</Text>
+                    <Text style={GlobalStyles.resultado}>Sua pontuação na escala de estresse está elevada. É importante falar com o seu médico a fim de traçar uma conduta.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Moderado.png')} />
+                </View>
+            )
+        } else if (result < 34) {
+            setEstresse(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Grave</Text>
+                    <Text style={GlobalStyles.resultado}>Os resultados demonstram um nível elevado de estresse. Você deve estar se sentindo exaurido pelos fatores estressantes do cotidiano. A tensão emocional produzida pelo acúmulo de fatores estressantes, o colocam sob risco de apresentar sintomas em um ou vários campos: relacional, intelectual, físico ou psíquico.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/Grave.png')} />
+                </View>
+            )
+        } else{
+            setEstresse(
+                <View style={localStyles.container2}>
+                    <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse - Severa</Text>
+                    <Text style={GlobalStyles.resultado}>Os resultados demonstram um nível de estresse muito elevado. As solicitações que você enfrenta no cotidiano ultrapassam a sua capacidade de adaptação que coloca sob risco a sua saúde. Recue, procure desligar-se por um período, delegue, viaje, tire férias e priorize a sua agenda.</Text>
+                    <Image style={localStyles.logo} source={require('../../assets/teste1/EstresseSevero.png')} />
+                </View>
+            )
+        }
     }
-}
 
 
-async function handleEstresse(day = getCurrentDate(), date) {
+    async function handleEstresse(day = getCurrentDate(), date) {
+        day = day.split("-");
+        if (day[2].length < 2) {
+            day[2] = "0" + day[2]
+        }
         const response = await AsyncStorage.getItem('@savesavaliacao:estresse')
         const data = response ? JSON.parse(response) : {};
-        data[day] ? resultadoEstresse(data[day].resultado):
-            setAnsiedade(
+        //console.log("estresse")
+        //console.log("resposta:"  + response);
+        //console.log("Dia: " + day);
+        //console.log("Selecionado:" + data[day]);
+        //if (data[day]) {
+        //    console.log("passou")
+        //}
+
+        data[day] ? resultadoEstresse(data[day].resultado) :
+            setEstresse(
                 <View style={localStyles.container2}>
                     <Text style={GlobalStyles.subtitulo}>Teste Avaliando Estresse</Text>
                     <Text style={GlobalStyles.resultado}>
-                        Não existem dados registrados para este teste do dia {day}.
+                        Não existem dados registrados para este teste do dia {day[2]}/{day[1]}/{day[0]}.
                     </Text>
             </View>
         )
-}
+    }
 
     
 
@@ -330,6 +357,10 @@ async function handleEstresse(day = getCurrentDate(), date) {
     }
 
     async function handleSofrimento(day = getCurrentDate(), date) {
+        day = day.split("-");
+        if (day[2].length < 2) {
+            day[2] = "0" + day[2]
+        }
         const response = await AsyncStorage.getItem('@savesavaliacao:sofrimento')
         const data = response ? JSON.parse(response) : {};
         data[day] ?
@@ -337,7 +368,7 @@ async function handleEstresse(day = getCurrentDate(), date) {
             :
             setSofrimento(
                 <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia {day}.
+                    Não existem dados registrados para este teste do dia {day[2]}/{day[1]}/{day[0]}.
                 </Text>
             )
         data[day] ?
@@ -383,6 +414,10 @@ async function handleEstresse(day = getCurrentDate(), date) {
     }
 
     async function handleCuidados(day = getCurrentDate(), date) {
+        day = day.split("-");
+        if (day[2].length < 2) {
+            day[2] = "0" + day[2]
+        }
         const response = await AsyncStorage.getItem('@savecuidados:cuidados')
         const data = response ? JSON.parse(response) : {};
         data[day] ?
@@ -390,7 +425,7 @@ async function handleEstresse(day = getCurrentDate(), date) {
             :
             setCuidados(
                 <Text style={GlobalStyles.resultado}>
-                    Não existem dados registrados para este teste do dia {day}.
+                    Não existem dados registrados para este teste do dia {day[2]}/{day[1]}/{day[0]}.
                 </Text>
             )
         data[day] ?
@@ -435,7 +470,7 @@ async function handleEstresse(day = getCurrentDate(), date) {
                         handleAnsiedade(e.dateString, e)
                         handleDepressao(e.dateString, e)
                         handleSofrimento(e.dateString, e)
-                        handleEstresse(e.DateString, e)
+                        handleEstresse(e.dateString, e)
                         handleCuidados(e.dateString, e)
                     }}
                     enableSwipeMonths

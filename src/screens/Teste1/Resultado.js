@@ -42,11 +42,23 @@ export default function Resultado21(props){
 
     async function handleNew (chave, resultado) {
         let date = getCurrentDate()
+        // Pega o valor que já tava lá
+        const json = await AsyncStorage.getItem('@savesavaliacao:' + chave)
+        var response = {}
+        if (json != null) {
+            response = JSON.parse(json)
+        }
 
-        const resultadoFinal = new Object();
-        resultadoFinal[date] = {resultado}
+        // Pegar a data
+        const data = date.split("-")
+        if (data[2].length < 2) {
+            data[2] = "0" + data[2]
+        }
 
-        await AsyncStorage.setItem('@savesavaliacao:' + chave, JSON.stringify(resultadoFinal))
+        // Botar o novo dia no json
+        response[data] = {resultado}
+        
+        await AsyncStorage.setItem('@savesavaliacao:' + chave, JSON.stringify(response))
     }
 
     handleNew('ansiedade', respostasAnsiedade);

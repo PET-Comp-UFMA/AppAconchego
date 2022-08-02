@@ -44,11 +44,23 @@ export default function Pergunta217({route}){
 
     async function handleNew (resultado) {
         let date = getCurrentDate()
+        // Pega o valor que já tava lá
+        const json = await AsyncStorage.getItem('@savesavaliacao:sofrimento')
+        var response = {}
+        if (json != null) {
+            response = JSON.parse(json)
+        }
 
-        const newSofrimento = new Object();
-        newSofrimento[date] = {resultado}
+        // Pegar a data
+        const data = date.split("-")
+        if (data[2].length < 2) {
+            data[2] = "0" + data[2]
+        }
 
-        await AsyncStorage.setItem('@savesavaliacao:sofrimento', JSON.stringify(newSofrimento))
+        // Botar o novo dia no json
+        response[data] = {resultado}
+        
+        await AsyncStorage.setItem('@savesavaliacao:sofrimento', JSON.stringify(response))
     }
     
     return(
