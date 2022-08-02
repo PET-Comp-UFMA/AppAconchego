@@ -14,10 +14,7 @@ export default function Resultado21(props){
     var respostasEstresse = (respostas.p1 + respostas.p6 + respostas.p8 + respostas.p11 + respostas.p12 + respostas.p14 + respostas.p18)*2
     var respostasAnsiedade= (respostas.p2 + respostas.p4 + respostas.p7 + respostas.p9 + respostas.p15 + respostas.p19 + respostas.p20)*2
     var respostasDepressao = (respostas.p3 + respostas.p5 + respostas.p10 + respostas.p13 + respostas.p16 + respostas.p17 + respostas.p21)*2
-    console.log(respostasEstresse)
-    console.log(respostasAnsiedade)
-    console.log(respostasDepressao)
-
+    
     var estresseTitulo
     var estresseTexto
     var estresseIMG

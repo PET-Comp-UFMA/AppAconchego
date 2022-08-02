@@ -238,8 +238,6 @@ export default function Registros(){
         }
         const response = await AsyncStorage.getItem('@savesavaliacao:depressao')
         const data = response ? JSON.parse(response) : {};
-        //console.log("depresso")
-        //console.log(response)
         data[day] ? resultadoDepressao(data[day].resultado):
             setDepressao(
                 <View style={localStyles.container2}>
@@ -307,13 +305,7 @@ export default function Registros(){
         }
         const response = await AsyncStorage.getItem('@savesavaliacao:estresse')
         const data = response ? JSON.parse(response) : {};
-        //console.log("estresse")
-        //console.log("resposta:"  + response);
-        //console.log("Dia: " + day);
-        //console.log("Selecionado:" + data[day]);
-        //if (data[day]) {
-        //    console.log("passou")
-        //}
+
 
         data[day] ? resultadoEstresse(data[day].resultado) :
             setEstresse(
