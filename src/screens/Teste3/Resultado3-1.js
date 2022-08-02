@@ -14,10 +14,11 @@ export default function Resultado31({route}){
     return(
     <View style={localStyles.container}>
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
-        <ScrollView>
-            <View style={{width: '100%', alignItems: 'center'}}>
-                <Text style={GlobalStyles.descricao}>Sim, Adotar um bom hábito de sono auxilia na preservação da sáude física e mental. “O momento de repouso é fundamental e sua falta acarreta um estado pró-inflamatório que prejudica o organismo e facilita o surgimento de doenças como depressão. ter um horário habitual para despertar auxilia o ciclo fisiológico e mantém o organismo saudável”, explica o psiquiatra. </Text>
-            </View>
+        <ScrollView style={{height: '100%'}}>
+                <Text style={GlobalStyles.descricao}>
+                    Sim, Adotar um bom hábito de sono auxilia na preservação da sáude física e mental. “O momento de repouso é fundamental e sua falta acarreta um estado pró-inflamatório que prejudica o organismo e facilita o surgimento de doenças como depressão. 
+                    Ter um horário habitual para despertar auxilia o ciclo fisiológico e mantém o organismo saudável”, explica o psiquiatra.{'\n'} 
+                </Text>    
         </ScrollView>
         <View>
             <Botao title='Próximo' onPress={() => navigation.navigate('Teste3P2', {resposta: resultado})} />

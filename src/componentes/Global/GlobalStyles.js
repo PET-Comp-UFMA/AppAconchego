@@ -129,6 +129,8 @@ export default StyleSheet.create({
         textAlign: 'justify',
         paddingBottom: 15,
         maxWidth: '90%',
+        alignItems: 'center',
+        alignSelf: 'center'
     },
     nomes:{
         color: GlobalColors.CorTextoForte,

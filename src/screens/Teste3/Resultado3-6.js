@@ -16,7 +16,7 @@ export default function Resultado36({route}){
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
             <View style={{width: '100%', alignItems: 'center'}}>
-                <Text style={GlobalStyles.descricao}>Sim. Ter um hobby contribui para minimizar e prevenir a depressão. “Atividades como tocar música, pintar , fazer artesanato, quando realizadas em grupo, ainda trazem o benefício de despertar o sentimento de pertencimento, oferecer estimulação cognitiva e o eventual suporte social. E mais: o hobby, constituindo uma atividade de auto expressão, criatividade  e satisfação, estimula circuitos cerebrais de prazer e recompensa, que modulam emoções positivas, como alegria e prazer. Nos quadros depressivos por exemplo, esses circuitos não estão eficazmente regulados”, explica o psiquiatra.</Text>
+                <Text style={GlobalStyles.descricao}>Sim. Ter um hobby contribui para minimizar e prevenir a depressão. “Atividades como tocar música, pintar , fazer artesanato, quando realizadas em grupo, ainda trazem o benefício de despertar o sentimento de pertencimento, oferecer estimulação cognitiva e o eventual suporte social. E mais: o hobby, constituindo uma atividade de auto expressão, criatividade  e satisfação, estimula circuitos cerebrais de prazer e recompensa, que modulam emoções positivas, como alegria e prazer. Nos quadros depressivos por exemplo, esses circuitos não estão eficazmente regulados”, explica o psiquiatra.{'\n'}{'\n'}{'\n'}{'\n'}</Text>
             </View>
         </ScrollView>
         <View>
