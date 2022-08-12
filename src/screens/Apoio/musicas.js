@@ -92,6 +92,36 @@ export default function Musicas() {
             singer: 'Milton Nascimento',
             url: 'https://www.youtube.com/watch?v=qmtOf2EGTSc'
         },
+        {
+            name: 'Ninguém',
+            singer: 'Fran & Chico Chico',
+            url: 'https://www.youtube.com/watch?v=hGeFoBZbDgM'
+        },
+        {
+            name: 'Bom dia, Saudade',
+            singer: 'Lorena Nunes',
+            url: 'https://www.youtube.com/watch?v=JifwYc0WZJ8'
+        },
+        {
+            name: 'Trem-Bala',
+            singer: 'Ana Vilela',
+            url: 'https://www.youtube.com/watch?v=6rH07oveQpo'
+        },
+        {
+            name: 'Tá escrito',
+            singer: 'Grupo Revelação',
+            url: 'https://www.youtube.com/watch?v=xFls0GiYbvw'
+        },
+        {
+            name: 'Onde Deus possa me ouvir',
+            singer: 'Vander Lee',
+            url: 'https://www.youtube.com/watch?v=qVA2GUPtrrI'
+        },
+        {
+            name: 'O leaozinho',
+            singer: 'Caetano Veloso',
+            url: 'https://www.youtube.com/watch?v=wJ2prEKx3_Y'
+        }
     ]
 
     return(

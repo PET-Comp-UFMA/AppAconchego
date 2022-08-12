@@ -38,7 +38,7 @@ export default function MenuApoio () {
                         <View style={localStyles.botaoImagem}>
                             <Image resizeMode='contain' style={localStyles.imagem} source={require('../../../assets/fones.png')} /> 
                         </View>
-                        <Text style={GlobalStyles.nomes}>LISCAMCAST</Text>
+                        <Text style={GlobalStyles.nomes}>LISAMCAST</Text>
                     </View>
                 </TouchableOpacity>
 

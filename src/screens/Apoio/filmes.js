@@ -32,6 +32,14 @@ export default function Filmes() {
             name: 'Viver duas vezes (2019)',
             url: 'https://www.netflix.com/br/title/80233408'
         },
+        {
+            name: 'A sociedade dos Poetas Mortos (1989)',
+            url: 'https://vizer.tv/filme/online/sociedade-dos-poetas-mortos'
+        },
+        {
+            name: 'Patch Adams O Amor É Contagioso (1998)',
+            url: 'https://www.youtube.com/watch?v=tOP72G7EMGw'
+        },
     ]
 
     return(

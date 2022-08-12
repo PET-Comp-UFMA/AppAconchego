@@ -9,7 +9,7 @@ export default function CanalUbs(){
         <SafeAreaView style={localStyles.container}>
             <Image source={require('../../../assets/apoio.png')} />
             <Text style={GlobalStyles.titulo1}>Unidade Básica de Atendimento (UBS)</Text>
-            <Text style={GlobalStyles.descricao}>As Unidades Básicas de Atendimento (UBS) se configuram como a porta de entrada no Sistema Único de Saúde (SUS). Ao se propor em prestar uma assistência mais próxima da população, torna-se possível a identificação, encaminhamento e acompanhamento de pacientes em sofrimento mental.</Text>
+            <Text style={GlobalStyles.descricao}>As Unidades Básicas de Atendimento (UBS) se configuram como a porta de entrada no Sistema Único de Saúde (SUS). Ao se propor em prestar uma assistência mais próxima da população, torna-se possível a identificação, encaminhamento e acompanhamento de pacientes em sofrimento mental. Em todo o Brasil existem UBS, procure a mais próxima e você encontrará ajuda profissional.</Text>
             <Botao title='Voltar' />
         </SafeAreaView>
     )

@@ -52,6 +52,10 @@ export default function Series() {
             name: 'Modern Family (2009)',
             url: 'https://www.starplus.com/pt-br/series/modern-family/6p2yzz9mh8Kp?distributionPartner=google'
         },
+        {
+            name: 'Unbreakable Kimmy Schmidt (2015)',
+            url: 'https://www.netflix.com/br/title/80025384'
+        },
     ]
 
     return(

@@ -52,7 +52,7 @@ export default function SaibaMais() {
                     <Text style={GlobalStyles.nomes}>Mestrado Acadêmico em Saúde da Família, Universidade Federal do Ceará</Text>
                 </View>
                 <View style={GlobalStyles.paragrafo}>
-                    <Text style={GlobalStyles.titulo2}>Bolsistas do Programa de Bolsa de Produtividade em Pesquisa, Estímulo à Interiorização e à Inovação Tecnológica (BPI-FUNCAP) e discentes do Curso de Enfermagem da Universidade Estadual Vale do Acaraú (UVA)</Text>
+                    <Text style={GlobalStyles.titulo2}>Bolsistas do Programa de Bolsa de Produtividade em Pesquisa, Estímulo à Interiorização e à Inovação Tecnológica (BPI-FUNCAP) e Discentes do Curso de Enfermagem da Universidade Estadual Vale do Acaraú (UVA)</Text>
                 </View>
                 <View style={GlobalStyles.paragrafo}>
                     <Text style={GlobalStyles.nomes}>Caio San Rodrigues</Text>
@@ -62,13 +62,9 @@ export default function SaibaMais() {
                     <Text style={GlobalStyles.nomes}>Flávia Regino Oliveira</Text>
                     <Text style={GlobalStyles.nomes}>Ana Beatryz dos Santos Costa</Text>
                     <Text style={GlobalStyles.nomes}>Emilia do Nascimento Silva</Text>
-                </View>
-                <View style={GlobalStyles.paragrafo}>
-                    <Text style={GlobalStyles.titulo2}>Discente do Curso de Enfermagem da Universidade Estadual do Vale do Acaraú (UVA)</Text>
-                </View>
-                <View style={GlobalStyles.paragrafo}>
                     <Text style={GlobalStyles.nomes}>Alexia Gomes Souza</Text>
                     <Text style={GlobalStyles.nomes}>Ravena Petra Mororó Ziesemer</Text>
+                    <Text style={GlobalStyles.nomes}>Sabrina da Silva França</Text>
                 </View>
                 <View style={GlobalStyles.paragrafo}>
                     <Text style={GlobalStyles.titulo2}>Discente do Curso de Engenharia da Computação da Universidade Ferderal do Ceará (UFC)</Text>
