@@ -93,12 +93,16 @@ export default function Home() {
 
             <View>
                 <BotaoPadrao
-                    onPress={() => navigation.navigate('sobre o aconchego')}
-                    title = 'Sobre o Aconchego'
+                    onPress={() => navigation.navigate('como usar')}
+                    title = 'Como Usar'
                 />
                 <BotaoPadrao
                     onPress={() => navigation.navigate('meus registros')}
                     title = 'Meus Registros'
+                />
+                <BotaoPadrao
+                    onPress={() => navigation.navigate('sobre o aconchego')}
+                    title = 'Sobre o Aconchego'
                 />
             </View>
         </SafeAreaView>

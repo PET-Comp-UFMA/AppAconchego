@@ -94,6 +94,7 @@ export default StyleSheet.create({
     },
     titulo1: {
         color: GlobalColors.CorTextoForte,
+        alignSelf: 'center',
         fontSize: 24,
         fontWeight: '600',
         textAlign: 'center',
@@ -126,11 +127,20 @@ export default StyleSheet.create({
         fontSize: 20,
         fontFamily: 'IBMPlexSans_Medium',
         justifyContent: 'center',
-        textAlign: 'justify',
-        paddingBottom: 15,
+        textAlign: 'left',
+        paddingBottom: 10,
         maxWidth: '90%',
         alignItems: 'center',
         alignSelf: 'center'
+    },
+    descricaoComoUsar:{
+        color: GlobalColors.CorTextoForte,
+        fontSize: 20,
+        fontFamily: 'IBMPlexSans_Medium',
+        justifyContent: 'flex-start',
+        textAlign: 'justify',
+        paddingBottom: 15,
+        maxWidth: '90%',
     },
     nomes:{
         color: GlobalColors.CorTextoForte,

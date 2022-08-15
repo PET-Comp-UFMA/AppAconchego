@@ -17,7 +17,8 @@ import { Entypo } from '@expo/vector-icons'
 
 import Home from './src/screens/home'
 import Aconchego from './src/screens/Aconchego';
-import SaibaMais from './src/screens/saibaMais'
+import SaibaMais from './src/screens/saibaMais';
+import ComoUsar from './src/screens/ComoUsar';
 import Registros from './src/screens/registros';
 import GlobalStyles from './src/componentes/Global/GlobalStyles';
 import GlobalColors from './src/componentes/Global/GlobalColors';
@@ -152,6 +153,8 @@ export default function App({}) {
           <Stack.Screen name='Aconchego' component={Aconchego} options={{headerShown: false}} />
 
           <Stack.Screen name='sobre o aconchego' component={SaibaMais} />
+
+          <Stack.Screen name='como usar' component={ComoUsar} />
 
           <Stack.Screen name='músicas' component={Musicas} />
 
