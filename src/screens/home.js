@@ -5,6 +5,7 @@ import {
     StyleSheet,
     Image,
     Dimensions,
+    Platform,
 } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
@@ -14,6 +15,7 @@ import BotaoEmoji from "../componentes/Botoes/Emoji";
 import BotaoPadrao from "../componentes/Botoes/Padrao";
 import GlobalColors from "../componentes/Global/GlobalColors";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Sair from '../componentes/Botoes/Sair';
 
 export default function Home() {
 
@@ -78,7 +80,12 @@ export default function Home() {
 
 
     return(
-        <SafeAreaView style={localStyles.container}>
+        <SafeAreaView style={localStyles.containerFora}>
+        <View style={localStyles.sair}>
+            <Sair />
+        </View>
+        <View style={localStyles.container}>
+            
             <Image style={localStyles.logo} source={require('../../assets/logo.png')} />
 
             <Titulo
@@ -105,11 +112,18 @@ export default function Home() {
                     title = 'Sobre o Aconchego'
                 />
             </View>
+        </View>
         </SafeAreaView>
     )
 }
 
 const localStyles = StyleSheet.create({
+    containerFora: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        backgroundColor: GlobalColors.CorFundo,
+    },
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -128,5 +142,10 @@ const localStyles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 50,
         marginVertical: 20
+    },
+    sair: {
+        paddingTop: 25,
+        alignSelf: 'flex-start',
+        paddingLeft: 10,
     }
 });
