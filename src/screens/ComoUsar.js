@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, StyleSheet, View, Image, ScrollView } from 'react-native'
+import { Text, StyleSheet, View, Image, ScrollView, SafeAreaView } from 'react-native'
 import GlobalColors from '../componentes/Global/GlobalColors'
 import GlobalStyles from '../componentes/Global/GlobalStyles'
 import Botao from '../componentes/Botoes/Padrao'
@@ -10,6 +10,8 @@ export default function ComoUsar(){
 
     return(
         <View style={localStyles.container}>
+            <ScrollView>
+            <SafeAreaView style={localStyles.container}>
             <Image style={localStyles.logo} source={require('../../assets/logo.png')}/>
             <View>
             <Text style={GlobalStyles.titulo1}>Como Usar</Text>
@@ -18,6 +20,8 @@ export default function ComoUsar(){
             <Text style={GlobalStyles.descricaoComoUsar}>2 - Apoio onde você terá sugestões de atividades e também encontrará a sugestão de canais de atendimento em saúde mental.</Text>
             <Text style={GlobalStyles.descricaoComoUsar}>3 - Meus Registros onde você poderá acompanhar, a partir de seus registros (resultados dos testes e humor) as características de sua saúde mental tendo como parâmetros os seus resultados.</Text>
             </View>
+            </SafeAreaView>
+            </ScrollView>
             <Botao title='Voltar à Tela Principal' onPress={() => navigation.goBack()}/>
         </View>
     )

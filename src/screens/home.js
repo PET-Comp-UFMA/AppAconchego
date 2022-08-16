@@ -5,7 +5,7 @@ import {
     StyleSheet,
     Image,
     Dimensions,
-    Platform,
+    ScrollView,
 } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
@@ -81,6 +81,7 @@ export default function Home() {
 
     return(
         <SafeAreaView style={localStyles.containerFora}>
+            <ScrollView>
         <View style={localStyles.sair}>
             <Sair />
         </View>
@@ -113,6 +114,7 @@ export default function Home() {
                 />
             </View>
         </View>
+        </ScrollView>
         </SafeAreaView>
     )
 }
