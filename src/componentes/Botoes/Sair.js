@@ -8,11 +8,9 @@ export default class BotaoSair extends Component{
 
     render(){
         return(
-            <SafeAreaView>
                 <TouchableOpacity style={localStyles.container} onPress={this.props.onPress}>
                     <Image style={localStyles.imagem} source={require('../../../assets/sair.png')} />
                 </TouchableOpacity>
-            </SafeAreaView>
         )
     }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     SafeAreaView,
     View,
@@ -6,6 +6,8 @@ import {
     Image,
     Dimensions,
     ScrollView,
+    BackHandler,
+    Alert,
 } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
@@ -78,12 +80,38 @@ export default function Home() {
         await AsyncStorage.setItem('@saveemoji:emoji', JSON.stringify(response))
     }
 
+    useEffect(() => {
+        BackHandler.addEventListener('hardwareBackPress', backPressed)
+
+        return () => {
+            BackHandler.removeEventListener('hardwareBackPress', backPressed)
+        }
+    }, [])
+
+    const backPressed = () => {
+        Alert.alert('Sair', 'Deseja sair do aplicativo?',
+        [
+            {text: 'Sim', onPress:() => BackHandler.exitApp()},
+            {text: 'Não'}
+        ], 
+        {cancelable: false}
+        )
+        return true
+    }
+
 
     return(
         <SafeAreaView style={localStyles.containerFora}>
             <ScrollView>
         <View style={localStyles.sair}>
-            <Sair />
+            <Sair onPress={() => {Alert.alert('Sair', 'Deseja sair do aplicativo?',
+        [
+            {text: 'Sim', onPress:() => BackHandler.exitApp()},
+            {text: 'Não'}
+        ], 
+        {cancelable: false}
+        )
+        return true}}/>
         </View>
         <View style={localStyles.container}>
             
