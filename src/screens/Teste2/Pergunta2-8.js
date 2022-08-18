@@ -52,6 +52,9 @@ export default function Pergunta28({route}){
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2P7')} />
                 <BotaoPeqProx title='Próximo' onPress={() => {
                     if(umAtivado == false && doisAtivado == false){
+                        if(Platform.OS == 'android'){
+                            ToastAndroid.show('Selecione uma resposta', ToastAndroid.BOTTOM)
+                        }
                     }else{
                     navigation.navigate('Teste2P9', {resposta: umAtivado? 1 : 0})}}
                     }/>

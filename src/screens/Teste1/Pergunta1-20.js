@@ -90,6 +90,9 @@ export default function Pergunta120(props){
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P19', {respostas: respostas})} />
                     <BotaoPeqProx title='Próximo' onPress={() => {
                         if(umAtivado == false && doisAtivado == false && tresAtivado == false && quatroAtivado == false){
+                            if(Platform.OS == 'android'){
+                                ToastAndroid.show('Selecione uma resposta', ToastAndroid.BOTTOM)
+                            }
                         }else{navigation.navigate('Teste1P21', {respostas: respostas})}}}/>
                 </View>
         </SafeAreaView>

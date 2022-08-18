@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView } from 'react-native'
+import { SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView, Platform, ToastAndroid } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
+//import Toast from '../../componentes/Botoes/Toast'
+import Toast from 'react-native-toast-message'
 
 
 
@@ -99,6 +101,9 @@ export default function Pergunta11(){
                             respostas.p1 = 3
                         }
                         if(umAtivado == false && doisAtivado == false && tresAtivado == false && quatroAtivado == false){
+                            if(Platform.OS == 'android'){
+                                ToastAndroid.show('Selecione uma resposta', ToastAndroid.BOTTOM)
+                            }
                         }else{
                             navigation.navigate('Teste1P2', {respostas: respostas})
                         }

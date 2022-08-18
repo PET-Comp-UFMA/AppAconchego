@@ -50,6 +50,9 @@ export default function Pergunta21(){
                 <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste2Int')} />
                 <BotaoPeqProx title='Próximo' onPress={() => {
                     if(umAtivado == false && doisAtivado == false){
+                        if(Platform.OS == 'android'){
+                            ToastAndroid.show('Selecione uma resposta', ToastAndroid.BOTTOM)
+                        }
                     }else{
                     navigation.navigate('Teste2P2', {resposta: umAtivado? 1 : 0})}}
                     }/>
