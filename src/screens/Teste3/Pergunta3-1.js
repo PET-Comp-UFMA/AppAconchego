@@ -46,7 +46,13 @@ export default function Pergunta31(){
                 </View>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3Int')} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R1', {resposta: umAtivado? 1 : 0})}/>
+                    <BotaoPeqProx title='Próximo' onPress={() => {
+                        if(umAtivado == false && doisAtivado == false){
+                            
+                        }
+                        else{
+                            navigation.navigate('Teste3R1', {resposta: umAtivado? 1 : 0})}}
+                        }/>
                 </View>
             </ScrollView>
         </SafeAreaView>

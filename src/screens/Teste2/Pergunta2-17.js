@@ -25,13 +25,6 @@ export default function Pergunta217({route}){
         setDoisAtivado(current => !current)
     }
 
-    function irResultado() {
-        let resultado = route.params?.resposta
-        umAtivado? resultado++ : resultado = resultado
-        handleNew(resultado)
-        resultado <= 7 ? navigation.navigate('Teste2R1') : navigation.navigate('Teste2R2')
-    }
-
     const getCurrentDate=()=>{
         let totalDate
         let date = new Date().getDate();
@@ -87,7 +80,14 @@ export default function Pergunta217({route}){
             </ScrollView>
             <View style={GlobalStyles.botoesTeste}>
                 <BotaoPeqVol title='Voltar'onPress={() => navigation.navigate('Teste2P16')} />
-                <BotaoPeqProx title='Próximo' onPress={irResultado} />
+                <BotaoPeqProx title='Próximo' onPress={() => {
+                    if(umAtivado == false && doisAtivado == false){
+                    }else{
+                        let resultado = route.params?.resposta
+                        umAtivado? resultado++ : resultado = resultado
+                        handleNew(resultado)
+                        resultado <= 7 ? navigation.navigate('Teste2R1') : navigation.navigate('Teste2R2')}}
+                    }/>
             </View>
         </SafeAreaView>
     )

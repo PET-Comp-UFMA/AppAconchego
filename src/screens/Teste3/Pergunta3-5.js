@@ -48,7 +48,13 @@ export default function Pergunta35({route}){
                 </View>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3P4')} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste3R5', {resposta: umAtivado? 1 + resultado : 0 + resultado})}/>
+                    <BotaoPeqProx title='Próximo' onPress={() => {
+                        if(umAtivado == false && doisAtivado == false){
+                            
+                        }
+                        else{
+                            navigation.navigate('Teste3R5', {resposta: umAtivado? 1 : 0})}}
+                        }/>
                 </View>
             </ScrollView>
         </SafeAreaView>

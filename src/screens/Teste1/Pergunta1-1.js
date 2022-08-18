@@ -98,7 +98,10 @@ export default function Pergunta11(){
                         } else if (quatroAtivado) {
                             respostas.p1 = 3
                         }
-                        navigation.navigate('Teste1P2', {respostas: respostas})
+                        if(umAtivado == false && doisAtivado == false && tresAtivado == false && quatroAtivado == false){
+                        }else{
+                            navigation.navigate('Teste1P2', {respostas: respostas})
+                        }
                         }} /> 
                 </View>           
         </SafeAreaView>

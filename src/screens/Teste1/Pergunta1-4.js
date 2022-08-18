@@ -89,7 +89,9 @@ export default function Pergunta14(props){
             </ScrollView>
                 <View style={GlobalStyles.botoesTeste}>
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste1P3', {respostas: respostas})} />
-                    <BotaoPeqProx title='Próximo' onPress={() => navigation.navigate('Teste1P5', {respostas: respostas})} />
+                    <BotaoPeqProx title='Próximo' onPress={() => {
+                        if(umAtivado == false && doisAtivado == false && tresAtivado == false && quatroAtivado == false){
+                        }else{navigation.navigate('Teste1P5', {respostas: respostas})}}} />
                 </View>
         </SafeAreaView>
     )
