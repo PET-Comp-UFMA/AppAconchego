@@ -6,8 +6,6 @@ import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
 import BotaoPeqVol from '../../componentes/Botoes/BotaoPequenoVoltar'
 import BotaoEscolhaTeste from '../../componentes/Botoes/EscolhaTeste'
 import { useNavigation } from '@react-navigation/native'
-//import Toast from '../../componentes/Botoes/Toast'
-import Toast from 'react-native-toast-message'
 
 
 

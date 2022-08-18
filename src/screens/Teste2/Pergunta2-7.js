@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView  } from 'react-native'
+import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView, ToastAndroid  } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
