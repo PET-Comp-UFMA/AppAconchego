@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView, Platform, ToastAndroid } from 'react-native'
+import { SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView, Alert, BackHandler } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
@@ -99,10 +99,14 @@ export default function Pergunta11(){
                             respostas.p1 = 3
                         }
                         if(umAtivado == false && doisAtivado == false && tresAtivado == false && quatroAtivado == false){
-                            if(Platform.OS == 'android'){
-                                ToastAndroid.show('Selecione uma resposta', ToastAndroid.BOTTOM)
-                            }
-                        }else{
+                                Alert.alert('Avaliando a ansiedade, depressão e estresse', 'Selecione uma resposta',
+                                [
+                                    {text: 'OK', onPress:() => BackHandler.removeEventListener('hardwareBackPress')},
+                                ], 
+                                {cancelable: false}
+                                )
+                        }
+                        else{
                             navigation.navigate('Teste1P2', {respostas: respostas})
                         }
                         }} /> 

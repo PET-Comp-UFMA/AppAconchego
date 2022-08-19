@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView, ToastAndroid } from 'react-native'
+import { SafeAreaView, Image, Text, StyleSheet, View, Dimensions, ScrollView, Alert, BackHandler } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import BotaoPeqProx from '../../componentes/Botoes/BotaoPequenoProx'
@@ -48,9 +48,12 @@ export default function Pergunta31(){
                     <BotaoPeqVol title='Voltar' onPress={() => navigation.navigate('Teste3Int')} />
                     <BotaoPeqProx title='Próximo' onPress={() => {
                         if(umAtivado == false && doisAtivado == false){
-                            if(Platform.OS == 'android'){
-                                ToastAndroid.show('Selecione uma resposta', ToastAndroid.BOTTOM)
-                            }
+                            Alert.alert('Avaliando os cuidados em saúde mental', 'Selecione uma resposta',
+                            [
+                                {text: 'OK', onPress:() => BackHandler.removeEventListener('hardwareBackPress')},
+                            ], 
+                            {cancelable: false}
+                            )
                         }
                         else{
                             navigation.navigate('Teste3R1', {resposta: umAtivado? 1 : 0})}}
