@@ -16,7 +16,7 @@ export default function Resultado32({route}){
         <Text style={localStyles.resposta}>Resposta Correta:</Text>
         <ScrollView>
             <View style={{width: '100%', alignItems: 'center'}}>
-                <Text style={GlobalStyles.descricao}>Sim, O estresse é um importante fator para desencadear a depressão, principalmente o primeiro episódio. Segundo Fráguas, o apoio do cônjuge, família e amigos, assim como dos pais, em particulas para ciranças e adolescentes tem papel fundamenta na proteção contra a doença.
+                <Text style={GlobalStyles.descricao}>Sim, O estresse é um importante fator para desencadear a depressão, principalmente o primeiro episódio. Segundo Fráguas, o apoio do cônjuge, família e amigos, assim como dos pais, em particulr para crianças e adolescentes tem papel fundamental na proteção contra a doença.
                 “O suporte social, seja por meio de incentivos, trocas de ideias, amparo e auxilio na resolução de problemas ajuda a lidar melhor com o estresse e contribui para a promoção da saúde emocional.”{'\n'}</Text>
             </View>
         </ScrollView>
