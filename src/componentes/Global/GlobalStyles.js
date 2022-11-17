@@ -127,7 +127,7 @@ export default StyleSheet.create({
         fontSize: 20,
         fontFamily: 'IBMPlexSans_Medium',
         justifyContent: 'center',
-        textAlign: 'left',
+        textAlign: 'justify',
         paddingBottom: 10,
         maxWidth: '90%',
         alignItems: 'center',

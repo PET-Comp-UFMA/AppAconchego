@@ -25,7 +25,8 @@ export default function SaibaMais() {
                 <View style={GlobalStyles.paragrafo}>
                     <Text style={GlobalStyles.titulo1}>Sobre Nós</Text>
                     <Text style={GlobalStyles.titulo2}>Realização</Text>
-                    <Text style={GlobalStyles.titulo2}>Universidade Federal do Vale do Aracaú</Text>
+                    <Text style={GlobalStyles.titulo2}>Universidade Estadual do Vale do Aracaú</Text>
+                    <Text style={GlobalStyles.titulo2}>(UVA)</Text>
                     <Text style={GlobalStyles.titulo2}>Curso de Enfermagem</Text>
                     <Image style={localStyles.logo} source={require('../../assets/aracau.png')} />
                     <Text style={GlobalStyles.titulo2}>Grupo de Estudo e Pesquisa Saúde Mental e Cuidado</Text>
