@@ -21,8 +21,8 @@ export default function ComoUsar(){
             <Text style={GlobalStyles.descricaoComoUsar}>3 - Meus registros onde você poderá acompanhar a partir dos seus registros (resultados dos testes e humor) as características da sua saúde mental</Text>
             </View>
             </SafeAreaView>
-            </ScrollView>
             <Botao title='Voltar à Tela Principal' onPress={() => navigation.goBack()}/>
+            </ScrollView>
         </View>
     )
 }
