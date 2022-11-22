@@ -18,7 +18,7 @@ export default function ComoUsar(){
             <Text style={GlobalStyles.descricao}>O Aconchego possui três funcionalidades:</Text>
             <Text style={GlobalStyles.descricaoComoUsar}>1 - Avaliação onde você irá encontrar 03 testes na área de saúde mental. Estes teste podem lhe ajudar a perceber como está a sua saúde mental, já que possuem o objetivo de identificar sinais e sintomas importantes no âmbito da saúde mental.</Text>
             <Text style={GlobalStyles.descricaoComoUsar}>2 - Apoio onde você terá sugestões de atividades e também encontrará a sugestão de canais de atendimento em saúde mental.</Text>
-            <Text style={GlobalStyles.descricaoComoUsar}>3 - Meus registros onde você poderá acompanhar a partir dos seus registros (resultados dos testes e humor) as características da sua saúde mental</Text>
+            <Text style={GlobalStyles.descricaoComoUsar}>3 - Meus registros onde você poderá acompanhar a partir dos seus registros (resultados dos testes e humor) as características da sua saúde mental.</Text>
             </View>
             </SafeAreaView>
             <Botao title='Voltar à Tela Principal' onPress={() => navigation.goBack()}/>

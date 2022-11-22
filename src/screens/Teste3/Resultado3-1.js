@@ -17,7 +17,7 @@ export default function Resultado31({route}){
         <ScrollView style={{height: '100%'}}>
             <View style={{width: '100%', alignItems: 'center'}}>
                 <Text style={GlobalStyles.descricao}>
-                Sim. Adotar um bom hábito de sono auxilia na preservação da saúde física e mental. “O momento de repouso é fundamental e sua falta acarreta  prejuízos ao organismo e facilita o surgimento de doenças como a depressão. Ter um horário habitual para despertar auxilia o ciclo fisiológico e mantém o organismo saudável”, explica o psiquiatra.{'\n'} 
+                Sim. Adotar um bom hábito de sono auxilia na preservação da saúde física e mental. “O momento de repouso é fundamental e sua falta acarreta  prejuízos ao organismo e facilita o surgimento de doenças como a depressão. Ter um horário habitual para despertar auxilia o ciclo fisiológico e mantém o organismo saudável”, explica o psiquiatra.{'\n'}{'\n'} 
                 </Text>
             </View>  
         </ScrollView>
