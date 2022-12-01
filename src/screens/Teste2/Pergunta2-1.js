@@ -28,7 +28,7 @@ export default function Pergunta21(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView contentContainerStyle={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
             <View style={localStyles.container2}>
-                <Text style={GlobalStyles.titulo1}>1. Você tem dores de cabeça frequente?</Text>
+                <Text style={GlobalStyles.pergunta}>1. Você tem dores de cabeça frequente?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>

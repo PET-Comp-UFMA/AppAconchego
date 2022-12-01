@@ -30,7 +30,7 @@ export default function Pergunta35({route}){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>5. Você evita ao máximo a exposição solar, sempre que possível se mantém em locais fechados e cobertos?</Text>
+                    <Text style={GlobalStyles.pergunta}>5. Você evita ao máximo a exposição solar, sempre que possível se mantém em locais fechados e cobertos?</Text>
                 </View>
                 <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
@@ -58,7 +58,7 @@ export default function Pergunta35({route}){
                             )
                         }
                         else{
-                            navigation.navigate('Teste3R5', {resposta: umAtivado? 1 : 0})}}
+                            navigation.navigate('Teste3R5', {resposta: umAtivado? resultado : resultado+=1})}}
                         }/>
                 </View>
             </ScrollView>

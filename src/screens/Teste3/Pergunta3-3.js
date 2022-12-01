@@ -30,7 +30,7 @@ export default function Pergunta33({route}){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>3. Em relação aos hábitos alimentares, você consome apenas o que apetece, come carboidratos, frituras e açúcares, pois comer é um prazer sem regras?</Text>
+                    <Text style={GlobalStyles.pergunta}>3. Em relação aos hábitos alimentares, você consome apenas o que apetece, come carboidratos, frituras e açúcares, pois comer é um prazer sem regras?</Text>
                 </View>
                 <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
@@ -58,7 +58,7 @@ export default function Pergunta33({route}){
                             )
                         }
                         else{
-                            navigation.navigate('Teste3R3', {resposta: umAtivado? 1 : 0})}}
+                            navigation.navigate('Teste3R3', {resposta: umAtivado? resultado : resultado+=1})}}
                         }/>
                 </View>
             </ScrollView>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, SafeAreaView, Text, StyleSheet, View, Dimensions, ScrollView } from 'react-native'
+import { Text, StyleSheet, View, Dimensions, ScrollView } from 'react-native'
 import GlobalStyles from '../../componentes/Global/GlobalStyles'
 import GlobalColors from '../../componentes/Global/GlobalColors'
 import Botao from '../../componentes/Botoes/Padrao'

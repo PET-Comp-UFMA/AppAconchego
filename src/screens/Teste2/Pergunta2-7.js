@@ -30,7 +30,7 @@ export default function Pergunta27({route}){
         <SafeAreaView style={localStyles.container}>
             <ScrollView contentContainerStyle={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
             <View style={localStyles.container2}>
-                <Text style={GlobalStyles.titulo1}>7. Tem dificuldade de pensar com clareza?</Text>
+                <Text style={GlobalStyles.pergunta}>7. Tem dificuldade de pensar com clareza?</Text>
             </View>
             <Image source={require('../../../assets/relax.png')} style={localStyles.Imagem2}/>
             <View style={localStyles.container2}>

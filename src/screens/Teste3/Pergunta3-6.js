@@ -30,7 +30,7 @@ export default function Pergunta36({route}){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>6. Você tem algum hobby, ou se dedica a alguma atividade recreativa que lhe dê prazer?</Text>
+                    <Text style={GlobalStyles.pergunta}>6. Você tem algum hobby, ou se dedica a alguma atividade recreativa que lhe dê prazer?</Text>
                 </View>
                 <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
@@ -58,7 +58,7 @@ export default function Pergunta36({route}){
                             )
                         }
                         else{
-                            navigation.navigate('Teste3R6', {resposta: umAtivado? 1 : 0})}}
+                            navigation.navigate('Teste3R6', {resposta: umAtivado? resultado+=1 : resultado})}}
                         }/>
                 </View>
             </ScrollView>

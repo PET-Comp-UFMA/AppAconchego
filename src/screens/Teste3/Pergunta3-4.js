@@ -30,7 +30,7 @@ export default function Pergunta34({route}){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>4. Você consegue encaixar a prática da atividade física na sua rotina?</Text>
+                    <Text style={GlobalStyles.pergunta}>4. Você consegue encaixar a prática da atividade física na sua rotina?</Text>
                 </View>
                 <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
@@ -58,7 +58,7 @@ export default function Pergunta34({route}){
                             )
                         }
                         else{
-                            navigation.navigate('Teste3R4', {resposta: umAtivado? 1 : 0})}}
+                            navigation.navigate('Teste3R4', {resposta: umAtivado? resultado+=1 : resultado})}}
                         }/>
                 </View>
             </ScrollView>

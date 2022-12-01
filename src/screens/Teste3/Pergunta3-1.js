@@ -9,6 +9,8 @@ import { useNavigation } from '@react-navigation/native'
 
 export default function Pergunta31(){
 
+    let resultado
+
     const navigation = useNavigation();
 
     const [umAtivado, setUmAtivado] = useState(false)
@@ -28,7 +30,7 @@ export default function Pergunta31(){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>1. Você procura seguir uma rotina em relação ao sono, mantendo um horário para ir para cama e despertar, de forma a acordar descansado e revigorado?</Text>
+                    <Text style={GlobalStyles.pergunta}>1. Você procura seguir uma rotina em relação ao sono, mantendo um horário para ir para cama e despertar, de forma a acordar descansado e revigorado?</Text>
                 </View>
                 <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
@@ -56,7 +58,7 @@ export default function Pergunta31(){
                             )
                         }
                         else{
-                            navigation.navigate('Teste3R1', {resposta: umAtivado? 1 : 0})}}
+                            navigation.navigate('Teste3R1', {resposta: umAtivado? resultado = 1 : resultado = 0})}}
                         }/>
                 </View>
             </ScrollView>

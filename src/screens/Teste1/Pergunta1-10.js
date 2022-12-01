@@ -54,7 +54,7 @@ export default function Pergunta110(props){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>10. Senti que não tinha nada a desejar</Text>
+                    <Text style={GlobalStyles.pergunta}>10. Senti que não tinha nada a desejar</Text>
                 </View>
                 
                 <View style={localStyles.container2}>

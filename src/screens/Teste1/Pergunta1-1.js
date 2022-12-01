@@ -47,6 +47,7 @@ export default function Pergunta11(){
 
 
     const handleQuatro = () => {
+        setTresAtivado(false)
         setUmAtivado(false)
         setDoisAtivado(false)
         setQuatroAtivado(current => !current)
@@ -56,7 +57,7 @@ export default function Pergunta11(){
         <SafeAreaView style={localStyles.container}>
             <ScrollView>
                 <View style={localStyles.container2}>
-                    <Text style={GlobalStyles.titulo1}>1. Achei difícil me acalmar</Text>
+                    <Text style={GlobalStyles.pergunta}>1. Achei difícil me acalmar</Text>
                 </View>
             
                 <View style={localStyles.container2}>

@@ -307,4 +307,15 @@ export default StyleSheet.create({
         maxWidth: '95%',
         textAlign: 'center'
     },
+    pergunta:{
+        color: GlobalColors.CorTextoForte,
+        alignSelf: 'center',
+        fontSize: 24,
+        fontWeight: '600',
+        textAlign: 'justify',
+        fontFamily: 'IBMPlexSans_Bold',
+        lineHeight: 28,
+        maxWidth: 330,
+        padding: 5
+    }
 });

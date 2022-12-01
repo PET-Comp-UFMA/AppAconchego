@@ -30,7 +30,7 @@ export default function Pergunta37({route}){
         <SafeAreaView>
             <ScrollView contentContainerStyle={localStyles.container}>
                 <View>
-                    <Text style={GlobalStyles.titulo1}>7. Quando está angustiado(a) com alguma problema, você costuma compartilhar essa preocupação com amigos, familiares ou até mesmo com um terapeuta?</Text>
+                    <Text style={GlobalStyles.pergunta}>7. Quando está angustiado(a) com alguma problema, você costuma compartilhar essa preocupação com amigos, familiares ou até mesmo com um terapeuta?</Text>
                 </View>
                 <View style={localStyles.container2}>
                 <BotaoEscolhaTeste
@@ -58,7 +58,7 @@ export default function Pergunta37({route}){
                             )
                         }
                         else{
-                            navigation.navigate('Teste3R7', {resposta: umAtivado? 1 : 0})}}
+                            navigation.navigate('Teste3R7', {resposta: umAtivado? resultado+=1 : resultado})}}
                         }/>
                 </View> 
             </ScrollView>
