@@ -2,7 +2,7 @@
   "expo": {
     "name": "Aconchego",
     "slug": "Aconchego",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,14 +21,19 @@
       "supportsTablet": true
     },
     "android": {
-      "package" : "com.appaconchego",
+      "package": "com.appaconchego",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1eeff22b-1e3e-4792-a819-955ae45c761c"
+      }
     }
   }
 }
