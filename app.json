@@ -22,6 +22,7 @@
     },
     "android": {
       "package": "com.appaconchego",
+      "versionCode":3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
