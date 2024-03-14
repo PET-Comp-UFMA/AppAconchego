@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import React, { useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
-import { StatusBar } from 'expo-status-bar';
+//import { StatusBar } from 'expo-status-bar';
 import { Text, View, Button } from 'react-native';
-import AppLoading from 'expo-app-loading';
+//import AppLoading from 'expo-app-loading';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import {
@@ -15,7 +15,7 @@ import {
 
 import { Entypo } from '@expo/vector-icons'
 
-import Home from './src/screens/home'
+//import Home from './src/screens/home'
 import Aconchego from './src/screens/Aconchego';
 import SaibaMais from './src/screens/saibaMais';
 import ComoUsar from './src/screens/ComoUsar';
